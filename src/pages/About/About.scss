@@ -1,0 +1,131 @@
+.about {
+  .about-banner {
+    img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .about-container {
+    margin: 40px 0px;
+    padding: 60px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .about-content {
+      display: flex;
+      gap: 50px;
+      text-align: center;
+
+      h1 {
+        border: 2px solid orange;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      li {
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      .about-content-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .about-content-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .about-content-right-top {
+          ul {
+            list-style: none;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+              .li-icon {
+                font-size: 10px;
+                margin-right: 10px;
+                color: orange;
+              }
+            }
+          }
+        }
+
+        .about-content-right-bottom {
+          p {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+
+    .about-content2 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      h1 {
+        font-size: 40px;
+        border: 2px solid #ffa500;
+        padding: 20px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .about-content2-name {
+        .founder-name {
+          text-transform: uppercase;
+          font-size: 20px;
+          letter-spacing: 1px;
+        }
+
+        .founder-title {
+          margin-top: 5px;
+        }
+      }
+
+      .founder-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        p {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .about-content3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        h1{
+            font-size: 40px;
+            border: 2px solid #ffa500;
+            padding: 20px;
+        }
+    
+    }
+  }
+}

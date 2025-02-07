@@ -1,0 +1,60 @@
+.clientReview {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+  
+    .clientReview-slide {
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+    }
+  
+    .clientReview-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+  
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  
+    // Swiper Pagination Styling
+    .swiper-pagination {
+      position: relative;
+      margin-top: 15px;
+  
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #aaa;
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+  
+      .swiper-pagination-bullet-active {
+        background-color: #ff6600;
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+      }
+    }
+  }
+  
