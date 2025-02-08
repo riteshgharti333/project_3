@@ -1,116 +1,151 @@
 import "./About.scss";
-import banner_img from "../../assets/images/m2.jpg";
-import { FaCircle } from "react-icons/fa6";
-import ClientReview from "../../components/ClientReview/ClientReview";
-import RingLine from "../../components/RingLine/RingLine";
+
+import m1 from "../../assets/images/m2.jpg";
+
+import { MdVerified } from "react-icons/md";
+import m2 from "../../assets/images/review.jpg";
+
+import RingLine from "../../components/RingLine/RingLine"
 
 const About = () => {
   return (
     <div className="about">
       <div className="about-banner">
-        <img src={banner_img} alt="" />
+        <div className="about-banner-desc">
+          <h1>About</h1>
+          <h1>
+            K <span className="line-break">Production</span> Film
+          </h1>
+        </div>
       </div>
 
-      <div className="about-container">
-        <div className="about-content">
-          <div className="about-content-left">
-            <h1>True Shades Photography</h1>
-            <p>
-              True Shades Photography is a sterling example of the light and
-              shade in our lives, of the subtle nuances that are -and yet are
-              not- of the palette of events that move along timeless corridors,
-              where beauty and passion stand intertwined.
-            </p>
-
-            <p>
-              Every day we celebrate our existence with delectable shades of
-              color, vibrant hues of festivity, bonding and glamour that spell
-              the eternal romance of life. We do it with a difference—we capture
-              these hues in pixels that transform them into True Shades- a
-              treasure house of the ‘impossible and the remarkable.”
-            </p>
-
-            <p>
-              With ten years of solid experience to back us in dealing with
-              quality photography, we have never stopped aiming for perfection
-              in what we do. Our work speaks volumes for itself and needs no
-              sponsor. We, at True Shades Photography, put our hearts into the
-              click and bring life into the picture.
-            </p>
+      <div className="about-banner2">
+        <div className="about-banner2-container">
+          <div className="about-banner2-left">
+            <img src={m1} alt="" />
           </div>
 
-          
+          <div className="about-banner2-right">
+            <p>
+              The Mulberry Weddings, renowned for its exquisite wedding
+              photography, embodies the fusion of artistry and emotion. Founded
+              by a team of passionate photographers, we specialize in capturing
+              the essence of love and celebration. Our philosophy is rooted in
+              the belief that each couple’s story is extraordinary and deserves
+              to be told with grace and elegance. We excel in creating a blend
+              of candid moments and artistically composed portraits, ensuring
+              every emotion and detail is captured. Our commitment to quality
+              and attention to detail, combined with our warm, personalized
+              approach, makes your photography experience truly memorable. Let
+              us narrate your love story through our lenses, creating a legacy
+              of timeless memories.
+            </p>
+          </div>
+        </div>
+      </div>
 
-          <div className="about-content-right">
-            <div className="about-content-right-top">
-              <h1>Principles Of Our Work</h1>
-              <ul>
-                <li>
-                  <FaCircle className="li-icon" /> Integrity and Honesty
-                </li>
-                <li>
-                  <FaCircle className="li-icon" /> Quality over quantity
-                </li>
-                <li>
-                  <FaCircle className="li-icon" /> Our assets are our clients &
-                  team
-                </li>
-              </ul>
-            </div>
+      <RingLine />
 
-            <div className="about-content-right-bottom">
-              <h1>Our Experience</h1>
+      <div className="about-content">
+        <div className="about-content-left">
+          <div className="about-content-left-top">
+            <img src={m2} alt="" />
+
+            <div className="about-content-left-top-right">
+              <h1>
+                Our <span className="line-break">Vision</span>
+              </h1>
               <p>
-                The only source of knowledge is experience. We are glad to be a
-                part of the wedding industry since 8 years.
+                Our vision is to create a visual narrative that captures the
+                essence of love and celebration. We strive to tell your unique
+                story through our lens, creating a legacy of timeless memories.
+                Our vision is to create a visual narrative that captures the
+                essence of love and celebration. We strive to tell your unique
+                story through our lens, creating a legacy of timeless memories.
               </p>
             </div>
           </div>
-        </div>
 
-        <RingLine />
+          <div className="about-content-left-bottom">
+            <div className="about-content-left-content">
+              <h1>100%</h1>
+              <p>Customer Satisfaction</p>
+            </div>
 
-        <div className="about-content2">
-          <h1>Founder</h1>
-          <img src={banner_img} alt="" />
-          <div className="about-content2-name">
-            <h4 className="founder-name">Arshid Bhimji</h4>
-            <p className="founder-title">Founder</p>
-          </div>
-
-          <div className="founder-desc">
-            <p>
-              With a keen eye, the ability to use gradients, light and colors,
-              stunning creativity and the talent to capture good frames in
-              adverse situations, Arshid Bhimji has what it takes to be a pro
-              photographer & cinematographer and has made him what he is today.
-            </p>
-            <p>
-              Arshid started small- a compositor in the VFX industry and made
-              his mark in all the multinational studios. He worked in- be it
-              Prana Studios, Reliance Media Works or UTV. He learned, studied,
-              observed, worked hard and the wells of passion were watered and
-              fueled by tremendous energy and a burning desire to make it big.
-            </p>
-
-            <p>
-              Arshid Bhimji turns the ordinary into extraordinary therein lies
-              his artistic skill. He renders photographs with ingenuity and a
-              passion that is unique to him and every picture speaks a thousand
-              words. His goal to create a huge bench mark in this form of art,
-              seems like to be going his way. He believes hardwork and his keep
-              learning nature, is the key to make his dreams come true.
-            </p>
+            <div className="about-content-left-content">
+              <h1>350+</h1>
+              <p>Photography Session</p>
+            </div>
           </div>
         </div>
 
-        <RingLine />
+        <div className="about-content-right">
+          <img src={m2} alt="" />
+        </div>
+      </div>
 
-        <div className="about-content3">
-          <h1>Client Reviews</h1>
+      <RingLine />
 
-          <div className="client-reviews">
-            <ClientReview />
+
+      <div className="about-content2">
+        <div className="about-content2-img">
+          <img src={m1} alt="" />
+        </div>
+
+        <div className="about-content2-desc">
+          <h1>
+            Why Choose <span className="line-break">Us</span>
+          </h1>
+
+          <div className="about-content2-points">
+            <div className="about-content2-point">
+              <MdVerified className="about-content2-points-icon" />
+
+              <div className="about-content2-points-desc">
+                <h2>Fully Equiped</h2>
+                <p>
+                  We are fully equiped with cameras, drones, lighting systems,
+                  etc.
+                </p>
+              </div>
+            </div>
+
+            <div className="about-content2-point">
+              <MdVerified className="about-content2-points-icon" />
+
+              <div className="about-content2-points-desc">
+                <h2>Fully Equiped</h2>
+                <p>
+                  We are fully equiped with cameras, drones, lighting systems,
+                  etc.
+                </p>
+              </div>
+            </div>
+
+            <div className="about-content2-point">
+              <MdVerified className="about-content2-points-icon" />
+
+              <div className="about-content2-points-desc">
+                <h2>Fully Equiped</h2>
+                <p>
+                  We are fully equiped with cameras, drones, lighting systems,
+                  etc.
+                </p>
+              </div>
+            </div>
+            
+
+            <div className="about-content2-point">
+              <MdVerified className="about-content2-points-icon" />
+
+              <div className="about-content2-points-desc">
+                <h2>Fully Equiped</h2>
+                <p>
+                  We are fully equiped with cameras, drones, lighting systems,
+                  etc.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

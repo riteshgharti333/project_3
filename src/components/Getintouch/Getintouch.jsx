@@ -4,7 +4,7 @@ const Getintouch = () => {
   return (
     <div className="getintouch">
       <div className="getintouch-content">
-        <h1>Get In Touch</h1>
+        <h1>Get In  <span className="break-line">Touch</span></h1>
         <p>
           Contact us for a great photography session & beautiful captured moments
         </p>

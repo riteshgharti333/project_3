@@ -12,6 +12,10 @@
       font-size: 50px;
       font-weight: 600;
       margin-bottom: 20px;
+
+      .break-line {
+        color: #ffa500;
+      }
     }
 
     p {
@@ -76,7 +80,7 @@
 
       &:hover {
         background-color: #ff8c00;
-        color: #000;
+        color: #fff;
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
