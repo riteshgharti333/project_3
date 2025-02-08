@@ -1,10 +1,19 @@
+@import "../../styles/responsive.scss";
+
 .getintouch {
   font-family: "Poppins", sans-serif;
   color: #fff;
   text-align: center;
   max-width: 1140px;
   margin: 0 auto;
+ 
+  @include md{
+    padding: 0px 40px;
+  }
 
+  @include sm{
+    padding: 0px 10px;
+  }
   .getintouch-content {
    
     h1 {
@@ -27,6 +36,12 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+
+      @include md{
+        display: flex;
+        flex-direction: column;
+
+      }
 
       .form-group {
         position: relative;
@@ -92,13 +107,3 @@
   }
 }
 
-@media (max-width: 768px) {
-  .getintouch-form {
-    grid-template-columns: 1fr !important;
-
-    .form-group:nth-child(3),
-    .form-group:nth-child(4) {
-      grid-column: span 1 !important;
-    }
-  }
-}

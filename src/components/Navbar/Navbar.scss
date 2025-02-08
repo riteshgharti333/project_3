@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -8,9 +10,14 @@
   z-index: 1000;
   padding: 0px 100px;
   transition: all 0.5s;
+  overflow: hidden;
 
   &.scrolled {
     background-color: #000;
+  }
+
+  @include sm{
+    padding: 0 10px;
   }
 
   .nav-left {
@@ -65,6 +72,12 @@
       cursor: pointer;
       position: relative;
       transition: color 0.3s ease;
+
+      @include md{
+        display: none;
+      }
+
+
 
       &:hover {
         color: #ffa500;

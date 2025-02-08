@@ -1,5 +1,5 @@
 $EEsm: 320px;
-$Esm: 360;
+$Esm: 360px;
 $sm: 480px;
 $md: 768px;
 $lg: 1024px;
@@ -8,13 +8,13 @@ $xxl: 1400px;
 $xxxl: 1600px;
 
 @mixin EEsm {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: ($EEsm)) {
     @content;
   }
 }
 
 @mixin Esm {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: ($Esm)) {
     @content;
   }
 }

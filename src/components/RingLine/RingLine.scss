@@ -1,9 +1,15 @@
+@import "../../styles/responsive.scss";
+
 .ringLine {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 0px 40px;
+
+  @include sm{
+    padding: 0;
+  }
 
   .ring-img {
     width: 50px;

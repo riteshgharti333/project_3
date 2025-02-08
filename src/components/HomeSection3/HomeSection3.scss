@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .homeSection3 {
   max-width: 1140px;
   margin: 0 auto;
@@ -5,6 +7,10 @@
   align-items: center;
   overflow: hidden;
   gap: 40px;
+
+  @include lg {
+    flex-direction: column;
+  }
 
   .homeSection3-left {
     flex: 1;

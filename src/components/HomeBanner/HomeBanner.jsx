@@ -1,9 +1,10 @@
+import "./HomeBanner.scss";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import "./HomeBanner.scss";
 
 import m1 from "../../assets/images/m1.jpg";
 import m2 from "../../assets/images/m2.jpg";
@@ -35,7 +36,11 @@ const HomeBanner = () => {
       <div className="homeBanner-desc">
         <p>The Mulberry Weddings</p>
         <h1>
-          Timeless Movies <span>for <span className="break-line">Lifetime</span> </span> <span>Events</span>
+          Timeless Movies
+          <span>
+            for <span className="break-line">Lifetime</span>{" "}
+          </span>
+          <span>Events</span>
         </h1>
 
         <button>

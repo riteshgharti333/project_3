@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .clientReview {
   display: flex;
   justify-content: center;
@@ -19,16 +21,24 @@
     }
 
     .clientReview-card {
-      width: 80%;
+      width: 90%;
       max-width: 800px;
       background: black;
       padding: 40px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       position: absolute;
-      left: 5%;
-      top: 15%;
+      left: 35%;
+      top: 50%;
+      transform: translate(-50%, -50%); // Centers the card
+      padding: 20px;
+      margin: 0px auto;
+   
+      @include xl{
+        left: 50%;
+      }
 
+    
       .clientReview-card-desc {
         display: flex;
         flex-direction: column;

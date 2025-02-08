@@ -1,9 +1,16 @@
+@import "../../styles/responsive.scss";
+
 .homeSection2 {
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
   overflow: hidden;
   gap: 70px;
+
+  @include md{
+    flex-direction: column;
+    gap: 40px;
+  }
   .homeSection2-left {
     flex: 4;
     img {

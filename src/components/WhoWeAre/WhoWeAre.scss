@@ -1,3 +1,6 @@
+@import "../../styles/responsive.scss";
+
+
 .whoWeAre {
   max-width: 1140px;
   margin: 0 auto;
@@ -5,6 +8,10 @@
   align-items: center;
   overflow: hidden;
   gap: 40px;
+
+  @include md{
+    flex-direction: column;
+  }
 
   .whoWeAre-left {
     flex: 1;

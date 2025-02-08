@@ -16,25 +16,27 @@ const Homepage = () => {
     <div className="homepage">
       <HomeBanner />
 
-      <WhoWeAre />
+      <div className="homepage-container">
+        <WhoWeAre />
 
-      <RingLine />
+        <RingLine />
 
-      <HomeSection2 />
+        <HomeSection2 />
 
-      <RingLine />
+        <RingLine />
 
-      <PortfolioSection />
+        <PortfolioSection />
 
-      <RingLine />
+        <RingLine />
 
-      <HomeSection3 />
+        <HomeSection3 />
 
-      <RingLine />
+        <RingLine />
 
-      <OurService />
+        <OurService />
 
-      <RingLine />
+        <RingLine />
+      </div>
 
       <ClientReview />
 
