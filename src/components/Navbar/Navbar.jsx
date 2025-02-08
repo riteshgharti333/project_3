@@ -1,11 +1,9 @@
 import "./Navbar.scss";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";  // Import NavLink
+import { Link, NavLink } from "react-router-dom"; 
 import logo from "../../assets/images/logo.png";
+import { SlCalender } from "react-icons/sl";
 
 const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   return (
     <div className="navbar">
       <div className="nav-left">
@@ -20,7 +18,7 @@ const Navbar = () => {
         <NavLink
           to={"/"}
           className="nav-link"
-          activeClassName="active-link"  // Apply 'active-link' when this link is active
+          activeClassName="active-link"
         >
           Home
         </NavLink>
@@ -34,9 +32,19 @@ const Navbar = () => {
         </NavLink>
         
         {/* Uncomment and modify if needed */}
-        {/* <Link to={"/contact-us"} className="nav-link">
-          Contact Us
-        </Link> */}
+        <Link to={"/contact-us"} className="nav-link">
+          Portfolio
+        </Link>
+
+        <Link to={"/contact-us"} className="nav-link">
+          Services
+        </Link>
+
+    
+        <Link to={"/contact-us"} className="contact-button">
+        <SlCalender className="calender" />  Contact
+        </Link>
+
       </div>
     </div>
   );

@@ -1,0 +1,101 @@
+.getintouch {
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+
+  .getintouch-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .getintouch-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      .form-group {
+        position: relative;
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          background: transparent;
+          color: #fff;
+          font-size: 18px;
+          transition: all 0.3s ease;
+          border: none;
+          border-bottom: 1px solid #ffa500;
+          font-family: "Metropolis", sans-serif;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #fff;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+          min-height: 150px;
+        }
+      }
+
+      .form-group:nth-child(3),
+      .form-group:nth-child(4) {
+        grid-column: span 2;
+      }
+    }
+
+    .submit-button {
+      grid-column: span 2;
+      padding: 15px 30px;
+      background: #fff;
+      color: #ff8c00;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #ff8c00;
+        color: #000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .getintouch-form {
+    grid-template-columns: 1fr !important;
+
+    .form-group:nth-child(3),
+    .form-group:nth-child(4) {
+      grid-column: span 1 !important;
+    }
+  }
+}

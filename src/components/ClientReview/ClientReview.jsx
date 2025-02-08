@@ -1,34 +1,70 @@
+import "./ClientReview.scss";
+import { FaStar } from "react-icons/fa";
+import { RiDoubleQuotesR } from "react-icons/ri";
+import m1 from "../../assets/images/m1.jpg";
 import { client_reviews } from "../../assets/data";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination,EffectFade } from "swiper/modules";
+import "swiper/css/effect-fade";
+
+
 import "swiper/css";
 import "swiper/css/pagination";
-import "./ClientReview.scss";
 
 const ClientReview = () => {
   return (
     <div className="clientReview">
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
-        spaceBetween={30}
-        slidesPerView={1}
-        speed={800} 
-        effect="fade"
-      >
-        {client_reviews.map((review, index) => (
-          <SwiperSlide key={index}>
-            <div className="clientReview-slide">
-              <p>{review.review_title}</p>
-              <div className="clientReview-name">
-                <img src={review.img} alt={review.review_name} />
-                <span>{review.review_name}</span>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="clientReview-img">
+        <img src={m1} alt="Client Background" />
+
+        <div className="clientReview-card">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={20}
+            loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            speed={1200}
+            pagination={{ clickable: true, dynamicBullets: true }}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+          >
+            {client_reviews.map((review, index) => (
+              <SwiperSlide key={index}>
+                <div className="clientReview-card-desc">
+                  <div className="clientReview-card-top">
+                    <div className="clientReview-card-stars">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} className="star" />
+                      ))}
+                    </div>
+
+                    <div className="clientReview-card-quotes">
+                      <RiDoubleQuotesR className="quotes" />
+                    </div>
+                  </div>
+
+                  <p className="reviews">{review.review_title}</p>
+
+                  <hr className="line" />
+
+                  <div className="review-name">
+                    <img src={review.img} alt={review.review_name} />
+                    <div className="review-name-desc">
+                      <p>{review.review_name}</p>
+                      <p>{review.review_location}</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,10 +1,11 @@
+import './ReviewCard.scss';
 import { review_card } from '../../assets/data';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './ReviewCard.scss';
 
 const ReviewCard = () => {
 

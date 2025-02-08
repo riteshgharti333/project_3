@@ -46,43 +46,47 @@ export const client_reviews = [
   {
     img: review_img,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
+      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
     review_name: "Ruchika Rathore",
+    review_location : "New York"
   },
 
   {
     img: review_img,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
+    "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
     review_name: "Ruchika Rathore",
+    review_location : "New York"
+    
+
   },
 
   {
     img: review_img,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
+    "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
     review_name: "Ruchika Rathore",
+    review_location : "New York"
+
   },
 
 
   {
     img: review_img,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
+    "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
     review_name: "Ruchika Rathore",
+    review_location : "New York"
+
   },
 
   {
     img: review_img,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
+    "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
     review_name: "Ruchika Rathore",
+    review_location : "New York"
+
   },
 
-  {
-    img: review_img,
-    review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional, ensuring every little detail was taken care of. Our guests couldn't stop praising the ambiance and hospitality. It truly made our special day even more memorable. Highly recommend for anyone planning their dream wedding!",
-    review_name: "Ruchika Rathore",
-  },
 ];

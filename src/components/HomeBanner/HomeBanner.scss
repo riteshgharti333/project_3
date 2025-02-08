@@ -1,66 +1,115 @@
 .homeBanner {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+
+  .homeBanner-desc {
+    position: absolute;
+    z-index: 9;
+    top: 55%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+
+    p {
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #989898;
+    }
+
+    h1 {
+      font-size: 70px;
+      display: flex;
+      flex-direction: column;
+
+      .break-line{
+        color: #ffa500;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 3px;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      border: 2px solid #ffa500;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      margin-top: 20px;
+
+      .right-arrow {
+        margin-right: 3px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: transparent;
+        color: #000;
+        background: orange;
+      }
+    }
+
+    .social-links{
+      margin-top: 70px;
+
+      span{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #dacdcd;
+        cursor: pointer;
+      }
+
+      .line{
+        margin: 0px 10px;
+      }
+    }
+  }
+
+  .bannerSwiper {
     width: 100%;
-    max-width: 1400px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-  
-    .bannerSwiper {
-      width: 100%;
-      height: 550px;
-  
-      .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 1.2s ease-in-out, filter 1.2s ease-in-out;
-          filter: blur(5px); // Initial blur effect
-        }
-  
-        &.swiper-slide-active img {
-          filter: blur(0px); // Remove blur effect on active slide
-          transform: scale(1.02); // Slight zoom-in effect
-        }
+    height: 600px;
+    z-index: 1;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); // 40% darkness overlay
+        z-index: 1;
       }
-  
-      // Pagination dots styling
-      .swiper-pagination-bullet {
-        background: rgba(255, 255, 255, 0.7);
-        width: 12px;
-        height: 12px;
-        margin: 8px;
-        transition: all 0.3s ease;
-  
-        &.swiper-pagination-bullet-active {
-          background: #ff8800;
-          transform: scale(1.3);
-        }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s ease-in-out, filter 1.2s ease-in-out;
+        filter: brightness(0.3) blur(5px);
+      }
+
+      &.swiper-slide-active img {
+        filter: brightness(0.5) blur(0px);
+        transform: scale(1.02);
       }
     }
   }
-  
-  .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.6);
-    width: 8px; // Reduced size
-    height: 8px;
-    margin: 6px;
-    transition: all 0.3s ease;
-  
-    &.swiper-pagination-bullet-active {
-      background: #ff8800;
-      transform: scale(1.2); // Slightly larger when active
-    }
-  
-    &:hover {
-      background: #ffaa33;
-      transform: scale(1.3);
-    }
-  }
-  
-  
+}
