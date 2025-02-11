@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .aboutAgency {
   max-width: 1140px;
   margin: 0 auto;
@@ -6,11 +8,22 @@
     justify-content: space-between;
     align-items: center;
 
+    @include sm {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
     h1 {
       font-size: 50px;
       display: flex;
       flex-direction: column;
       text-transform: uppercase;
+
+      @include sm {
+        font-size: 30px;
+        display: block;
+      }
 
       .line-break {
         color: #ffa500;
@@ -51,7 +64,6 @@
         }
       }
 
-      // Adding a bounce effect to give feedback when clicked
       &:active {
         animation: buttonBounce 0.2s ease-in-out;
       }
@@ -74,6 +86,12 @@
     display: flex;
     gap: 80px;
     margin-top: 40px;
+
+    @include md {
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .aboutAgency-bottom-left {
       position: relative;
       flex: 1;
@@ -82,8 +100,66 @@
         border-radius: 20px;
       }
 
-    
-    
+      .aboutAgency-bottom-left-btn {
+        margin-top: 20px;
+
+        @media screen and (min-width: 1201px) {
+          display: none;
+        }
+
+        button {
+          background: #ffa500;
+          height: fit-content;
+          color: #000;
+          padding: 10px 15px;
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          transition: 0.3s ease-in-out, transform 0.2s ease,
+            box-shadow 0.2s ease;
+          overflow: hidden;
+          text-transform: uppercase;
+          border: 2px solid #ffa500;
+          &:hover {
+            background-color: transparent;
+            color: #fff;
+            transform: translateY(-5px);
+            border: 2px solid #ffa500;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 300%;
+              height: 300%;
+              border-radius: 50%;
+              transition: 0.4s ease;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          &:active {
+            animation: buttonBounce 0.2s ease-in-out;
+          }
+
+          @keyframes buttonBounce {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-5px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+
       .aboutAgency-bottom-left-desc {
         height: 170px;
         width: 170px;
@@ -96,17 +172,19 @@
         top: 67%;
         left: 83%;
         border: 2px solid #ffa500;
-      
+
+        @include xl {
+          display: none;
+        }
+
         span {
           color: #000;
           font-size: 18px;
         }
-      
-        // Bounce effect animation
+
         animation: bounce 8s ease-in-out infinite;
       }
-      
-      // Keyframes for bounce animation
+
       @keyframes bounce {
         0%,
         100% {
@@ -122,9 +200,6 @@
           transform: scale(1.1); // Slight scale up
         }
       }
-      
-      
-      
     }
 
     .aboutAgency-bottom-right {

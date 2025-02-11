@@ -1,6 +1,10 @@
+@import "../../styles/responsive.scss";
+
 .ourPhotography {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0px 20px;
+  padding-bottom: 30px;
 
   .ourPhotography-top {
     display: flex;
@@ -8,11 +12,22 @@
     justify-content: space-between;
     gap: 20%;
 
+    @include lg {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
     h1 {
       font-size: 50px;
 
       .line-break {
         color: #ffa500;
+      }
+
+      @include sm {
+        font-size: 40px;
+        margin-bottom: 10px;
       }
     }
 
@@ -22,12 +37,76 @@
     }
   }
 
+  .ourPhotography-lists-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+
+    @media screen and (min-width: 1025px) {
+      display: none;
+    }
+
+    .ourPhotography-lists-mobile-card {
+      .ourPhotography-lists-mobile-top {
+        h1 {
+          color: #585858;
+          margin-bottom: 10px;
+        }
+      }
+
+      .ourPhotography-lists-mobile-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        img {
+          width: 100%;
+        }
+        button {
+          background: #b90808;
+          color: #fff;
+          padding: 10px 15px;
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          position: relative;
+          transition: 0.3s ease-in-out, transform 0.2s ease,
+            box-shadow 0.2s ease;
+          overflow: hidden;
+          text-transform: uppercase;
+          width: 100%;
+
+          &:active {
+            animation: buttonBounce 0.2s ease-in-out;
+          }
+
+          @keyframes buttonBounce {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-5px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
   .ourPhotography-lists {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 80px;
 
+    @media screen and (max-width: 1025px) {
+      display: none;
+    }
     .ourPhotography-list {
       display: flex;
       justify-content: space-between;

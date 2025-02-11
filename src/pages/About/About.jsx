@@ -143,8 +143,12 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      
+      <div className="core-option">
       <OurCore />
+
+      </div>
+
 
       <ClientReview />
 

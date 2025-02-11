@@ -1,19 +1,36 @@
+@import "../../styles/responsive.scss";
+
 .followSection {
     max-width: 1400px;
     margin: 0 auto;
  position: relative;
-    .followSection-imgs {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr); 
-      width: 100%; 
-      overflow: hidden;
-  
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: contain; 
-      }
+ .followSection-imgs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row by default */
+  width: 100%;
+  overflow: hidden;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr); /* Show 3 items per row on medium screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Hide last 2 images on smaller screens (under 768px) */
+  @media (max-width: 768px) {
+    & > img:nth-child(4),
+    & > img:nth-child(5) {
+      display: none; /* Hide the 4th and 5th images */
     }
+  }
+}
+
   
     .followSection-desc {
         position: absolute;
@@ -27,6 +44,10 @@
         border-radius: 10px; 
         box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3); 
         transition: all 0.3s ease-in-out; 
+
+        @include sm{
+          padding: 10px;
+        }
       
         .followSection-icon {
           font-size: 30px; 
@@ -40,6 +61,10 @@
           font-weight: 500; 
           margin: 0;
           color: #fff; 
+
+          @include sm{
+            font-size: 14px;
+          }
           
         }
       

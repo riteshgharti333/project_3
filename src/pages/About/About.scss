@@ -7,6 +7,10 @@
   background: #fff;
   color: #000;
 
+  .core-option{
+    padding: 0px 20px;
+  }
+
   @include sm {
   }
 
@@ -215,6 +219,10 @@
       max-width: 1200px;
       padding: 20px;
 
+      @include md{
+        width: 100%;
+      }
+
       h1 {
         font-size: 60px;
         margin-bottom: 20px;
@@ -239,6 +247,14 @@
         flex-direction: column;
         gap: 40px;
         height: auto;
+
+        @include lg{
+          width: 100%;
+        }
+        @include md{
+gap: 10px;
+width: 100%;
+        }
 
         .about-content2-list {
           transition: transform 5s ease-in-out;

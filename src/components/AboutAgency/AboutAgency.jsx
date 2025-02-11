@@ -7,7 +7,7 @@ const AboutAgency = () => {
     <div className="aboutAgency">
       <div className="aboutAgency-top">
         <h1>
-          About <span className="line-break">Agency</span>
+          About  <span className="line-break"> Agency</span>
         </h1>
 
         <button>Book us now</button>
@@ -19,6 +19,10 @@ const AboutAgency = () => {
 
           <div className="aboutAgency-bottom-left-desc">
             <span>Explore Us</span>
+          </div>
+
+          <div className="aboutAgency-bottom-left-btn">
+            <button>Explore Us</button>
           </div>
         </div>
 

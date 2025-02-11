@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
 import "./HomeBanner.scss";
+
+import React, { useEffect, useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Pagination, Navigation } from "swiper/modules";

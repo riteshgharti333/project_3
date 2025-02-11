@@ -23,14 +23,30 @@ const OurPhotography = () => {
         </p>
       </div>
 
+      <div className="ourPhotography-lists-mobile">
+        {ourPhotography.map((our) => (
+          <div className="ourPhotography-lists-mobile-card">
+            <div className="ourPhotography-lists-mobile-top">
+              <h1>{our.no}</h1>
+              <h1>{our.title}</h1>
+            </div>
+
+            <div className="ourPhotography-lists-mobile-bottom">
+              <img src={our.img} alt="" />
+              <button>View</button>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div className="ourPhotography-lists">
         {ourPhotography.map((our, index) => (
           <div
             key={index}
             className={`ourPhotography-list ${
               hoverIndex === index ? "active" : ""
-            }`} 
-            onMouseEnter={() => setHoverIndex(index)} 
+            }`}
+            onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(1)}
           >
             <div className="ourPhotography-list-left">

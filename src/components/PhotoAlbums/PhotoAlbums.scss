@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .photoAlbums {
   display: flex;
   flex-direction: column;
@@ -8,24 +10,27 @@
     .line-break {
       color: orange;
     }
+
+    @include sm{
+      font-size: 40px;
+    }
   }
 
   .photoAlbums-desc {
     margin: 20px 0px;
     font-size: 25px;
+    text-align: center;
   }
 
   .photoAlbums-cards {
     width: 100%;
     max-width: 1200px;
- 
     display: flex;
     gap: 20px;
     .photoAlbums-slider {
-       
       .swiper-button-next,
       .swiper-button-prev {
-        color: #ffa500; 
+        color: #ffa500;
         border-radius: 50%;
         width: 40px;
         height: 40px;
@@ -34,11 +39,10 @@
 
     .photoAlbums-card {
       position: relative;
-    
 
       .photoAlbums-card-content {
         position: relative;
-       
+
         img {
           width: 100%;
           display: block;
@@ -46,23 +50,20 @@
           object-fit: contain;
 
           filter: brightness(0.6);
-      
         }
         .photoAlbums-card-content-desc {
-            position: absolute;
-            bottom: 10%;
-            left: 10%;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-          }
-          
-          .swiper-slide-active .photoAlbums-card-content-desc {
-            opacity: 1;
-            transform: translateY(0);
-          }
-          
-          
+          position: absolute;
+          bottom: 10%;
+          left: 10%;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .swiper-slide-active .photoAlbums-card-content-desc {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }

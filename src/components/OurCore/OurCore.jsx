@@ -1,4 +1,4 @@
-import './OurCore.scss';
+import "./OurCore.scss";
 import slider_img from "../../assets/images/3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
@@ -17,8 +17,13 @@ const OurCore = () => {
   return (
     <div className="ourCore">
       <div className="ourCore-top">
-        <h1>Our <span className="line-break">Team</span></h1>
-        <p>We’re deeply passionate about capturing your lovely memories and conveying your love for every moment of life.</p>
+        <h1>
+          Our <span className="line-break">Team</span>
+        </h1>
+        <p>
+          We’re deeply passionate about capturing your lovely memories and
+          conveying your love for every moment of life.
+        </p>
       </div>
 
       <Swiper
@@ -27,9 +32,23 @@ const OurCore = () => {
         navigation={true}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         loop={true}
-        speed={800} // Adjust this value for smoother transitions
+        speed={800}
         modules={[Navigation, Autoplay]}
         className="ourCore-slider"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2, // Show 2 slides on tablets
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 3, // Show 3 slides on larger screens
+            spaceBetween: 20,
+          },
+        }}
       >
         {teamMembers.map((member, index) => (
           <SwiperSlide key={index} className="ourCore-slider-card">

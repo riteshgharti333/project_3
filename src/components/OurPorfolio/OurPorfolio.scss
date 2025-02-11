@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .ourPorfolio {
   max-width: 1140px;
   margin: 0 auto;
@@ -25,6 +27,11 @@
     column-count: 2;
     column-gap: 150px;
     margin-top: 50px;
+
+    @include md{
+    column-count: 1;
+      
+    }
 
     .ourPorfolio-card {
       display: inline-block;

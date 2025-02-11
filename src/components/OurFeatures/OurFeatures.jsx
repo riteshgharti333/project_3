@@ -1,16 +1,16 @@
+import "./OurFeatures.scss";
+
 import React, { useState, useEffect, useRef } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { TiArrowRight } from "react-icons/ti";
 import { gsap } from "gsap";
-import { Flip } from "gsap/Flip"; 
+import { Flip } from "gsap/Flip";
 import m1 from "../../assets/images/m1.jpg";
 import m2 from "../../assets/images/m2.jpg";
 import m3 from "../../assets/images/m3.jpg";
-import "./OurFeatures.scss";
 
 gsap.registerPlugin(Flip);
 
-// Fake data for each list item
 const featuresData = [
   {
     id: 1,
@@ -55,24 +55,24 @@ const featuresData = [
 ];
 
 const OurFeatures = () => {
-  const [hoveredItem, setHoveredItem] = useState(featuresData[0]); 
-  const cardRef = useRef(null); 
-  const imgRef = useRef(null); 
+  const [hoveredItem, setHoveredItem] = useState(featuresData[0]);
+  const cardRef = useRef(null);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const card = cardRef.current;
-    const flipState = Flip.getState(card); 
+    const flipState = Flip.getState(card);
     Flip.from(flipState, {
       duration: 0.8,
       ease: "power2.out",
-      scale: true, 
-      absolute: true, 
+      scale: true,
+      absolute: true,
     });
 
     const img = imgRef.current;
     gsap.fromTo(
       img,
-      { opacity: 0, y: 20 }, 
+      { opacity: 0, y: 20 },
       {
         opacity: 1,
         y: 0,
@@ -80,10 +80,29 @@ const OurFeatures = () => {
         ease: "power2.out",
       }
     );
-  }, [hoveredItem]); 
+  }, [hoveredItem]);
 
   return (
     <div className="ourFeatures">
+
+<div className="ourFeatures-mobile">
+<h1 className="ourFeatures-mobile-title">
+          Why choose <span className="line-break">Us</span>
+        </h1>
+
+<div className="ourFeatures-mobile-cards">
+  {featuresData.map((feature) => (
+    <div className="ourFeatures-mobile-desc">
+          <h1>{feature.title}</h1>
+          <p>We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.</p>
+          <button>Read More</button>
+        </div>
+  ))}
+
+</div>
+        
+</div>
+
       <div className="ourFeatures-left">
         <h1>
           Why choose <span className="line-break">Us</span>
