@@ -60,10 +60,6 @@ const Navbar = () => {
           Services
         </Link>
 
-    
-        <Link to={""} className="contact-button">
-        <SlCalender className="calender" />  Contact
-        </Link>
 
       </div>
     </div>

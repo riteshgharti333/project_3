@@ -10,6 +10,13 @@ import ClientReview from "../../components/ClientReview/ClientReview";
 import Getintouch from "../../components/Getintouch/Getintouch";
 
 import RingLine from "../../components/RingLine/RingLine";
+import AboutAgency from "../../components/AboutAgency/AboutAgency";
+import OurFeatures from "../../components/OurFeatures/OurFeatures";
+import OurCore from "../../components/OurCore/OurCore";
+import OurPorfolio from "../../components/OurPorfolio/OurPorfolio";
+import ContactSection from "../../components/ContactSection/ContactSection";
+import FollowSection from "../../components/FollowSection/FollowSection";
+import PhotoAlbums from "../../components/PhotoAlbums/PhotoAlbums";
 
 const Homepage = () => {
   return (
@@ -17,23 +24,27 @@ const Homepage = () => {
       <HomeBanner />
 
       <div className="homepage-container">
-        <WhoWeAre />
-
-        <RingLine />
-
-        <HomeSection2 />
-
-        <RingLine />
-
-        <PortfolioSection />
-
-        <RingLine />
-
-        <HomeSection3 />
-
-        <RingLine />
-
         <OurService />
+
+        <RingLine />
+
+        <PhotoAlbums />
+
+        <RingLine />
+
+        <AboutAgency />
+
+        <RingLine />
+
+        <OurFeatures />
+
+        <RingLine />
+
+        <OurCore />
+
+        <RingLine />
+
+        <OurPorfolio />
 
         <RingLine />
       </div>
@@ -43,6 +54,12 @@ const Homepage = () => {
       <RingLine />
 
       <Getintouch />
+
+      <RingLine />
+
+      <ContactSection />
+
+      <FollowSection />
     </div>
   );
 };

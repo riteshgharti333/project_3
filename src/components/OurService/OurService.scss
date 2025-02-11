@@ -11,15 +11,16 @@
     justify-content: space-between;
     gap: 30%;
 
-    @include md{
-       flex-direction: column;
-       gap: 20px;
+    @include md {
+      flex-direction: column;
+      gap: 20px;
     }
 
     h1 {
       display: flex;
       flex-direction: column;
       font-size: 50px;
+      text-transform: uppercase;
 
       .line-break {
         color: #ffa500;
@@ -31,7 +32,6 @@
       flex-direction: column;
       p {
         font-size: 20px;
-        line-height: 30px;
         color: #989898;
         text-align: justify;
       }
@@ -82,35 +82,30 @@
 
   .ourService-bottom {
     .ourService-top-cards {
-        display: grid;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 30px;
+
+      @include xl {
         grid-template-columns: repeat(4, 1fr);
-        margin-top: 30px;
+        gap: 10px;
+      }
 
-        @include xl{
-        grid-template-columns: repeat(4, 1fr);
-          gap: 10px;
-        }
+      @include lg {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
 
-        
-        @include lg{
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-            
-          }
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
 
-        @include md{
-          grid-template-columns: repeat(2, 1fr);
-          gap: 15px;
-            
-          }
-
-        @include sm{
+      @include sm {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-      
-        }
+      }
       .ourService-top-card {
-       
         width: 270px;
         height: 360px;
         padding: 40px 50px;
@@ -125,34 +120,31 @@
         overflow: hidden;
         background: #000;
 
-        @include xl{
-         
+        @include xl {
           width: 100%;
           padding: 20px;
         }
 
-        @include lg{
+        @include lg {
           margin: 0 auto;
           padding: 40px 50px;
         }
 
-        @include md{
+        @include md {
           width: 100%;
           padding: 20px;
         }
 
-        @include sm{
+        @include sm {
           margin: 0 auto;
           padding: 40px 50px;
 
-        width: 270px;
-
+          width: 270px;
         }
 
-
-        .line-break{
-            color: #ffa500;
-          }
+        .line-break {
+          color: #ffa500;
+        }
 
         &:hover {
           border: 1px solid #989898;
@@ -160,10 +152,9 @@
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
           background: linear-gradient(135deg, #ffa500, #ff8c00);
 
-          .line-break{
+          .line-break {
             color: #fff;
           }
-          
 
           img {
             animation: bounce 0.8s ease-in-out;
@@ -204,6 +195,10 @@
             margin-bottom: 10px;
             color: #fff;
             transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+          }
+
+          h1{
+            font-size: 25px;
           }
 
           h5 {

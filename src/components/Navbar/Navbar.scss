@@ -16,6 +16,14 @@
     background-color: #000;
   }
 
+  @include lg{
+    padding: 0px 60px;
+  }
+
+  @include md{
+    padding: 0px 20px;
+  }
+
   @include sm{
     padding: 0 10px;
   }

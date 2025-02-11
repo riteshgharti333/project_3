@@ -1,0 +1,130 @@
+import React, { useState, useEffect, useRef } from "react";
+import { BsArrowUpRight } from "react-icons/bs";
+import { TiArrowRight } from "react-icons/ti";
+import { gsap } from "gsap";
+import { Flip } from "gsap/Flip"; // Import Flip plugin
+import m1 from "../../assets/images/m1.jpg";
+import m2 from "../../assets/images/m2.jpg";
+import m3 from "../../assets/images/m3.jpg";
+import "./OurFeatures.scss";
+
+// Register GSAP plugins
+gsap.registerPlugin(Flip);
+
+// Fake data for each list item
+const featuresData = [
+  {
+    id: 1,
+    title: "20+ Years Experience",
+    image: m1,
+    cardContent: {
+      description:
+        "Kimono has 20+ years of experience in photography & videography, which makes us pioneers in this profession. We are having so much fun doing this.",
+      readMore: "Read More",
+    },
+  },
+  {
+    id: 2,
+    title: "Creative Shoot Ideas",
+    image: m2,
+    cardContent: {
+      description:
+        "We bring unique and creative ideas to every shoot, ensuring your photos stand out. Our team is always innovating to capture the perfect moment.",
+      readMore: "Read More",
+    },
+  },
+  {
+    id: 3,
+    title: "Globally Awarded",
+    image: m3,
+    cardContent: {
+      description:
+        "Our work has been recognized globally with numerous awards. We take pride in delivering excellence in every project we undertake.",
+      readMore: "Read More",
+    },
+  },
+  {
+    id: 4,
+    title: "Best Quality Photos",
+    image: m3,
+    cardContent: {
+      description:
+        "We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.",
+      readMore: "Read More",
+    },
+  },
+];
+
+const OurFeatures = () => {
+  const [hoveredItem, setHoveredItem] = useState(featuresData[0]); // Default to the first item
+  const cardRef = useRef(null); // Ref for the card
+  const imgRef = useRef(null); // Ref foPr the image
+
+  // GSAP animation on hover change
+  useEffect(() => {
+    // Flip animation for the card
+    const card = cardRef.current;
+    const flipState = Flip.getState(card); // Capture the current state of the card
+    Flip.from(flipState, {
+      duration: 0.8,
+      ease: "power2.out",
+      scale: true, // Enable scaling for a smoother flip
+      absolute: true, // Ensure smooth transitions
+    });
+
+    // Fade-up animation for the image
+    const img = imgRef.current;
+    gsap.fromTo(
+      img,
+      { opacity: 0, y: 20 }, // Start from slightly below and invisible
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      }
+    );
+  }, [hoveredItem]); // Trigger animation when hoveredItem changes
+
+  return (
+    <div className="ourFeatures">
+      <div className="ourFeatures-left">
+        <h1>
+          Why choose <span className="line-break">Us</span>
+        </h1>
+
+        <div className="ourFeatures-left-desc">
+          <ul>
+            {featuresData.map((item) => (
+              <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
+                <BsArrowUpRight className="up-arrow" />
+                {item.title}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="ourFeatures-left-card" ref={cardRef}>
+          <p>{hoveredItem.cardContent.description}</p>
+          <span className="read-more">
+            {hoveredItem.cardContent.readMore}{" "}
+            <TiArrowRight className="right-arrow" />
+          </span>
+        </div>
+      </div>
+
+      <div className="ourFeatures-right">
+        <div className="ourFeatures-right-img">
+          <img
+            ref={imgRef}
+            src={hoveredItem.image}
+            alt="Feature"
+            style={{ opacity: 0 }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurFeatures;
