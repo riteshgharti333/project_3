@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
+  background: #fff;
+  color: #000;
 
   @include sm {
   }
@@ -60,104 +62,11 @@
     }
   }
 
-  .about-banner2 {
-    background-image: url("../../assets/images/about.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-
-    @include lg {
-      background-image: none;
-      padding: 0px 20px;
-      position: static;
-      height: 100%;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+  .about-big-img {
+    max-width: 1200px;
+    margin: 0 auto;
+    img {
       width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      filter: brightness(1.2);
-
-      @include lg {
-        display: none;
-      }
-    }
-
-    .about-banner2-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 80%;
-      max-width: 1200px;
-      z-index: 1;
-
-      @include xl {
-        width: 95%;
-      }
-
-      @include lg {
-        flex-direction: column;
-        width: 100%;
-        transform: none;
-        position: static;
-        width: 100%;
-      }
-
-      .about-banner2-left {
-        width: 45%;
-
-        @include lg {
-          width: 100%;
-        }
-        img {
-          width: 100%;
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-          object-fit: cover;
-          transition: transform 0.3s ease-in-out;
-
-          @include lg {
-            height: 400px;
-          }
-
-          &:hover {
-            // transform: scale(1.05);
-          }
-        }
-      }
-
-      .about-banner2-right {
-        width: 50%;
-
-        @include lg {
-          width: 100%;
-          margin-top: 30px;
-        }
-        p {
-          font-size: 20px;
-          line-height: 1.3;
-          text-align: justify;
-          color: #fff;
-          font-weight: 400;
-          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-
-          @include lg {
-            font-size: 22px;
-          }
-        }
-      }
     }
   }
 
@@ -209,15 +118,12 @@
           h1 {
             font-size: 50px;
             .line-break {
-              color: #ffa500;
             }
           }
 
           p {
             font-size: 20px;
-            line-height: 25px;
             text-align: justify;
-            color: #fff;
             margin-top: 30px;
           }
         }
@@ -233,30 +139,42 @@
           margin-top: 30px;
         }
         .about-content-left-content {
-          display: flex;
-          align-items: center;
+          .about-content-left-content-top {
+            display: flex;
+            align-items: center;
 
-          h1 {
-            font-size: 70px;
-            color: #ffa500;
-
-            @include lg {
+            h1 {
               font-size: 50px;
+
+              @include lg {
+                font-size: 50px;
+              }
+
+              @include sm {
+                font-size: 45px;
+              }
             }
 
-            @include sm {
-              font-size: 45px;
+            p {
+              font-size: 20px;
+              margin-left: 10px;
+              color: #989898;
+              text-transform: uppercase;
+
+              @include lg {
+                font-size: 22px;
+              }
             }
           }
 
-          p {
-            font-size: 25px;
-            margin-left: 10px;
-            color: #989898;
+          .about-content-left-bottom-line {
+            background-color: #b90808;
+            height: 4px;
+            border: none;
+            border-radius: 2px;
+            width: 60px;
 
-            @include lg {
-              font-size: 22px;
-            }
+            
           }
         }
       }
@@ -273,20 +191,16 @@
       }
     }
   }
-
   .about-content2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     .about-content2-img {
-      @include md {
-        display: none;
-      }
+      width: 100%;
       img {
         width: 100%;
-        // height: ;
+        height: 800px;
         object-fit: cover;
         filter: brightness(0.2);
       }
@@ -300,16 +214,6 @@
       width: 90%;
       max-width: 1200px;
       padding: 20px;
-      text-align: center;
-
-      @include lg {
-        width: 100%;
-      }
-
-      @include md {
-        position: static;
-        transform: none;
-      }
 
       h1 {
         font-size: 60px;
@@ -317,6 +221,7 @@
         color: #fff;
         font-weight: 600;
         text-transform: uppercase;
+        margin-bottom: 40px;
 
         @include md {
           font-size: 50px;
@@ -325,78 +230,90 @@
         @include sm {
           font-size: 40px;
         }
-
-        .line-break {
-          color: #ffa500;
-        }
       }
 
-      .about-content2-points {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      .about-content2-lists {
+        width: 60%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
-        margin-top: 40px;
+        height: auto;
 
-        @include md {
-          grid-template-columns: repeat(1, 1fr);
+        .about-content2-list {
+          transition: transform 5s ease-in-out;
+
+          .about-content2-list-top {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            border-bottom: 2px solid #fff;
+            transition: all 6s ease-in-out;
+            padding-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+
+            h3 {
+              font-size: 25px;
+              transition: color 0.3s ease-in-out;
+            }
+
+            .about-content2-icon {
+              transition: transform 0.3s ease-in-out;
+            }
+
+            &.active {
+              border-bottom: 2px solid #b90808;
+
+              h3 {
+                color: #b90808;
+              }
+
+              .about-content2-icon {
+                color: #b90808;
+              }
+            }
+          }
+
+          .about-content2-desc-text {
+            color: #dddddd;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: max-height 0.9s ease-in-out, opacity 0.9s ease-in-out,
+              transform 0.9s ease-in-out;
+            font-size: 20px;
+          }
+
+          .about-content2-desc-text.open {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
+      }
+      .experience {
+        margin-top: 100px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 20px;
 
-        .about-content2-point {
+        .experience-circle {
+          background: #b90808;
+          height: 100px;
+          width: 100px;
           display: flex;
           align-items: center;
-          gap: 20px;
-          background: rgba(255, 255, 255, 0.1);
-          padding: 20px;
-          border-radius: 15px;
-          transition: all 0.3s ease;
-
-          @include lg {
-            flex-direction: column;
-            text-align: center;
+          justify-content: center;
+          border-radius: 50%;
+          h4 {
+            font-size: 40px;
           }
+        }
 
-          @include md {
-            flex-direction: column;
-            text-align: center;
-          }
-
-          &:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          }
-
-          .about-content2-points-icon {
-            font-size: 60px;
-            color: #000;
-            transition: transform 0.3s ease;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
-
-          .about-content2-points-desc {
-            text-align: left;
-
-            @include lg {
-              text-align: center;
-            }
-
-            h2 {
-              font-size: 24px;
-              font-weight: 600;
-              margin-bottom: 10px;
-              color: #ffa500;
-            }
-
-            p {
-              font-size: 18px;
-              line-height: 25px;
-              color: #fff;
-              opacity: 0.9;
-            }
-          }
+        h2 {
         }
       }
     }

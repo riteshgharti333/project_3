@@ -1,13 +1,38 @@
 import "./About.scss";
-
 import m1 from "../../assets/images/m2.jpg";
+import { FaPlus, FaMinus } from "react-icons/fa6";
+import { useState } from "react";
 
-import { MdVerified } from "react-icons/md";
-import m2 from "../../assets/images/review.jpg";
+import OurCore from "../../components/OurCore/OurCore";
 
-import RingLine from "../../components/RingLine/RingLine"
+import ClientReview from "../../components/ClientReview/ClientReview";
+
+import review_img from "../../assets/images/review.jpg";
+
+import OurPhotography from "../../components/OurPhotography/OurPhotography"
+
+const lists = [
+  {
+    title: "Limono Mission",
+    desc: "Our business consulting programs help break the performance of your business down into customers and product groups so you know exactly which customers or product groups are working.",
+  },
+  {
+    title: "Our Strategy",
+    desc: "We provide strategic insights that empower businesses to make data-driven decisions and optimize their performance in a competitive market.",
+  },
+  {
+    title: "Customer-Centric Approach",
+    desc: "Our approach ensures that our clients receive personalized solutions that cater to their unique business needs.",
+  },
+];
 
 const About = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggleList = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <div className="about">
       <div className="about-banner">
@@ -19,37 +44,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-banner2">
-        <div className="about-banner2-container">
-          <div className="about-banner2-left">
-            <img src={m1} alt="" />
-          </div>
-
-          <div className="about-banner2-right">
-            <p>
-              The Mulberry Weddings, renowned for its exquisite wedding
-              photography, embodies the fusion of artistry and emotion. Founded
-              by a team of passionate photographers, we specialize in capturing
-              the essence of love and celebration. Our philosophy is rooted in
-              the belief that each couple’s story is extraordinary and deserves
-              to be told with grace and elegance. We excel in creating a blend
-              of candid moments and artistically composed portraits, ensuring
-              every emotion and detail is captured. Our commitment to quality
-              and attention to detail, combined with our warm, personalized
-              approach, makes your photography experience truly memorable. Let
-              us narrate your love story through our lenses, creating a legacy
-              of timeless memories.
-            </p>
-          </div>
-        </div>
+      <div className="about-big-img">
+        <img src={m1} alt="About Us" />
       </div>
-
-      <RingLine />
 
       <div className="about-content">
         <div className="about-content-left">
           <div className="about-content-left-top">
-            <img src={m2} alt="" />
+            <img src={review_img} alt="" />
 
             <div className="about-content-left-top-right">
               <h1>
@@ -68,28 +70,37 @@ const About = () => {
 
           <div className="about-content-left-bottom">
             <div className="about-content-left-content">
+            <div className="about-content-left-content-top">
+
+
+
               <h1>100%</h1>
               <p>Customer Satisfaction</p>
             </div>
 
+              <hr className="about-content-left-bottom-line" />
+            </div>
+
             <div className="about-content-left-content">
-              <h1>350+</h1>
-              <p>Photography Session</p>
+              <div className="about-content-left-content-top">
+                <h1>350+</h1>
+
+                <p>Photography Session</p>
+              </div>
+
+              <hr className="about-content-left-bottom-line" />
             </div>
           </div>
         </div>
 
         <div className="about-content-right">
-          <img src={m2} alt="" />
+          <img src={review_img} alt="" />
         </div>
       </div>
 
-      <RingLine />
-
-
       <div className="about-content2">
         <div className="about-content2-img">
-          <img src={m1} alt="" />
+          <img src={m1} alt="Why Choose Us" />
         </div>
 
         <div className="about-content2-desc">
@@ -97,59 +108,49 @@ const About = () => {
             Why Choose <span className="line-break">Us</span>
           </h1>
 
-          <div className="about-content2-points">
-            <div className="about-content2-point">
-              <MdVerified className="about-content2-points-icon" />
-
-              <div className="about-content2-points-desc">
-                <h2>Fully Equiped</h2>
-                <p>
-                  We are fully equiped with cameras, drones, lighting systems,
-                  etc.
+          <div className="about-content2-lists">
+            {lists.map((list, index) => (
+              <div key={index} className="about-content2-list">
+                <div
+                  className={`about-content2-list-top ${
+                    openIndex === index ? "active" : ""
+                  }`}
+                  onClick={() => toggleList(index)}
+                >
+                  <h3>{list.title}</h3>
+                  {openIndex === index ? (
+                    <FaMinus className="about-content2-icon" />
+                  ) : (
+                    <FaPlus className="about-content2-icon" />
+                  )}
+                </div>
+                <p
+                  className={`about-content2-desc-text ${
+                    openIndex === index ? "open" : ""
+                  }`}
+                >
+                  {list.desc}
                 </p>
               </div>
+            ))}
+          </div>
+
+          <div className="experience">
+            <div className="experience-circle">
+              <h4>15+</h4>
             </div>
-
-            <div className="about-content2-point">
-              <MdVerified className="about-content2-points-icon" />
-
-              <div className="about-content2-points-desc">
-                <h2>Fully Equiped</h2>
-                <p>
-                  We are fully equiped with cameras, drones, lighting systems,
-                  etc.
-                </p>
-              </div>
-            </div>
-
-            <div className="about-content2-point">
-              <MdVerified className="about-content2-points-icon" />
-
-              <div className="about-content2-points-desc">
-                <h2>Fully Equiped</h2>
-                <p>
-                  We are fully equiped with cameras, drones, lighting systems,
-                  etc.
-                </p>
-              </div>
-            </div>
-            
-
-            <div className="about-content2-point">
-              <MdVerified className="about-content2-points-icon" />
-
-              <div className="about-content2-points-desc">
-                <h2>Fully Equiped</h2>
-                <p>
-                  We are fully equiped with cameras, drones, lighting systems,
-                  etc.
-                </p>
-              </div>
-            </div>
+            <h2>Years Experience</h2>
           </div>
         </div>
       </div>
+
+      <OurCore />
+
+      <ClientReview />
+
+      <OurPhotography />
     </div>
+
   );
 };
 

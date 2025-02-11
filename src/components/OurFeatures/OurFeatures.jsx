@@ -2,13 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { TiArrowRight } from "react-icons/ti";
 import { gsap } from "gsap";
-import { Flip } from "gsap/Flip"; // Import Flip plugin
+import { Flip } from "gsap/Flip"; 
 import m1 from "../../assets/images/m1.jpg";
 import m2 from "../../assets/images/m2.jpg";
 import m3 from "../../assets/images/m3.jpg";
 import "./OurFeatures.scss";
 
-// Register GSAP plugins
 gsap.registerPlugin(Flip);
 
 // Fake data for each list item
@@ -56,27 +55,24 @@ const featuresData = [
 ];
 
 const OurFeatures = () => {
-  const [hoveredItem, setHoveredItem] = useState(featuresData[0]); // Default to the first item
-  const cardRef = useRef(null); // Ref for the card
-  const imgRef = useRef(null); // Ref foPr the image
+  const [hoveredItem, setHoveredItem] = useState(featuresData[0]); 
+  const cardRef = useRef(null); 
+  const imgRef = useRef(null); 
 
-  // GSAP animation on hover change
   useEffect(() => {
-    // Flip animation for the card
     const card = cardRef.current;
-    const flipState = Flip.getState(card); // Capture the current state of the card
+    const flipState = Flip.getState(card); 
     Flip.from(flipState, {
       duration: 0.8,
       ease: "power2.out",
-      scale: true, // Enable scaling for a smoother flip
-      absolute: true, // Ensure smooth transitions
+      scale: true, 
+      absolute: true, 
     });
 
-    // Fade-up animation for the image
     const img = imgRef.current;
     gsap.fromTo(
       img,
-      { opacity: 0, y: 20 }, // Start from slightly below and invisible
+      { opacity: 0, y: 20 }, 
       {
         opacity: 1,
         y: 0,
@@ -84,7 +80,7 @@ const OurFeatures = () => {
         ease: "power2.out",
       }
     );
-  }, [hoveredItem]); // Trigger animation when hoveredItem changes
+  }, [hoveredItem]); 
 
   return (
     <div className="ourFeatures">

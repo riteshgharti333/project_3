@@ -1,0 +1,134 @@
+.ourPhotography {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  .ourPhotography-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+
+    h1 {
+      font-size: 50px;
+
+      .line-break {
+        color: #ffa500;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: #989898;
+    }
+  }
+
+  .ourPhotography-lists {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    .ourPhotography-list {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .ourPhotography-list-left {
+        h1 {
+          font-size: 25px;
+          color: #585858;
+
+          &:last-child {
+            margin-left: 80px;
+            font-size: 25px;
+            transition: margin-left 0.9s ease-in-out;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 0%;
+              height: 2px;
+              background: #b90808;
+              left: -80px;
+              bottom: 13px;
+              border-radius: 1px;
+              transition: width 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      .ourPhotography-list-right {
+        width: 400px;
+        position: absolute;
+        right: 0px;
+        top: -150%;
+
+        img {
+          width: 100%;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        .ourPhotography-list-right-btn {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: #b90808;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          bottom: -29px;
+          left: -44px;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+
+          &:hover {
+            background-color: #fff;
+            color: #b90808;
+
+            span {
+              color: #b90808;
+            }
+          }
+
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      // Apply hover styles for the active list
+      &.active {
+        .ourPhotography-list-left {
+          h1:last-child {
+            margin-left: 100px;
+            transition: margin-left 0.3s ease-in-out;
+
+            &::before {
+              width: 17%;
+            }
+          }
+        }
+
+        .ourPhotography-list-right {
+          img {
+            opacity: 1;
+          }
+
+          .ourPhotography-list-right-btn {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
