@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import { Link, NavLink } from "react-router-dom"; 
+import { Link, NavLink, useLocation } from "react-router-dom"; 
 import logo from "../../assets/images/logo.png";
 import { SlCalender } from "react-icons/sl";
 import { useEffect, useState } from "react";
@@ -12,6 +12,9 @@ const Navbar = () => {
 
   const [scroll, setScroll] = useState(false);
 
+  const location = useLocation();
+
+  const path = location.pathname;
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -27,7 +30,8 @@ const Navbar = () => {
     };
   }, []);
 
-  const navbarClass = scroll ? "navbar scrolled" : "navbar";
+  const navbarClass = `navbar ${path === "/contact-us" ? "static" : "fixed"} ${scroll ? "scrolled" : ""}`;
+
 
 
   return (
@@ -62,6 +66,10 @@ const Navbar = () => {
         </NavLink>
         <Link to={""} className="nav-link">
           Portfolio
+        </Link>
+
+        <Link to={"/contact-us"} className="nav-link">
+          Contact Us
         </Link>
 
         <div className="dropdown-menu">

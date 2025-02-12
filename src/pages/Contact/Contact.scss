@@ -1,0 +1,13 @@
+@import "../../styles/responsive.scss";
+
+.contact{
+    background: #fff;
+    padding: 20px;
+
+    @include sm{
+        padding: 10px;
+    }
+ .contact-map{
+    width: 100%;
+ }   
+}

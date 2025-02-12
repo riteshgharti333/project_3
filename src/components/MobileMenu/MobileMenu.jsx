@@ -29,11 +29,13 @@ const MobileMenu = () => {
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about-us">About</Link></li>
+        <li><Link to="/about-us">About Us</Link></li>
+        <li><Link to="/contact-us">Contact Us</Link></li>
+
         <li><Link to="/">Services : </Link></li>
 
        {services.map((service) => (
-        <Link to={`${service.link}`} className="service-link">
+        <Link to={`${service.link}`} className="service-link" key={service.service_name}>
            {service.service_name}
         </Link>
        ))}

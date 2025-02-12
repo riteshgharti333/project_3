@@ -12,6 +12,7 @@ import Service3 from "./pages/ServicesPage/Service3/Service3.jsx";
 import Service4 from "./pages/ServicesPage/Service4/Service4.jsx";
 import Service5 from "./pages/ServicesPage/Service5/Service5.jsx";
 import Service6 from "./pages/ServicesPage/Service6/Service6.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/contact-us" element={<Contact />} />
+
           <Route path="/pre-Wedding-shoots" element={<Service1 />} />
           <Route path="/destination-weddings" element={<Service2 />} />
           <Route path="/concerts-live-streaming" element={<Service3 />} />
