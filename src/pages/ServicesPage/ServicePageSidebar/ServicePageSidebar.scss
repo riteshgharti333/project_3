@@ -1,6 +1,16 @@
+@import "../../../styles/responsive.scss";
+
 .servicePageSidebar {
   width: 400px;
   color: #000;
+
+  @include lg{
+    width: 350px;
+  }
+
+  @include md{
+    width: 100%;
+  }
 
   .servicePageSidebar-link {
     text-decoration: none;
@@ -10,7 +20,7 @@
       .servicePageSidebar-item {
         p,
         .servicePageSidebar-icon {
-          color: #b90808; // Active color for text and icon
+          color: #b90808; 
         }
       }
     }

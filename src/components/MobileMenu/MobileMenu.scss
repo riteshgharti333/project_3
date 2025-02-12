@@ -1,6 +1,6 @@
 @import "../../styles/responsive.scss";
 
-$primary-color: #ff6600; 
+$primary-color: #ff6600;
 $background-color: #111;
 $text-color: white;
 
@@ -56,12 +56,14 @@ $text-color: white;
       color: #ffa500;
     }
 
-    
-
-    .service-link{
+    .service-link {
       margin-top: 30px;
       margin-left: 40px;
       font-size: 25px;
+
+      @include sm {
+        font-size: 20px;
+      }
     }
   }
 
@@ -73,13 +75,17 @@ $text-color: white;
     .nav-links {
       position: fixed;
       top: 0;
-      right: -100%;
+      right: -160%;
       width: 500px;
       height: 100vh;
       background: rgba(17, 17, 17, 0.95);
       flex-direction: column;
       padding-top: 50px;
       transition: right 0.3s ease-in-out;
+
+      @include sm {
+        width: 100%;
+      }
 
       &.open {
         right: 0;
@@ -99,7 +105,7 @@ $text-color: white;
         }
 
         @include sm {
-          margin-left: 70px;
+          margin-left: 10px;
         }
       }
 

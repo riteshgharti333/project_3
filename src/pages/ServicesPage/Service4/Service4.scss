@@ -1,7 +1,13 @@
+@import "../../../styles/responsive.scss";
+
 .service4 {
   .service4-banner {
     position: relative;
     height: 500px;
+
+    @include sm {
+      height: 300px;
+    }
 
     img {
       width: 100%;
@@ -15,18 +21,43 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+
+      @include lg {
+        width: 100%;
+        text-align: center;
+      }
       h1 {
         font-size: 70px;
+
+        @include md {
+          font-size: 50px;
+        }
+        @include sm {
+          font-size: 40px;
+        }
       }
     }
   }
 
   .service4-container {
-    padding: 115px 0px;
+    padding: 115px 10px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     gap: 50px;
+
+    @include lg {
+      gap: 30px;
+    }
+
+    @include md {
+      flex-direction: column;
+      padding: 50px 10px;
+      gap: 30px;
+    }
+
     .service4-container-sidebar {
     }
 

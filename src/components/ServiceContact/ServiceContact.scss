@@ -1,9 +1,19 @@
+@import "../../styles/responsive.scss";
+
 .serviceContact {
-  padding: 115px 0px;
+  padding: 115px 20px;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 80px;
+
+  @include lg {
+    padding: 50px 10px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
   .serviceContact-left {
     color: black;
     display: flex;
@@ -13,6 +23,10 @@
     .serviceContact-left-top {
       h1 {
         font-size: 60px;
+
+        @include sm {
+          font-size: 50px;
+        }
       }
       .serviceContact-left-desc {
         font-size: 25px;
@@ -27,6 +41,10 @@
         &:last-child {
           transition: all 0.3s ease-in-out;
           cursor: pointer;
+
+          @include sm {
+            font-size: 20px;
+          }
           &:hover {
             color: #b90808;
           }
@@ -49,6 +67,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+
+      @include md {
+        display: flex;
+        flex-direction: column;
+      }
 
       .form-group {
         position: relative;
