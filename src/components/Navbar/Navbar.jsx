@@ -51,12 +51,8 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        <Link to={""} className="nav-link">
-          Portfolio
-        </Link>
-
         <Link to={"/gallery"} className="nav-link">
-          Gallery
+          Portfolio
         </Link>
 
         <div className="dropdown-menu">

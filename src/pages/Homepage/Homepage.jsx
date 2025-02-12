@@ -51,11 +51,15 @@ const Homepage = () => {
 
       <ClientReview />
 
-      <RingLine />
+      <div className="bottom-ring-line">
+        <RingLine />
+      </div>
 
       <Getintouch />
 
-      <RingLine />
+      <div className="bottom-ring-line">
+        <RingLine />
+      </div>
 
       <ContactSection />
 

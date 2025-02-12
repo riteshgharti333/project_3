@@ -28,9 +28,12 @@
     column-gap: 150px;
     margin-top: 50px;
 
-    @include md{
-    column-count: 1;
-      
+    @include lg {
+      column-gap: 50px;
+    }
+
+    @include md {
+      column-count: 1;
     }
 
     .ourPorfolio-card {

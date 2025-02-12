@@ -128,6 +128,7 @@
         @include lg {
           margin: 0 auto;
           padding: 40px 50px;
+          width: 270px;
         }
 
         @include md {
@@ -197,7 +198,7 @@
             transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
           }
 
-          h1{
+          h1 {
             font-size: 25px;
           }
 

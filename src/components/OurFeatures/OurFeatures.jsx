@@ -4,55 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { TiArrowRight } from "react-icons/ti";
 import { gsap } from "gsap";
-import { Flip } from "gsap/Flip";
-import m1 from "../../assets/images/m1.jpg";
-import m2 from "../../assets/images/m2.jpg";
-import m3 from "../../assets/images/m3.jpg";
 
-gsap.registerPlugin(Flip);
-
-const featuresData = [
-  {
-    id: 1,
-    title: "20+ Years Experience",
-    image: m1,
-    cardContent: {
-      description:
-        "Kimono has 20+ years of experience in photography & videography, which makes us pioneers in this profession. We are having so much fun doing this.",
-      readMore: "Read More",
-    },
-  },
-  {
-    id: 2,
-    title: "Creative Shoot Ideas",
-    image: m2,
-    cardContent: {
-      description:
-        "We bring unique and creative ideas to every shoot, ensuring your photos stand out. Our team is always innovating to capture the perfect moment.",
-      readMore: "Read More",
-    },
-  },
-  {
-    id: 3,
-    title: "Globally Awarded",
-    image: m3,
-    cardContent: {
-      description:
-        "Our work has been recognized globally with numerous awards. We take pride in delivering excellence in every project we undertake.",
-      readMore: "Read More",
-    },
-  },
-  {
-    id: 4,
-    title: "Best Quality Photos",
-    image: m3,
-    cardContent: {
-      description:
-        "We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.",
-      readMore: "Read More",
-    },
-  },
-];
+import { featuresData } from "../../assets/data";
 
 const OurFeatures = () => {
   const [hoveredItem, setHoveredItem] = useState(featuresData[0]);
@@ -60,15 +13,6 @@ const OurFeatures = () => {
   const imgRef = useRef(null);
 
   useEffect(() => {
-    const card = cardRef.current;
-    const flipState = Flip.getState(card);
-    Flip.from(flipState, {
-      duration: 0.8,
-      ease: "power2.out",
-      scale: true,
-      absolute: true,
-    });
-
     const img = imgRef.current;
     gsap.fromTo(
       img,
