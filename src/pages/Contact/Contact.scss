@@ -1,13 +1,22 @@
 @import "../../styles/responsive.scss";
 
-.contact{
-    background: #fff;
-    padding: 20px;
+.contact {
+  background: #fff;
+  padding: 20px;
 
-    @include sm{
-        padding: 10px;
-    }
- .contact-map{
+  @include sm {
+    padding: 10px;
+  }
+
+  .contact-card {
+    margin-top: 20px;
+  }
+  .contact-map {
     width: 100%;
- }   
+    margin-top: 20px;
+
+    @include lg {
+      margin-top: 40px;
+    }
+  }
 }
