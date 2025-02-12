@@ -90,3 +90,14 @@ export const client_reviews = [
   },
 
 ];
+
+export const services = [
+  { service_name: "Pre-Wedding Shoots", link: "/pre-Wedding-shoots" },
+  { service_name: "Destination Weddings", link: "/destination-weddings" },
+  { service_name: "Concerts & Live Streaming", link: "/concerts-live-streaming" },
+  { service_name: "Corporate Photoshoots", link: "/corporate-photoshoots" },
+  { service_name: "Album Printing & Unique Products", link: "/album-printing-unique-products" },
+  { service_name: "Fast Delivery of Photos & Videos", link: "/fast-delivery-photos-videos" }
+];
+
+

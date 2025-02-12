@@ -9,7 +9,7 @@ import ClientReview from "../../components/ClientReview/ClientReview";
 
 import review_img from "../../assets/images/review.jpg";
 
-import OurPhotography from "../../components/OurPhotography/OurPhotography"
+import OurPhotography from "../../components/OurPhotography/OurPhotography";
 
 const lists = [
   {
@@ -70,13 +70,10 @@ const About = () => {
 
           <div className="about-content-left-bottom">
             <div className="about-content-left-content">
-            <div className="about-content-left-content-top">
-
-
-
-              <h1>100%</h1>
-              <p>Customer Satisfaction</p>
-            </div>
+              <div className="about-content-left-content-top">
+                <h1>100%</h1>
+                <p>Customer Satisfaction</p>
+              </div>
 
               <hr className="about-content-left-bottom-line" />
             </div>
@@ -143,18 +140,15 @@ const About = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="core-option">
-      <OurCore />
-
+        <OurCore />
       </div>
-
 
       <ClientReview />
 
       <OurPhotography />
     </div>
-
   );
 };
 

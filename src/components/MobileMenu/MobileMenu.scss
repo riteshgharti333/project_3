@@ -1,0 +1,123 @@
+@import "../../styles/responsive.scss";
+
+$primary-color: #ff6600; 
+$background-color: #111;
+$text-color: white;
+
+.mobileMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: $text-color;
+  position: relative;
+  z-index: 1000;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+
+    span {
+      display: block;
+      width: 40px;
+      height: 5px;
+      background: $primary-color;
+      transition: 0.3s;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 0 15px;
+      color: #ffa500;
+    }
+
+    
+
+    .service-link{
+      margin-top: 30px;
+      margin-left: 40px;
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 500px;
+      height: 100vh;
+      background: rgba(17, 17, 17, 0.95);
+      flex-direction: column;
+      padding-top: 50px;
+      transition: right 0.3s ease-in-out;
+
+      &.open {
+        right: 0;
+      }
+
+      li {
+        margin-left: 30px;
+        margin-top: 50px;
+        opacity: 0;
+        transform: translateX(30px);
+        animation: slideIn 0.5s ease-in-out forwards;
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            animation-delay: 0.1s * $i;
+          }
+        }
+
+        @include sm {
+          margin-left: 70px;
+        }
+      }
+
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+/* Animation for links */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

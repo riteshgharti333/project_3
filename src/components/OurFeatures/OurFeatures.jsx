@@ -84,24 +84,25 @@ const OurFeatures = () => {
 
   return (
     <div className="ourFeatures">
-
-<div className="ourFeatures-mobile">
-<h1 className="ourFeatures-mobile-title">
+      <div className="ourFeatures-mobile">
+        <h1 className="ourFeatures-mobile-title">
           Why choose <span className="line-break">Us</span>
         </h1>
 
-<div className="ourFeatures-mobile-cards">
-  {featuresData.map((feature) => (
-    <div className="ourFeatures-mobile-desc">
-          <h1>{feature.title}</h1>
-          <p>We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.</p>
-          <button>Read More</button>
+        <div className="ourFeatures-mobile-cards">
+          {featuresData.map((feature) => (
+            <div className="ourFeatures-mobile-desc" key={feature.id}>
+              <h1>{feature.title}</h1>
+              <p>
+                We use state-of-the-art equipment and techniques to ensure the
+                highest quality photos. Your memories deserve nothing but the
+                best.
+              </p>
+              <button>Read More</button>
+            </div>
+          ))}
         </div>
-  ))}
-
-</div>
-        
-</div>
+      </div>
 
       <div className="ourFeatures-left">
         <h1>

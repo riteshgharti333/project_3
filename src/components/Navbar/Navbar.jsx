@@ -3,6 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { SlCalender } from "react-icons/sl";
 import { useEffect, useState } from "react";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import { IoIosArrowDown } from "react-icons/io";
+
+import {services} from "../../assets/data"
 
 const Navbar = () => {
 
@@ -36,6 +40,10 @@ const Navbar = () => {
         </div>
       </div>
 
+      <div className="mobile-menu">
+        <MobileMenu />
+      </div>
+
       <div className="nav-right">
         <NavLink
           to={"/"}
@@ -56,9 +64,19 @@ const Navbar = () => {
           Portfolio
         </Link>
 
-        <Link to={""} className="nav-link">
-          Services
-        </Link>
+        <div className="dropdown-menu">
+          <div className="name-link">  Services <IoIosArrowDown className="dropdown-icon"/>
+        
+
+          <div className="services-dropdown">
+            {services.map((service) => (
+              <Link to={service.link} key={service.service_name}  className="dropdown-link">{service.service_name}</Link>
+              
+            ))}
+          </div>
+          </div>
+      
+        </div>
 
 
       </div>
