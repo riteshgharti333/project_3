@@ -29,6 +29,8 @@ const MobileMenu = () => {
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/gallery">Gallery</Link></li>
+
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/contact-us">Contact Us</Link></li>
 

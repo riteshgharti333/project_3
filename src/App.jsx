@@ -13,6 +13,7 @@ import Service4 from "./pages/ServicesPage/Service4/Service4.jsx";
 import Service5 from "./pages/ServicesPage/Service5/Service5.jsx";
 import Service6 from "./pages/ServicesPage/Service6/Service6.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import Gallery from "./components/Gallery/Gallery.jsx";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
+
 
           <Route path="/pre-Wedding-shoots" element={<Service1 />} />
           <Route path="/destination-weddings" element={<Service2 />} />

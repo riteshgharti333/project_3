@@ -16,6 +16,7 @@ const Service6 = () => {
         <div className="service6-banner-desc">
           <h1>Service Details</h1>
         </div>
+        </div>
 
         <div className="service6-container">
           <div className="service6-container-sidebar">
@@ -88,7 +89,7 @@ const Service6 = () => {
         <ServiceContact />
 
         </div>
-      </div>
+   
     </div>
   );
 };

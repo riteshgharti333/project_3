@@ -1,4 +1,7 @@
 import review_img from "../assets/images/review.jpg";
+import card_1 from "../assets/images/1.jpg";
+import card_2 from "../assets/images/2.jpg";
+
 
 export const review_card = [
   {
@@ -99,5 +102,58 @@ export const services = [
   { service_name: "Album Printing & Unique Products", link: "/album-printing-unique-products" },
   { service_name: "Fast Delivery of Photos & Videos", link: "/fast-delivery-photos-videos" }
 ];
+
+export const gallery = [
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+
+
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+  {img : card_1 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+
+  {img : card_2 , title: "California Fall Collection 2023" , desc : "By Jonathon Willson"},
+
+  
+
+]
 
 
