@@ -20,6 +20,11 @@
       font-size: 50px;
       text-transform: uppercase;
       white-space:nowrap;
+
+      @include sm{
+        white-space: wrap;
+        text-align: center;
+      }
     }
 
     .ourService-top-right {
