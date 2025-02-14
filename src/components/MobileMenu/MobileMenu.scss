@@ -1,6 +1,6 @@
 @import "../../styles/responsive.scss";
 
-$primary-color: #ff6600;
+$primary-color: #fff;
 $background-color: #111;
 $text-color: white;
 
@@ -16,6 +16,15 @@ $text-color: white;
   @media (min-width: 769px) {
     display: none;
   }
+
+  &.scrolled {
+    .burger {
+      span {
+        background-color: #585858;
+      }
+    }
+  }
+  
 
   .burger {
     display: none;
@@ -53,7 +62,7 @@ $text-color: white;
 
     li {
       margin: 0 15px;
-      color: #ffa500;
+      color: #fff;
     }
 
     .service-link {
@@ -93,7 +102,7 @@ $text-color: white;
 
       li {
         margin-left: 30px;
-        margin-top: 50px;
+        margin-top: 20px;
         opacity: 0;
         transform: translateX(30px);
         animation: slideIn 0.5s ease-in-out forwards;

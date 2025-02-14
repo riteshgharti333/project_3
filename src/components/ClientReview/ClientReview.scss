@@ -17,28 +17,26 @@
       height: 600px;
       object-fit: cover;
       width: 100%;
-      filter: brightness(0.5);
     }
 
     .clientReview-card {
       width: 90%;
-      max-width: 800px;
-      background: black;
+      max-width: 700px;
+      background: #1e1e1e;
       padding: 40px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       position: absolute;
-      left: 35%;
+      left: 30%;
       top: 50%;
       transform: translate(-50%, -50%); // Centers the card
       padding: 20px;
       margin: 0px auto;
-   
-      @include xl{
+
+      @include xl {
         left: 50%;
       }
 
-    
       .clientReview-card-desc {
         display: flex;
         flex-direction: column;
@@ -55,14 +53,14 @@
             gap: 5px;
 
             .star {
-              color: #ffa500;
+              color: $primary-color;
               font-size: 20px;
             }
           }
 
           .clientReview-card-quotes {
             .quotes {
-              color: #989898;
+              color: #3c3c3c;
               font-size: 80px;
             }
           }
@@ -73,15 +71,14 @@
           line-height: 30px;
           color: #ddd;
           text-align: center;
-          font-style: italic;
         }
 
         .line {
-          height: 3px;
+          height: 1px;
           width: 50%;
           margin: 0 auto;
-          border-radius: 3px;
-          background-color: #ffa500;
+          border-radius: 2px;
+          background-color: #3c3c3c;
           border: none;
           width: 100%;
         }
@@ -109,7 +106,7 @@
 
               &:last-child {
                 font-size: 14px;
-                color: #aaa;
+                color: #dddddd;
                 margin-top: 5px;
               }
             }
@@ -122,14 +119,14 @@
 
 /* Swiper Pagination Custom Styling */
 .swiper-pagination-bullet {
-  background: rgba(255, 165, 0, 0.5);
+  background: #fff;
   width: 12px;
   height: 12px;
   transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background: #ffa500;
+  background: $primary-color;
   width: 15px;
   height: 15px;
 }

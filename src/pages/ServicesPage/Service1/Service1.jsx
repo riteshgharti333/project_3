@@ -1,18 +1,17 @@
 import "./Service1.scss";
-import m1 from "../../../assets/images/m1.jpg";
+import bg22 from "../../../assets/images/bg22.jpg";
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
-// import ServiceSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 const Service1 = () => {
   return (
     <div className="service1">
       <div className="service1-banner">
-        <img src={m1} alt="" />
+        <img src={bg22} alt="" />
 
         <div className="service1-banner-desc">
           <h1>Service Details</h1>

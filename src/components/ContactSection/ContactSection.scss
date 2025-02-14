@@ -10,66 +10,64 @@
   padding: 0px 40px;
 
   @include lg {
-    display:  flex;
+    display: flex;
     gap: 40px;
     flex-wrap: wrap;
-
   }
-  
 
- @include md{
+  @include md {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
     gap: 30px;
- }
+  }
 
   .contactSection-card {
     display: flex;
     gap: 20px;
 
-    @include lg{
-    margin: 0 auto;
-
+    @include lg {
+      margin: 0 auto;
     }
 
-    
-  
-    @include md{
+    @include md {
       flex-direction: column;
       align-items: center;
       text-align: center;
-    gap: 10px;
+      gap: 10px;
     }
 
     .contactSection-left {
-    
       .contactSection-icon {
         font-size: 60px;
-        background: #ffa500;
-        color: #000;
+        background: $primary-color;
+        color: #fff;
         border-radius: 50%;
         padding: 10px;
+        box-shadow: 0 4px 10px rgba(185, 8, 8, 0.6);
       }
     }
     .contactSection-right {
-
       h1 {
       }
       p {
-        color: #989898;
+        color: #585858;
         margin: 10px 0px;
+        font-size: 18px;
       }
       span {
         display: inline-block;
-        border-bottom: 2px solid #ffa500;
+        border-bottom: 1px solid #000;
         border-radius: 2px;
         cursor: pointer;
-        transition: all .3s ease-in-out;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
 
-        &:hover{
-            color: #ffa500;
+        &:hover {
+          color: $primary-color;
+          border-bottom: 1px solid $primary-color;
         }
       }
     }

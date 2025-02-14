@@ -1,6 +1,6 @@
 import "./HomeBanner.scss";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Pagination, Navigation } from "swiper/modules";
@@ -10,26 +10,27 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import m1 from "../../assets/images/m1.jpg";
-import m2 from "../../assets/images/m2.jpg";
-import m3 from "../../assets/images/m3.jpg";
+import banner_img1 from "../../assets/images/7.jpg";
+import banner_img2 from "../../assets/images/8.jpg";
+import banner_img3 from "../../assets/images/9.jpg";
+
 
 const slides = [
   {
     id: 1,
-    image: m1,
+    image: banner_img1,
     title: "Make Portfolio With Kimono Studio",
     desc: "We are dedicated to immortalizing the enchanting moments of your special day. With a blend of classic elegance and modern flair.",
   },
   {
     id: 2,
-    image: m2,
+    image: banner_img2,
     title: "Your Dream Wedding Agency",
     desc: "I have been building blogs and websites since 2002. In that time I have launched several of my own blogs, and helped hundreds of others do the same.",
   },
   {
     id: 3,
-    image: m3,
+    image: banner_img3,
     title: "Creating Beautiful Memories",
     desc: "I know that starting a blog can seem overwhelming and intimidating. This free guide is all about blogging for beginners, and will teach you how to become a blogger.",
   },

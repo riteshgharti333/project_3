@@ -17,9 +17,7 @@ const OurCore = () => {
   return (
     <div className="ourCore">
       <div className="ourCore-top">
-        <h1>
-          Our <span className="line-break">Team</span>
-        </h1>
+        <h1>Our Team</h1>
         <p>
           We’re deeply passionate about capturing your lovely memories and
           conveying your love for every moment of life.

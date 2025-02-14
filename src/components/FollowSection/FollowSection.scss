@@ -1,88 +1,82 @@
 @import "../../styles/responsive.scss";
 
 .followSection {
-    max-width: 1400px;
-    margin: 0 auto;
- position: relative;
- .followSection-imgs {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 items per row by default */
-  width: 100%;
-  overflow: hidden;
-
-  @include md {
-    grid-template-columns: repeat(3, 1fr); /* Show 3 items per row on medium screens */
-    align-items: center;
-    justify-content: center;
-  }
-
-  img {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  .followSection-imgs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    overflow: hidden;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      & > img:nth-child(4),
+      & > img:nth-child(5) {
+        display: none;
+      }
+    }
   }
 
-  /* Hide last 2 images on smaller screens (under 768px) */
-  @media (max-width: 768px) {
-    & > img:nth-child(4),
-    & > img:nth-child(5) {
-      display: none; /* Hide the 4th and 5th images */
+  .followSection-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $primary-color;
+    text-align: center;
+    padding: 20px 30px;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include sm {
+      padding: 10px;
+    }
+
+    .followSection-icon {
+      font-size: 30px;
+      margin-bottom: 5px;
+      color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+      color: #fff;
+
+      @include sm {
+        font-size: 14px;
+      }
+    }
+
+    &:hover {
+      background: #fff;
+      color: $primary-color;
+
+      .followSection-icon {
+        transform: scale(1.2);
+        color: $primary-color;
+      }
+
+      p {
+        color: $primary-color;
+      }
     }
   }
 }
-
-  
-    .followSection-desc {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #000;
-        text-align: center;
-        padding: 20px 30px;
-        color: #ffa500;
-        border-radius: 10px; 
-        box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3); 
-        transition: all 0.3s ease-in-out; 
-
-        @include sm{
-          padding: 10px;
-        }
-      
-        .followSection-icon {
-          font-size: 30px; 
-          margin-bottom: 5px; 
-          color: #ffa500; 
-          transition: transform 0.3s ease-in-out;
-        }
-      
-        p {
-          font-size: 18px; 
-          font-weight: 500; 
-          margin: 0;
-          color: #fff; 
-
-          @include sm{
-            font-size: 14px;
-          }
-          
-        }
-      
-        // Hover effects
-        &:hover {
-          background: #ffa500;
-          color: #000; 
-          box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
-      
-          .followSection-icon {
-            transform: scale(1.2); 
-            color: #000; 
-          }
-      
-          p {
-            color: #000;
-          }
-        }
-      }
-  }
-  

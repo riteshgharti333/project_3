@@ -3,13 +3,22 @@ import m1 from "../../assets/images/m2.jpg";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useState } from "react";
 
+import bg17 from "../../assets/images/bg17.jpg";
+
+import bg18 from "../../assets/images/bg18.jpg";
+import bg19 from "../../assets/images/bg19.jpg";
+import bg20 from "../../assets/images/bg20.jpg";
+
+
+
+
+
 import OurCore from "../../components/OurCore/OurCore";
 
 import ClientReview from "../../components/ClientReview/ClientReview";
 
-import review_img from "../../assets/images/review.jpg";
-
 import OurPhotography from "../../components/OurPhotography/OurPhotography";
+
 
 const lists = [
   {
@@ -39,19 +48,19 @@ const About = () => {
         <div className="about-banner-desc">
           <h1>About</h1>
           <h1>
-            K <span className="line-break">Production</span> Film
+            K Production Film
           </h1>
         </div>
       </div>
 
       <div className="about-big-img">
-        <img src={m1} alt="About Us" />
+        <img src={bg17} alt="About Us" />
       </div>
 
       <div className="about-content">
         <div className="about-content-left">
           <div className="about-content-left-top">
-            <img src={review_img} alt="" />
+            <img src={bg18} alt="" />
 
             <div className="about-content-left-top-right">
               <h1>
@@ -91,13 +100,13 @@ const About = () => {
         </div>
 
         <div className="about-content-right">
-          <img src={review_img} alt="" />
+          <img src={bg19} alt="" />
         </div>
       </div>
 
       <div className="about-content2">
         <div className="about-content2-img">
-          <img src={m1} alt="Why Choose Us" />
+          <img src={bg20} alt="Why Choose Us" />
         </div>
 
         <div className="about-content2-desc">

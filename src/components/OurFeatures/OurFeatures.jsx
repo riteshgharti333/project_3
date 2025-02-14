@@ -29,9 +29,7 @@ const OurFeatures = () => {
   return (
     <div className="ourFeatures">
       <div className="ourFeatures-mobile">
-        <h1 className="ourFeatures-mobile-title">
-          Why choose <span className="line-break">Us</span>
-        </h1>
+        <h1 className="ourFeatures-mobile-title">Why choose Us</h1>
 
         <div className="ourFeatures-mobile-cards">
           {featuresData.map((feature) => (
@@ -49,9 +47,7 @@ const OurFeatures = () => {
       </div>
 
       <div className="ourFeatures-left">
-        <h1>
-          Why choose <span className="line-break">Us</span>
-        </h1>
+        <h1>Why choose Us</h1>
 
         <div className="ourFeatures-left-desc">
           <ul>

@@ -1,7 +1,6 @@
 @import "../../../styles/responsive.scss";
 
 .service4 {
-  background: #fff;
   .service4-banner {
     position: relative;
     height: 500px;
@@ -14,7 +13,6 @@
       width: 100%;
       object-fit: cover;
       height: 100%;
-      filter: brightness(0.3);
     }
 
     .service4-banner-desc {
@@ -31,6 +29,7 @@
       }
       h1 {
         font-size: 70px;
+        color: #fff;
 
         @include md {
           font-size: 50px;

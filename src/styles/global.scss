@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+$primary-color: #b90808;
 
 * {
   margin: 0;
@@ -11,17 +13,12 @@ body {
   font-family: "Sora", serif;
 }
 
-
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
 .app {
-  background-color: #000;
-  color: #fff;
-
   .navbar {
     position: fixed;
     top: 0;
@@ -30,6 +27,24 @@ a {
 
     &.static {
       position: relative;
+
+      .nav-right {
+        .nav-link {
+          color: #585858;
+
+          &.active-link {
+            border-bottom: 2px solid #000;
+            color: #000;
+          }
+          
+        }
+      }
+
+      .dropdown-menu {
+        .name-link {
+          color: #585858 !important;
+        }
+      }
     }
-  } 
+  }
 }

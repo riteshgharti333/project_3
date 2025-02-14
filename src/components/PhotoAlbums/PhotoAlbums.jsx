@@ -92,9 +92,7 @@ const PhotoAlbums = () => {
 
   return (
     <div className="photoAlbums">
-      <h1>
-        Photo <span className="line-break">Albums</span>
-      </h1>
+      <h1>Photo Albums</h1>
       <p className="photoAlbums-desc">
         Collection of photos All of Your Best Works
       </p>

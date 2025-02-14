@@ -8,7 +8,7 @@ const OurPorfolio = () => {
     <div className="ourPorfolio">
       <div className="ourPorfolio-top">
         <h1>
-          Our <span className="line-break">Portfolio</span>
+          Our Portfolio
         </h1>
         <p>Kimono captures All of Your beautiful memories</p>
       </div>

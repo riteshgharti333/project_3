@@ -7,9 +7,7 @@ const OurService = () => {
   return (
     <div className="ourService">
       <div className="ourService-top">
-        <h1>
-          Our<span className="line-break">Services</span>
-        </h1>
+        <h1>Our Services</h1>
         <div className="ourService-top-right">
           <p>
             We offer a range of personalized services: from engagement shoots to

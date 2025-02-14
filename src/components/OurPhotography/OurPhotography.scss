@@ -21,10 +21,6 @@
     h1 {
       font-size: 50px;
 
-      .line-break {
-        color: #ffa500;
-      }
-
       @include sm {
         font-size: 40px;
         margin-bottom: 10px;
@@ -64,24 +60,44 @@
           width: 100%;
         }
         button {
-          background: #b90808;
+          background: $primary-color;
           color: #fff;
-          padding: 10px 15px;
+          padding: 12px 20px;
           font-size: 1rem;
           font-weight: bold;
           border: none;
           cursor: pointer;
           position: relative;
-          transition: 0.3s ease-in-out, transform 0.2s ease,
-            box-shadow 0.2s ease;
+          transition: 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.2s ease;
           overflow: hidden;
           text-transform: uppercase;
-          width: 100%;
-
+          border: 1px solid #fff;
+    
+          &:hover {
+            background-color: #fff;
+            color: $primary-color;
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid $primary-color;
+    
+    
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 300%;
+              height: 300%;
+              border-radius: 50%;
+              transition: 0.4s ease;
+              transform: translate(-50%, -50%);
+            }
+          }
+    
           &:active {
             animation: buttonBounce 0.2s ease-in-out;
           }
-
+    
           @keyframes buttonBounce {
             0% {
               transform: translateY(0);

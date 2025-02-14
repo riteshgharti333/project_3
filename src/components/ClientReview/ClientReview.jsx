@@ -2,12 +2,14 @@ import "./ClientReview.scss";
 
 import { FaStar } from "react-icons/fa";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import m1 from "../../assets/images/m1.jpg";
 import { client_reviews } from "../../assets/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination,EffectFade } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/effect-fade";
+
+import bg2  from "../../assets/images/bg2.jpg"
+import user from "../../assets/images/11.jpg"
 
 
 import "swiper/css";
@@ -17,7 +19,7 @@ const ClientReview = () => {
   return (
     <div className="clientReview">
       <div className="clientReview-img">
-        <img src={m1} alt="Client Background" />
+        <img src={bg2} alt="Client Background" />
 
         <div className="clientReview-card">
           <Swiper
@@ -54,7 +56,7 @@ const ClientReview = () => {
                   <hr className="line" />
 
                   <div className="review-name">
-                    <img src={review.img} alt={review.review_name} />
+                    <img src={user} alt={review.review_name} />
                     <div className="review-name-desc">
                       <p>{review.review_name}</p>
                       <p>{review.review_location}</p>

@@ -7,13 +7,29 @@ const MobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  return (
-    <nav className="mobileMenu">
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav className={`mobileMenu ${scroll ? "scrolled" : ""}`}>
       {/* Burger Button */}
       <button
         className={`burger ${menuOpen ? "open" : ""}`}
@@ -28,19 +44,33 @@ const MobileMenu = () => {
 
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/gallery">Gallery</Link>
+        </li>
 
-        <li><Link to="/about-us">About Us</Link></li>
-        <li><Link to="/contact-us">Contact Us</Link></li>
+        <li>
+          <Link to="/about-us">About Us</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
 
-        <li><Link to="/">Services : </Link></li>
+        <li>
+          <Link to="/">Services : </Link>
+        </li>
 
-       {services.map((service) => (
-        <Link to={`${service.link}`} className="service-link" key={service.service_name}>
-           {service.service_name}
-        </Link>
-       ))}
+        {services.map((service) => (
+          <Link
+            to={`${service.link}`}
+            className="service-link"
+            key={service.service_name}
+          >
+            {service.service_name}
+          </Link>
+        ))}
       </ul>
     </nav>
   );

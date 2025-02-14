@@ -1,5 +1,7 @@
 import "./Service2.scss";
-import m1 from "../../../assets/images/m1.jpg";
+
+import bg22 from "../../../assets/images/bg22.jpg";
+
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
@@ -11,7 +13,7 @@ const Service2 = () => {
   return (
     <div className="service2">
       <div className="service2-banner">
-        <img src={m1} alt="" />
+        <img src={bg22} alt="" />
 
         <div className="service2-banner-desc">
           <h1>Service Details</h1>

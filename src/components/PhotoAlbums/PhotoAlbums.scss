@@ -7,11 +7,9 @@
 
   h1 {
     font-size: 50px;
-    .line-break {
-      color: orange;
-    }
+    text-transform: uppercase;
 
-    @include sm{
+    @include sm {
       font-size: 40px;
     }
   }
@@ -30,10 +28,15 @@
     .photoAlbums-slider {
       .swiper-button-next,
       .swiper-button-prev {
-        color: #ffa500;
+        color: #000;
         border-radius: 50%;
         width: 40px;
         height: 40px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
 
@@ -58,6 +61,22 @@
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+          color: #fff;
+          cursor: pointer;
+
+          h3 {
+            font-size: 25px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+
+          p {
+            font-size: 18px;
+          }
         }
 
         .swiper-slide-active .photoAlbums-card-content-desc {

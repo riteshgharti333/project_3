@@ -7,6 +7,10 @@ import m1 from "../assets/images/m1.jpg";
 import m2 from "../assets/images/m2.jpg";
 import m3 from "../assets/images/m3.jpg";
 
+import bg12 from "../assets/images/12.jpg"
+import bg2 from "../assets/images/bg2.jpg"
+
+
 
 export const review_card = [
   {
@@ -335,7 +339,7 @@ export const featuresData = [
   {
     id: 1,
     title: "20+ Years Experience",
-    image: m1,
+    image: bg12,
     cardContent: {
       description:
         "Kimono has 20+ years of experience in photography & videography, which makes us pioneers in this profession. We are having so much fun doing this.",
@@ -345,7 +349,7 @@ export const featuresData = [
   {
     id: 2,
     title: "Creative Shoot Ideas",
-    image: m2,
+    image: bg2,
     cardContent: {
       description:
         "We bring unique and creative ideas to every shoot, ensuring your photos stand out. Our team is always innovating to capture the perfect moment.",
@@ -355,7 +359,7 @@ export const featuresData = [
   {
     id: 3,
     title: "Globally Awarded",
-    image: m3,
+    image: bg12,
     cardContent: {
       description:
         "Our work has been recognized globally with numerous awards. We take pride in delivering excellence in every project we undertake.",
@@ -365,7 +369,7 @@ export const featuresData = [
   {
     id: 4,
     title: "Best Quality Photos",
-    image: m3,
+    image: bg2,
     cardContent: {
       description:
         "We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.",

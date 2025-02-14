@@ -1,9 +1,10 @@
+import "./Gallery.scss";
+
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./Gallery.scss";
 
-import m1 from "../../assets/images/m1.jpg";
+import bg15 from "../../assets/images/bg15.jpg";
 import { gallery } from "../../assets/data";
 
 const Gallery = () => {
@@ -42,7 +43,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       <div className="gallery-banner">
-        <img src={m1} alt="" />
+        <img src={bg15} alt="" />
         <div className="gallery-banner-desc">
           <h1>Our Projects</h1>
         </div>
@@ -72,8 +73,16 @@ const Gallery = () => {
 
         {/* Pagination Controls */}
         <ReactPaginate
-          previousLabel={<FaChevronLeft />}
-          nextLabel={<FaChevronRight />}
+          previousLabel={
+            <span className="prev-icon">
+              <FaChevronLeft />
+            </span>
+          }
+          nextLabel={
+            <span className="next-icon">
+              <FaChevronRight />
+            </span>
+          }
           pageCount={Math.ceil(gallery.length / cardsPerPage)}
           onPageChange={handlePageChange}
           containerClassName={"pagination"}
@@ -85,8 +94,8 @@ const Gallery = () => {
           nextLinkClassName={"page-link"}
           activeClassName={"active"}
           pageRangeDisplayed={2}
-          marginPagesDisplayed={1} 
-          breakLabel=".........." 
+          marginPagesDisplayed={1}
+          breakLabel=".........."
         />
       </div>
     </div>

@@ -1,21 +1,19 @@
 import "./AboutAgency.scss";
 
-import m1 from "../../assets/images/m1.jpg";
+import bg7 from "../../assets/images/7.png";
 
 const AboutAgency = () => {
   return (
     <div className="aboutAgency">
       <div className="aboutAgency-top">
-        <h1>
-          About  <span className="line-break"> Agency</span>
-        </h1>
+        <h1>About Agency</h1>
 
         <button>Book us now</button>
       </div>
 
       <div className="aboutAgency-bottom">
         <div className="aboutAgency-bottom-left">
-          <img src={m1} alt="" />
+          <img src={bg7} alt="" />
 
           <div className="aboutAgency-bottom-left-desc">
             <span>Explore Us</span>

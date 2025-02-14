@@ -51,9 +51,13 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        <Link to={"/gallery"} className="nav-link">
+        <NavLink
+          to={"/portfolio"}
+          className="nav-link"
+          activeClassName="active-link"
+        >
           Portfolio
-        </Link>
+        </NavLink>
 
         <div className="dropdown-menu">
           <div className="name-link">
@@ -79,9 +83,16 @@ const Navbar = () => {
         >
           About Us
         </NavLink>
-        <Link to={"/contact-us"} className="nav-link">
+
+        <NavLink
+          to={"/contact-us"}
+          className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
+        >
           Contact Us
-        </Link>
+        </NavLink>
+
+       
+   
       </div>
     </div>
   );

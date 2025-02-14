@@ -5,18 +5,17 @@
   margin: 0 auto;
   overflow: hidden;
 
-  @include xl{
+  @include xl {
     margin: 0;
   }
-
 
   .ourCore-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40%; // Reduced gap for better 
-    
-    @include xl{
+    gap: 30%; 
+
+    @include xl {
       gap: 30%;
     }
 
@@ -28,16 +27,13 @@
 
     h1 {
       font-size: 50px;
-
-      .line-break {
-        color: #ffa500;
-      }
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     p {
       font-size: 20px;
-      color: #989898;
-      line-height: 1.6; 
+      color: #585858;
     }
   }
 
@@ -58,7 +54,12 @@
       cursor: pointer;
       padding: 10px;
       z-index: 10;
-      color: #ff8c00;
+      color: #000;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        color: $primary-color;
+      }
     }
 
     .ourCore-slider-card {
@@ -120,4 +121,3 @@
     }
   }
 }
-
