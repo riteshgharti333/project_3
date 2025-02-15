@@ -86,13 +86,12 @@ const Navbar = () => {
 
         <NavLink
           to={"/contact-us"}
-          className={({ isActive }) => (isActive ? "nav-link active-link" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active-link" : "nav-link"
+          }
         >
           Contact Us
         </NavLink>
-
-       
-   
       </div>
     </div>
   );
