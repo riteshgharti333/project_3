@@ -5,15 +5,16 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 import { client_reviews } from "../../assets/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination , Navigation } from "swiper/modules";
 import "swiper/css/effect-fade";
+import "swiper/css/navigation";
 
-import bg2  from "../../assets/images/bg2.jpg"
-import user from "../../assets/images/11.jpg"
-
+import bg2 from "../../assets/images/bg2.jpg";
+import user from "../../assets/images/11.jpg";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const ClientReview = () => {
   return (
@@ -23,7 +24,7 @@ const ClientReview = () => {
 
         <div className="clientReview-card">
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination , Navigation]}
             slidesPerView={1}
             spaceBetween={20}
             loop={true}
@@ -32,9 +33,12 @@ const ClientReview = () => {
               disableOnInteraction: false,
             }}
             speed={1200}
-            pagination={{ clickable: true, dynamicBullets: true }}
             effect="fade"
             fadeEffect={{ crossFade: true }}
+            navigation={{
+              prevEl: ".client-prev",
+              nextEl: ".client-next",
+            }}
           >
             {client_reviews.map((review, index) => (
               <SwiperSlide key={index}>
@@ -51,7 +55,7 @@ const ClientReview = () => {
                     </div>
                   </div>
 
-                  <p className="reviews">{review.review_title}</p>
+                  <p className="reviews">" {review.review_title} "</p>
 
                   <hr className="line" />
 
@@ -66,6 +70,13 @@ const ClientReview = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <div className="client-prev ">
+            <BsArrowLeft className="client-icon" />
+          </div>
+          <div className="client-next">
+            <BsArrowRight className="client-icon" />
+          </div>
         </div>
       </div>
     </div>

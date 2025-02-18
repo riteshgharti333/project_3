@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./HomeBanner.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Pagination, Navigation } from "swiper/modules";
@@ -7,9 +7,16 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { slides } from "../../assets/data";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const HomeBanner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [initialized, setInitialized] = useState(false);
+
+  // Set the animation trigger after component mounts
+  useEffect(() => {
+    setInitialized(true);
+  }, []);
 
   return (
     <div className="homeBanner">
@@ -19,12 +26,11 @@ const HomeBanner = () => {
         loop={true}
         speed={1200}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        onTransitionEnd={(swiper) => {
-          setActiveIndex(-1); // Reset active index
-          setTimeout(() => setActiveIndex(swiper.realIndex), 10); // Set active index after a slight delay
+        pagination={{ clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
         className="swiper-container"
       >
         {slides.map((slide, index) => (
@@ -33,25 +39,42 @@ const HomeBanner = () => {
               <img src={slide.image} alt="Banner" />
             </div>
 
-            <div className={`homeBanner-desc ${index === activeIndex ? "animate" : ""}`}>
-              <p>Wedding Agency</p>
-              <h1 className={index === activeIndex ? "animate" : ""}>{slide.title}</h1>
-              <h2 className={index === activeIndex ? "animate" : ""}>
-                {slide.desc.split(". ").map((line, i) => (
-                  <span key={i} className="desc-line">{line}.</span>
-                ))}
-              </h2>
-              <div className={`homeBanner-btns ${index === activeIndex ? "animate" : ""}`}>
-                <button>Book Kimono</button>
-                <button>Explore Now</button>
+            <div
+              className={`homeBanner-desc ${
+                initialized && index === activeIndex ? "animate" : ""
+              }`}
+            >
+              <h6>Wedding Agency</h6>
+              <h1>{slide.title}</h1>
+              <p>{slide.desc}</p>
+              <div className="homeBanner-btns">
+                <button className="book-kimono">
+                  Book Kimono
+                <span className="arrows">
+                    <BsArrowUpRight className="up-arrow first-arrow" />
+                    <BsArrowUpRight className="up-arrow second-arrow" />
+                  </span>
+                </button>
+                <button className="book-kimono">
+                  Explore Now
+                  <span className="corner top-left"></span>
+                  <span className="corner top-right"></span>
+                  <span className="corner bottom-left"></span>
+                  <span className="corner bottom-right"></span>
+                  <span className="arrows">
+                    <BsArrowUpRight className="up-arrow first-arrow" />
+                    <BsArrowUpRight className="up-arrow second-arrow" />
+                  </span>
+                </button>
               </div>
             </div>
           </SwiperSlide>
         ))}
-        <div className="swiper-button-prev">Prev</div>
-        <div className="swiper-button-next">Next</div>
-        <div className="swiper-pagination"></div>
       </Swiper>
+
+      <div className="swiper-button-prev">Prev</div>
+      <div className="swiper-button-next">Next</div>
+      <div className="swiper-pagination"></div>
     </div>
   );
 };

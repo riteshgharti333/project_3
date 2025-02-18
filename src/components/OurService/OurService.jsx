@@ -3,7 +3,23 @@ import "./OurService.scss";
 
 import camera from "../../assets/images/camera.svg";
 
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const OurService = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  
+      easing: "ease", 
+      once: false, 
+      delay: 500, 
+    });
+
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="ourService">
       <div className="ourService-top">
@@ -24,7 +40,7 @@ const OurService = () => {
 
       <div className="ourService-bottom">
         <div className="ourService-top-cards">
-          <div className="ourService-top-card">
+          <div className="ourService-top-card" data-aos="fade-right">
             <img src={camera} alt="" />
 
             <div className="ourService-top-card-desc">
@@ -35,7 +51,7 @@ const OurService = () => {
             </div>
           </div>
 
-          <div className="ourService-top-card">
+          <div className="ourService-top-card" data-aos="fade-right">
             <img src={camera} alt="" />
 
             <div className="ourService-top-card-desc">
@@ -46,7 +62,7 @@ const OurService = () => {
             </div>
           </div>
 
-          <div className="ourService-top-card">
+          <div className="ourService-top-card" data-aos="fade-left">
             <img src={camera} alt="" />
 
             <div className="ourService-top-card-desc">
@@ -57,7 +73,7 @@ const OurService = () => {
             </div>
           </div>
 
-          <div className="ourService-top-card">
+          <div className="ourService-top-card" data-aos="fade-left">
             <img src={camera} alt="" />
 
             <div className="ourService-top-card-desc">

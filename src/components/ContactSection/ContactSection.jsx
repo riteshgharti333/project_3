@@ -1,13 +1,32 @@
-import "./ContactSection.scss";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { IoIosGlobe } from "react-icons/io";
 import { CiMobile2 } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
+import "./ContactSection.scss";
 
 const ContactSection = () => {
+
+  useEffect(() => {
+    // Initialize AOS without the global offset
+    AOS.init({
+      duration: 1000,
+      easing: "ease",
+      once: false,
+      delay: 500,
+    });
+
+    AOS.refresh(); // Refresh AOS to apply changes
+  }, []);
+
   return (
     <div className="contactSection">
-      <div className="contactSection-card">
+      <div
+        className="contactSection-card"
+        data-aos="fade-right"
+        data-aos-offset="1500" // Apply specific offset here
+      >
         <div className="contactSection-left">
           <IoIosGlobe className="contactSection-icon" />
         </div>
@@ -18,7 +37,12 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <div className="contactSection-card">
+      <div
+        className="contactSection-card"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        data-aos-offset="1500"  // Specific offset for this card
+      >
         <div className="contactSection-left">
           <CiMobile2 className="contactSection-icon" />
         </div>
@@ -29,7 +53,12 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <div className="contactSection-card">
+      <div
+        className="contactSection-card"
+        data-aos="fade-right"
+        data-aos-delay="400"
+        data-aos-offset="1500"  // Specific offset for this card
+      >
         <div className="contactSection-left">
           <IoLocationOutline className="contactSection-icon" />
         </div>

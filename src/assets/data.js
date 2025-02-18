@@ -2,7 +2,6 @@ import review_img from "../assets/images/review.jpg";
 import card_1 from "../assets/images/1.jpg";
 import card_2 from "../assets/images/2.jpg";
 
-
 import m1 from "../assets/images/m1.jpg";
 import m2 from "../assets/images/m2.jpg";
 import m3 from "../assets/images/m3.jpg";
@@ -11,8 +10,10 @@ import banner_img1 from "../assets/images/7.jpg";
 import banner_img2 from "../assets/images/8.jpg";
 import banner_img3 from "../assets/images/9.jpg";
 
-import bg12 from "../assets/images/12.jpg"
-import bg2 from "../assets/images/bg2.jpg"
+import bg12 from "../assets/images/12.jpg";
+import bg2 from "../assets/images/bg2.jpg";
+
+import album_img from "../assets/images/5.jpg";
 
 export const slides = [
   {
@@ -32,6 +33,45 @@ export const slides = [
     image: banner_img3,
     title: "Creating Beautiful Memories",
     desc: "I know that starting a blog can seem overwhelming and intimidating. This free guide is all about blogging for beginners, and will teach you how to become a blogger.",
+  },
+];
+
+export const photoAlbumsData = [
+  {
+    id: 1,
+    title: "Jeniffer in Green",
+    description: "By Jonathon Willson",
+    image: album_img,
+  },
+  {
+    id: 2,
+    title: "California Dreaming",
+    description: "By Mary Doe",
+    image: album_img,
+  },
+  {
+    id: 3,
+    title: "Mountain Adventures",
+    description: "By Emily Carter",
+    image: album_img,
+  },
+  {
+    id: 4,
+    title: "Autumn in Paris",
+    description: "By Michael Smith",
+    image: album_img,
+  },
+  {
+    id: 5,
+    title: "Winter Wonderland",
+    description: "By Sarah Brown",
+    image: album_img,
+  },
+  {
+    id: 6,
+    title: "Desert Dunes",
+    description: "By Oliver James",
+    image: album_img,
   },
 ];
 

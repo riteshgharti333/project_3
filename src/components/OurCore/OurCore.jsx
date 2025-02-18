@@ -2,8 +2,14 @@ import "./OurCore.scss";
 import slider_img from "../../assets/images/3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Importing icons
 import "swiper/css";
 import "swiper/css/navigation";
+
+import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
+
+
 
 const teamMembers = [
   { name: "Nelson Jameson", role: "Photographer", img: slider_img },
@@ -27,7 +33,10 @@ const OurCore = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={20}
-        navigation={true}
+        navigation={{
+          prevEl: ".custom-prev",
+          nextEl: ".custom-next",
+        }}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         loop={true}
         speed={800}
@@ -39,11 +48,11 @@ const OurCore = () => {
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 2, // Show 2 slides on tablets
+            slidesPerView: 2,
             spaceBetween: 15,
           },
           1024: {
-            slidesPerView: 3, // Show 3 slides on larger screens
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
@@ -56,6 +65,14 @@ const OurCore = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Custom navigation buttons with React Icons */}
+      <div className="custom-prev ">
+        <BsArrowLeft className="core-icon" />
+      </div>
+      <div className="custom-next">
+        <BsArrowRight className="core-icon" />
+      </div>
     </div>
   );
 };

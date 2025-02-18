@@ -1,94 +1,22 @@
 import "./PhotoAlbums.scss";
-
-import m1 from "../../assets/images/5.jpg";
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-
-const photoAlbumsData = [
-  {
-    id: 1,
-    title: "Jeniffer in Green",
-    description: "By Jonathon Willson",
-    image: m1,
-  },
-  {
-    id: 2,
-    title: "California Dreaming",
-    description: "By Mary Doe",
-    image: m1,
-  },
-  {
-    id: 3,
-    title: "Mountain Adventures",
-    description: "By Emily Carter",
-    image: m1,
-  },
-  {
-    id: 4,
-    title: "Autumn in Paris",
-    description: "By Michael Smith",
-    image: m1,
-  },
-  {
-    id: 5,
-    title: "Winter Wonderland",
-    description: "By Sarah Brown",
-    image: m1,
-  },
-  { id: 6, title: "Desert Dunes", description: "By Oliver James", image: m1 },
-];
+import { photoAlbumsData } from "../../assets/data";
+import { useEffect, useState } from "react";
 
 const PhotoAlbums = () => {
-  const swiperRef = useRef(null);
-  const [isSwiperReady, setIsSwiperReady] = useState(false);
 
-  const animateSlides = () => {
-    gsap.fromTo(
-      ".photoAlbums-card-content-desc",
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out",
-        stagger: 0.2,
-      }
-    );
-
-    gsap.fromTo(
-      ".photoAlbums-card-content-img",
-      { scale: 0.8, opacity: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power2.out",
-        delay: 0.2,
-      }
-    );
-  };
-
-  const handleSwiperInit = (swiper) => {
-    swiperRef.current = swiper;
-    setIsSwiperReady(true);
-  };
-
-  // Handle Slide Change (avoid redundant animations)
-  const handleSlideChange = () => {
-    animateSlides(); // Run animation when slide changes
-  };
-
-  // Trigger animation only after the page is rendered
-  useEffect(() => {
-    if (isSwiperReady) {
-      // Only run animation after Swiper is initialized
-      requestAnimationFrame(animateSlides); // Ensures animation runs after render
-    }
-  }, [isSwiperReady]);
+  const [activeIndex, setActiveIndex] = useState(0);
+   const [initialized, setInitialized] = useState(false);
+  
+    // Set the animation trigger after component mounts
+    useEffect(() => {
+      setInitialized(true);
+    }, []);
+  
 
   return (
     <div className="photoAlbums">
@@ -99,15 +27,16 @@ const PhotoAlbums = () => {
 
       <div className="photoAlbums-cards">
         <Swiper
-          onInit={handleSwiperInit}
-          slidesPerView={2}
+          slidesPerView={3}
+          centeredSlides={true}
           navigation={true}
           spaceBetween={20}
           loop={true}
-          speed={800}
+          speed={2000}
           modules={[Navigation]}
           className="photoAlbums-slider"
-          onSlideChange={handleSlideChange}
+          initialSlide={1}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           breakpoints={{
             0: {
               slidesPerView: 1,
@@ -119,13 +48,20 @@ const PhotoAlbums = () => {
             },
           }}
         >
-          {photoAlbumsData.map((album) => (
+          {photoAlbumsData.map((album , index) => (
             <SwiperSlide key={album.id} className="photoAlbums-card">
               <div className="photoAlbums-card-content">
                 <img src={album.image} alt={album.title} />
-                <div className="photoAlbums-card-content-desc">
-                  <h3>{album.title}</h3>
-                  <p>{album.description}</p>
+
+                <div
+                  className={`homeBanner-desc ${
+                    initialized && index === activeIndex ? "animate" : ""
+                  }`}
+                >
+                  <div className="photoAlbums-card-content-desc">
+                    <h3>{album.title}</h3>
+                    <p>{album.description}</p>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

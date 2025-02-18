@@ -1,6 +1,7 @@
 import "./AboutAgency.scss";
 
 import bg7 from "../../assets/images/7.png";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const AboutAgency = () => {
   return (
@@ -8,7 +9,17 @@ const AboutAgency = () => {
       <div className="aboutAgency-top">
         <h1>About Agency</h1>
 
-        <button>Book us now</button>
+        <button className="book-kimono">
+          Book Us Now
+          <span className="corner top-left"></span>
+          <span className="corner top-right"></span>
+          <span className="corner bottom-left"></span>
+          <span className="corner bottom-right"></span>
+          <span className="arrows">
+            <BsArrowUpRight className="up-arrow first-arrow" />
+            <BsArrowUpRight className="up-arrow second-arrow" />
+          </span>
+        </button>
       </div>
 
       <div className="aboutAgency-bottom">
@@ -16,11 +27,15 @@ const AboutAgency = () => {
           <img src={bg7} alt="" />
 
           <div className="aboutAgency-bottom-left-desc">
-            <span>Explore Us</span>
+            Explore Us
+            <span className="arrows">
+              <BsArrowUpRight className="up-arrow first-arrow" />
+              <BsArrowUpRight className="up-arrow second-arrow" />
+            </span>
           </div>
 
           <div className="aboutAgency-bottom-left-btn">
-            <button>Explore Us</button>
+            <button>Explore Us </button>
           </div>
         </div>
 

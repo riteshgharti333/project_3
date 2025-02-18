@@ -20,7 +20,7 @@ const OurFeatures = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 2,
         ease: "power2.out",
       }
     );
@@ -55,18 +55,20 @@ const OurFeatures = () => {
               <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
                 <BsArrowUpRight className="up-arrow" />
                 {item.title}
-              </li>
-            ))}
-          </ul>
-        </div>
 
-        <div className="ourFeatures-left-card" ref={cardRef}>
+                <div className="ourFeatures-left-card" ref={cardRef}>
           <p>{hoveredItem.cardContent.description}</p>
           <span className="read-more">
             {hoveredItem.cardContent.readMore}{" "}
             <TiArrowRight className="right-arrow" />
           </span>
         </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+       
       </div>
 
       <div className="ourFeatures-right">

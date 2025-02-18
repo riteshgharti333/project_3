@@ -24,7 +24,6 @@
       max-width: 700px;
       background: #1e1e1e;
       padding: 40px;
-      border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       position: absolute;
       left: 30%;
@@ -86,7 +85,6 @@
         .review-name {
           display: flex;
           align-items: center;
-          justify-content: center;
           gap: 10px;
           margin-bottom: 30px;
 
@@ -117,16 +115,63 @@
   }
 }
 
-/* Swiper Pagination Custom Styling */
-.swiper-pagination-bullet {
-  background: #fff;
-  width: 12px;
-  height: 12px;
-  transition: all 0.3s ease;
+
+
+.client-prev,
+.client-next {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 60px; // Fixed size
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: visible; 
+  color: #fff;
+  font-size: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px; 
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #dddddd; // Ensure border is visible
+    border-radius: 50%;
+    z-index: 1; // Ensure it appears above background
+    pointer-events: none; // Prevents click interference
+    display: block; // Ensures it is visible
+  }
+
+  &:hover::before {
+    animation: rotateBorder 5s linear infinite;
+    background: #ffffff86;
+  }
+
+  @keyframes rotateBorder {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
 }
 
-.swiper-pagination-bullet-active {
-  background: $primary-color;
-  width: 15px;
-  height: 15px;
+
+
+.client-prev {
+  left: 75%;
+}
+
+.client-next {
+  right: 7%;
 }

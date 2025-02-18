@@ -25,26 +25,29 @@ a {
     width: 100%;
     z-index: 999;
 
-    &.static {
-      position: relative;
+    &.contact-class{
+   position: relative;
 
-      .nav-right {
-        .nav-link {
-          color: #585858;
+   background: #fff;
 
-          &.active-link {
-            border-bottom: 2px solid #000;
-            color: #000;
-          }
-          
-        }
-      }
+   .nav-link {
+     color: #585858 !important;
 
-      .dropdown-menu {
-        .name-link {
-          color: #585858 !important;
-        }
-      }
+     &.active-link {
+       color: #000 !important;
+
+       &::after {
+         width: 100%;
+         background: #000 !important;
+       }
+     }
+   }
+
+   .dropdown {
+     .name-link {
+       color: #585858 !important;
+     }
+   }
     }
   }
 }

@@ -1,7 +1,7 @@
 import "./About.scss";
-import m1 from "../../assets/images/m2.jpg";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import { useState } from "react";
+
+import { useState, useEffect, useRef } from "react";
 
 import bg17 from "../../assets/images/bg17.jpg";
 
@@ -9,9 +9,7 @@ import bg18 from "../../assets/images/bg18.jpg";
 import bg19 from "../../assets/images/bg19.jpg";
 import bg20 from "../../assets/images/bg20.jpg";
 
-
-
-
+import CountUp from "react-countup";
 
 import OurCore from "../../components/OurCore/OurCore";
 
@@ -19,6 +17,8 @@ import ClientReview from "../../components/ClientReview/ClientReview";
 
 import OurPhotography from "../../components/OurPhotography/OurPhotography";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const lists = [
   {
@@ -42,25 +42,61 @@ const About = () => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const [startCount, setStartCount] = useState(false);
+  const aboutContentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStartCount(true);
+        }
+      },
+      { threshold: 0.7 }
+    );
+
+    if (aboutContentRef.current) {
+      observer.observe(aboutContentRef.current);
+    }
+
+    return () => {
+      if (aboutContentRef.current) {
+        observer.unobserve(aboutContentRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease",
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="about">
       <div className="about-banner">
         <div className="about-banner-desc">
           <h1>About</h1>
-          <h1>
-            K Production Film
-          </h1>
+          <h1>K Production Film</h1>
         </div>
       </div>
 
-      <div className="about-big-img">
+      <div className="about-big-img" data-aos="fade-up">
         <img src={bg17} alt="About Us" />
       </div>
 
-      <div className="about-content">
+      <div className="about-content" ref={aboutContentRef}>
         <div className="about-content-left">
           <div className="about-content-left-top">
-            <img src={bg18} alt="" />
+            <img
+              src={bg18}
+              alt=""
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-offset="700"
+            />
 
             <div className="about-content-left-top-right">
               <h1>
@@ -80,7 +116,14 @@ const About = () => {
           <div className="about-content-left-bottom">
             <div className="about-content-left-content">
               <div className="about-content-left-content-top">
-                <h1>100%</h1>
+                <h1>
+                  <CountUp
+                    start={startCount ? 0 : null}
+                    end={100}
+                    duration={2.5}
+                  />
+                  %
+                </h1>
                 <p>Customer Satisfaction</p>
               </div>
 
@@ -89,7 +132,14 @@ const About = () => {
 
             <div className="about-content-left-content">
               <div className="about-content-left-content-top">
-                <h1>350+</h1>
+                <h1>
+                  <CountUp
+                    start={startCount ? 0 : null}
+                    end={350}
+                    duration={2.5}
+                  />
+                  +
+                </h1>
 
                 <p>Photography Session</p>
               </div>
@@ -100,7 +150,13 @@ const About = () => {
         </div>
 
         <div className="about-content-right">
-          <img src={bg19} alt="" />
+          <img
+            src={bg19}
+            alt=""
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-offset="700"
+          />
         </div>
       </div>
 
