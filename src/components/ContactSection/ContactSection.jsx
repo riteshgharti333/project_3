@@ -7,7 +7,6 @@ import { IoLocationOutline } from "react-icons/io5";
 import "./ContactSection.scss";
 
 const ContactSection = () => {
-
   useEffect(() => {
     // Initialize AOS without the global offset
     AOS.init({
@@ -40,8 +39,7 @@ const ContactSection = () => {
       <div
         className="contactSection-card"
         data-aos="fade-right"
-        data-aos-delay="200"
-        data-aos-offset="1500"  // Specific offset for this card
+        data-aos-offset="1500" // Specific offset for this card
       >
         <div className="contactSection-left">
           <CiMobile2 className="contactSection-icon" />
@@ -56,8 +54,7 @@ const ContactSection = () => {
       <div
         className="contactSection-card"
         data-aos="fade-right"
-        data-aos-delay="400"
-        data-aos-offset="1500"  // Specific offset for this card
+        data-aos-offset="1500" // Specific offset for this card
       >
         <div className="contactSection-left">
           <IoLocationOutline className="contactSection-icon" />
