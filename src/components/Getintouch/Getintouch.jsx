@@ -5,8 +5,10 @@ import overlay1 from "../../assets/images/overlay1.png";
 const Getintouch = () => {
   return (
     <div className="getintouch">
-      <div className="getintouch-overlay">
-        <img src={overlay1} alt="" />
+      <div className="getintouch-overlay-wrapper">
+        <div className="getintouch-overlay">
+          <img src={overlay1} alt="" />
+        </div>
       </div>
 
       <div className="getintouch-content">

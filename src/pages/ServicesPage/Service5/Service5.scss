@@ -4,6 +4,10 @@
  
   .service5-top-banner {
     padding: 100px 30px 0px 30px;
+
+    @include md{
+      padding: 100px 10px 0px 10px;
+    }
   
   .service5-banner {
     background-image: url("../../../assets/images/bg22.jpg");
@@ -12,6 +16,11 @@
     background-position: center;
     height: 500px;
     position: relative;
+
+    
+    @include md{
+      height: 300px;
+    }
 
     .service5-banner-desc {
       position: absolute;
@@ -37,6 +46,16 @@
 
         @include sm {
           font-size: 40px;
+        }
+
+        @include xl{
+          &::before{
+            display: none;
+          }
+
+          &::after{
+            display: none;
+          }
         }
 
         &::before {

@@ -103,13 +103,11 @@
       background: #fff;
       color: $primary-color;
 
-      .btn-wrap{
-
-      
-      span{
-        color: $primary-color;
+      .btn-wrap {
+        span {
+          color: $primary-color;
+        }
       }
-    }
 
       &::before {
         top: -40%;

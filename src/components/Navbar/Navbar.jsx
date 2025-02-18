@@ -3,8 +3,9 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { HiMenu, HiX } from "react-icons/hi"; // Mobile menu icons
 import { services } from "../../assets/data";
+
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -21,18 +22,26 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const contactClass = location.pathname === "/contact-us" ? "contact-class" : "";
+  const contactClass =
+    location.pathname === "/contact-us" ? "contact-class" : "";
 
   const homeClass = location.pathname === "/" ? "home-class" : "";
 
-
   return (
-    <nav className={`navbar ${scroll ? "scrolled" : ""} ${contactClass} ${homeClass}`}>
+    <nav
+      className={`navbar ${
+        scroll ? "scrolled" : ""
+      } ${contactClass} ${homeClass}`}
+    >
       {/* Left: Logo */}
       <div className="navbar-left">
         <Link to="/" className="logo">
           <img src={logo} alt="Company Logo" />
         </Link>
+      </div>
+
+      <div className="mobile-Menu">
+        <MobileMenu />
       </div>
 
       {/* Right: Navigation Links */}

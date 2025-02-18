@@ -17,6 +17,10 @@
     h1 {
       font-size: 50px;
       text-transform: uppercase;
+
+      @include sm{
+        font-size: 40px;
+      }
     }
 
     button {
@@ -389,10 +393,18 @@
 
       .about-desc1 {
         font-size: 20px;
+
+        @include sm{
+          text-align: justify;
+        }
       }
 
       .about-desc2 {
         color: #989898;
+
+        @include sm{
+          text-align: justify;
+        }
       }
     }
   }

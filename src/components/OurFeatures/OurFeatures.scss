@@ -12,9 +12,14 @@
     .ourFeatures-mobile-title {
       font-size: 50px;
 
+
       @include lg {
         text-align: center;
         margin-bottom: 40px;
+      }
+
+      @include sm{
+        font-size: 40px;
       }
     }
 

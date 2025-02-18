@@ -9,22 +9,35 @@ $text-color: white;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  color: $text-color;
+  color: #000;
   position: relative;
   z-index: 1000;
+  // background: #fff; // Keep menu background white
 
   @media (min-width: 769px) {
     display: none;
   }
 
   &.scrolled {
-    .burger {
-      span {
-        background-color: #585858;
+    &.mobile-class {
+      color: #fff;
+      .burger {
+        color: #fff;
+
+        span {
+          background-color: #fff;
+        }
       }
     }
   }
-  
+
+  &.mobile-class {
+    .burger {
+      span {
+        background: #fff;
+      }
+    }
+  }
 
   .burger {
     display: none;
@@ -39,11 +52,15 @@ $text-color: white;
       display: block;
       width: 40px;
       height: 5px;
-      background: $primary-color;
+      background: #000; // Default burger color black
       transition: 0.3s;
     }
 
     &.open {
+      span {
+        background: #000 !important; // Keep cross (X) black when menu opens
+      }
+
       span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
       }
@@ -62,13 +79,24 @@ $text-color: white;
 
     li {
       margin: 0 15px;
-      color: #fff;
+      color: #585858;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      .nav-icon{
+        font-size: 32px;
+        margin-right: 10px;
+        color: #b90808;
+      }
+
     }
 
     .service-link {
       margin-top: 30px;
       margin-left: 40px;
       font-size: 25px;
+      color: #b90808;
 
       @include sm {
         font-size: 20px;
@@ -87,7 +115,7 @@ $text-color: white;
       right: -160%;
       width: 500px;
       height: 100vh;
-      background: rgba(17, 17, 17, 0.95);
+      background: #fff; // Keep menu background white
       flex-direction: column;
       padding-top: 50px;
       transition: right 0.3s ease-in-out;

@@ -1,78 +1,95 @@
 @import "../../../styles/responsive.scss";
 
 .service1 {
- 
   .service1-top-banner {
     padding: 100px 30px 0px 30px;
-  
-  .service1-banner {
-    background-image: url("../../../assets/images/bg22.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    position: relative;
 
-    .service1-banner-desc {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      width: 100%;
+    @include md{
+      padding: 100px 10px 0px 10px;
+    }
 
-      @include lg {
-        width: 90%;
+    .service1-banner {
+      background-image: url("../../../assets/images/bg22.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 500px;
+      position: relative;
+
+      @include md{
+        height: 300px;
       }
 
-      h1 {
-        text-align: center;
-        font-size: 60px;
-        color: #fff;
-        position: relative;
+      .service1-banner-desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100%;
 
-        @include md {
-          font-size: 50px;
+        @include lg {
+          width: 90%;
         }
 
-        @include sm {
-          font-size: 40px;
-        }
+        h1 {
+          text-align: center;
+          font-size: 60px;
+          color: #fff;
+          position: relative;
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 0; // Align to the left of the parent element
-          width: 400px;
-          height: 1px;
-          background-color: rgba(
-            255,
-            255,
-            255,
-            0.3
-          ); // Ensure RGBA value is correct
-          transform: translateY(-50%); // Adjust vertical positioning
-        }
+          @include md {
+            font-size: 50px;
+          }
 
-        &::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: 0; // Align to the left of the parent element
-          width: 400px;
-          height: 1px;
-          background-color: rgba(
-            255,
-            255,
-            255,
-            0.3
-          ); // Ensure RGBA value is correct
-          transform: translateY(-50%); // Adjust vertical positioning
+          @include sm {
+            font-size: 40px;
+          }
+
+          @include xl{
+            &::before{
+              display: none;
+            }
+
+            &::after{
+              display: none;
+            }
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0; // Align to the left of the parent element
+            width: 400px;
+            height: 1px;
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.3
+            ); // Ensure RGBA value is correct
+            transform: translateY(-50%); // Adjust vertical positioning
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0; // Align to the left of the parent element
+            width: 400px;
+            height: 1px;
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.3
+            ); // Ensure RGBA value is correct
+            transform: translateY(-50%); // Adjust vertical positioning
+          }
         }
       }
     }
-  }
   }
 
   .service1-container {
