@@ -34,7 +34,7 @@ const PhotoAlbums = () => {
           loop={true}
           speed={2000}
           modules={[Navigation]}
-          className="photoAlbums-slider"
+          className="photoAlbums-slider album-swiper"
           initialSlide={1}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           breakpoints={{

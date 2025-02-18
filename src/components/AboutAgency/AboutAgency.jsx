@@ -35,9 +35,13 @@ const AboutAgency = () => {
           </div>
 
           <div className="aboutAgency-bottom-left-btn">
-            <button>Explore Us </button>
+            Explore Us
+            <span className="arrows">
+              <BsArrowUpRight className="up-arrow first-arrow" />
+              <BsArrowUpRight className="up-arrow second-arrow" />
+            </span>
           </div>
-        </div>
+          </div>
 
         <div className="aboutAgency-bottom-right">
           <h2>About Kimono</h2>

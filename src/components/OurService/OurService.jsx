@@ -7,6 +7,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import overlay1 from "../../assets/images/overlay1.png"
+import overlay2 from "../../assets/images/overlay2.png"
+
+
 const OurService = () => {
 
   useEffect(() => {
@@ -36,6 +40,11 @@ const OurService = () => {
             Read More <TiArrowRight className="right-arrow" />
           </span>
         </div>
+      </div>
+
+      <div className="overlay">
+         <img src={overlay1} alt="" />
+         {/* <img src={overlay2} alt="" /> */}
       </div>
 
       <div className="ourService-bottom">

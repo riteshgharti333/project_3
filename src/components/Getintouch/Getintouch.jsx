@@ -1,8 +1,14 @@
 import "./Getintouch.scss";
 
+import overlay1 from "../../assets/images/overlay1.png";
+
 const Getintouch = () => {
   return (
     <div className="getintouch">
+      <div className="getintouch-overlay">
+        <img src={overlay1} alt="" />
+      </div>
+
       <div className="getintouch-content">
         <h1>Get In Touch</h1>
         <p>

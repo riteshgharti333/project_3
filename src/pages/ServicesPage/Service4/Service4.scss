@@ -1,49 +1,83 @@
 @import "../../../styles/responsive.scss";
 
 .service4 {
+
+  .service4-top-banner {
+    padding: 100px 30px 0px 30px;
+  
   .service4-banner {
-    position: relative;
+    background-image: url("../../../assets/images/bg22.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 500px;
-
-    @include sm {
-      height: 300px;
-    }
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-    }
+    position: relative;
 
     .service4-banner-desc {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: 1;
       width: 100%;
-      text-align: center;
 
       @include lg {
-        width: 100%;
-        text-align: center;
+        width: 90%;
       }
+
       h1 {
-        font-size: 70px;
+        text-align: center;
+        font-size: 60px;
         color: #fff;
+        position: relative;
 
         @include md {
           font-size: 50px;
         }
+
         @include sm {
           font-size: 40px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0; // Align to the left of the parent element
+          width: 400px;
+          height: 1px;
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.3
+          ); // Ensure RGBA value is correct
+          transform: translateY(-50%); // Adjust vertical positioning
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0; // Align to the left of the parent element
+          width: 400px;
+          height: 1px;
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.3
+          ); // Ensure RGBA value is correct
+          transform: translateY(-50%); // Adjust vertical positioning
         }
       }
     }
   }
+  }
 
   .service4-container {
-    padding: 115px 10px;
-    max-width: 1200px;
+    padding: 115px 30px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     gap: 50px;

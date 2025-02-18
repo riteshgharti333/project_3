@@ -12,13 +12,14 @@ import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 const Service6 = () => {
   return (
     <div className="service6">
-      <div className="service6-banner">
-        <img src={bg22} alt="" />
-
-        <div className="service6-banner-desc">
-          <h1>Service Details</h1>
+     
+     <div className="service6-top-banner">
+        <div className="service6-banner">
+          <div className="service6-banner-desc">
+            <h1>Service Details</h1>
+          </div>
         </div>
-        </div>
+      </div>
 
         <div className="service6-container">
           <div className="service6-container-sidebar">

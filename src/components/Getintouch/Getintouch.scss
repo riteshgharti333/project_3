@@ -2,8 +2,11 @@
 
 .getintouch {
   text-align: center;
-  max-width: 1140px;
-  margin: 0 auto;
+  margin: 40px;
+  position: relative;
+  background: #fff;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%);
+  // background: red;
 
   @include md {
     padding: 0px 40px;
@@ -12,7 +15,24 @@
   @include sm {
     padding: 0px 10px;
   }
+
+  .getintouch-overlay {
+    position: absolute;
+    z-index: -1;
+    bottom: -130px;
+    img {
+      object-fit: contain;
+    }
+  }
+
   .getintouch-content {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
     h1 {
       font-size: 50px;
       font-weight: 600;
@@ -29,6 +49,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      width: 800px;
 
       @include md {
         display: flex;
@@ -73,7 +94,7 @@
     }
 
     button {
-      grid-column: span 2;
+      grid-column: span 3;
       background: $primary-color;
       color: #fff;
       padding: 12px 20px;
@@ -82,7 +103,7 @@
       border: none;
       cursor: pointer;
       position: relative;
-      transition:   all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       overflow: hidden;
       text-transform: uppercase;
       &:hover {

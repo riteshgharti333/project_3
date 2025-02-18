@@ -23,8 +23,11 @@ const Navbar = () => {
 
   const contactClass = location.pathname === "/contact-us" ? "contact-class" : "";
 
+  const homeClass = location.pathname === "/" ? "home-class" : "";
+
+
   return (
-    <nav className={`navbar ${scroll ? "scrolled" : ""} ${contactClass}`}>
+    <nav className={`navbar ${scroll ? "scrolled" : ""} ${contactClass} ${homeClass}`}>
       {/* Left: Logo */}
       <div className="navbar-left">
         <Link to="/" className="logo">

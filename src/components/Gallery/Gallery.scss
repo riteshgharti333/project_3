@@ -1,42 +1,74 @@
 @import "../../styles/responsive.scss";
 
 .gallery {
-  .gallery-banner {
-    position: relative;
-    height: 500px;
+  .gallery-top-banner {
+    padding: 100px 30px 0px 30px;
 
-    @include sm {
-      height: 300px;
-    }
+    .gallery-banner {
+      background-image: url("../../assets/images/bg15.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 500px;
+      position: relative;
 
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: 100%;
-    }
-
-    .gallery-banner-desc {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      text-align: center;
-
-      @include lg {
+      .gallery-banner-desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
         width: 100%;
-        text-align: center;
-      }
 
-      h1 {
-        font-size: 70px;
-        color: #fff;
-
-        @include md {
-          font-size: 50px;
+        @include lg {
+          width: 90%;
         }
-        @include sm {
-          font-size: 40px;
+
+        h1 {
+          text-align: center;
+          font-size: 60px;
+          color: #fff;
+          position: relative;
+
+          @include md {
+            font-size: 50px;
+          }
+
+          @include sm {
+            font-size: 40px;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0; // Align to the left of the parent element
+            width: 400px;
+            height: 1px;
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.3
+            ); // Ensure RGBA value is correct
+            transform: translateY(-50%); // Adjust vertical positioning
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0; // Align to the left of the parent element
+            width: 400px;
+            height: 1px;
+            background-color: rgba(
+              255,
+              255,
+              255,
+              0.3
+            ); // Ensure RGBA value is correct
+            transform: translateY(-50%); // Adjust vertical positioning
+          }
         }
       }
     }
@@ -179,8 +211,6 @@
     }
   }
 
-  
-
   a {
     color: #585858;
   }
@@ -196,11 +226,18 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
+
+    &:not(.prev-icon):not(.next-icon):hover {
+      background-color: #fff;
+      color: #000;
+    }
   }
 
-  .prev-icon, .next-icon {
-    padding: 1.5px 0px;
-  }
+  .prev-icon,
+.next-icon {
+  padding: 1.5px 0;
+  pointer-events: none; // This prevents hover effects
+}
 
   .page-link:hover {
     background-color: $primary-color;

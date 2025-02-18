@@ -42,10 +42,12 @@ const Gallery = () => {
 
   return (
     <div className="gallery">
-      <div className="gallery-banner">
-        <img src={bg15} alt="" />
-        <div className="gallery-banner-desc">
-          <h1>Our Projects</h1>
+      
+      <div className="gallery-top-banner">
+        <div className="gallery-banner">
+          <div className="gallery-banner-desc">
+            <h1>Our Projects</h1>
+          </div>
         </div>
       </div>
       <div className="gallery-container">

@@ -9,6 +9,8 @@ import bg18 from "../../assets/images/bg18.jpg";
 import bg19 from "../../assets/images/bg19.jpg";
 import bg20 from "../../assets/images/bg20.jpg";
 
+import bg23 from "../../assets/images/bg23.jpg";
+
 import CountUp from "react-countup";
 
 import OurCore from "../../components/OurCore/OurCore";
@@ -19,6 +21,10 @@ import OurPhotography from "../../components/OurPhotography/OurPhotography";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import overlay3 from "../../assets/images/overlay3.png";
+
+import { TbPlayerPlayFilled } from "react-icons/tb";
 
 const lists = [
   {
@@ -76,15 +82,20 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="about-banner">
-        <div className="about-banner-desc">
-          <h1>About</h1>
-          <h1>K Production Film</h1>
+      <div className="top-banner">
+        <div className="about-banner">
+          <div className="about-banner-desc">
+            <h1>About</h1>
+          </div>
         </div>
       </div>
 
       <div className="about-big-img" data-aos="fade-up">
         <img src={bg17} alt="About Us" />
+      </div>
+
+      <div className="about-overlay">
+        <img src={overlay3} alt="" />
       </div>
 
       <div className="about-content" ref={aboutContentRef}>
@@ -94,7 +105,6 @@ const About = () => {
               src={bg18}
               alt=""
               data-aos="fade-up"
-              data-aos-duration="2000"
               data-aos-offset="700"
             />
 
@@ -154,7 +164,6 @@ const About = () => {
             src={bg19}
             alt=""
             data-aos="fade-up"
-            data-aos-duration="2000"
             data-aos-offset="700"
           />
         </div>
@@ -203,6 +212,29 @@ const About = () => {
             </div>
             <h2>Years Experience</h2>
           </div>
+        </div>
+      </div>
+
+      <div class="about-content3">
+        <div class="scrolling-container">
+          <div class="scrolling-content">
+            <h1>Photography</h1>
+            <h1>Studio</h1>
+            <h1>Agency</h1>
+          </div>
+          <div class="scrolling-content">
+            <h1>Photography</h1>
+            <h1>Studio</h1>
+            <h1>Agency</h1>
+          </div>
+        </div>
+      </div>
+
+      <div className="about-content4">
+        <img src={bg23} alt="" />
+
+        <div className="player">
+          <TbPlayerPlayFilled className="player-icon" />
         </div>
       </div>
 

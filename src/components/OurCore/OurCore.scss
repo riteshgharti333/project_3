@@ -4,6 +4,7 @@
   max-width: 1140px;
   margin: 0 auto;
   overflow: hidden;
+  // display: none;
 
   @include xl {
     margin: 0;
@@ -157,6 +158,7 @@
     z-index: 1; // Ensure it appears above background
     pointer-events: none; // Prevents click interference
     display: block; // Ensures it is visible
+
   }
 
   &:hover::before {
