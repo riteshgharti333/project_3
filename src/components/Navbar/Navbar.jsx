@@ -1,29 +1,44 @@
 import "./Navbar.scss";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo2.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { services } from "../../assets/data";
-
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import MobileBurger from "../MobileBurger/MobileBurger";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [navbarVisible, setNavbarVisible] = useState(true);
   const location = useLocation(); // Get the current path
 
   useEffect(() => {
     const handleScroll = () => {
-      setScroll(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      const midPoint = window.innerHeight / 1; // Mid-point of the viewport
+
+      if (currentScrollY > midPoint) {
+        // Scrolling down past mid-point
+        if (currentScrollY > lastScrollY) {
+          setNavbarVisible(false); // Hide navbar
+        } else {
+          setNavbarVisible(true); // Show navbar when scrolling up
+        }
+      } else {
+        setNavbarVisible(true); // Always show navbar above mid-point
+      }
+
+      setLastScrollY(currentScrollY); // Update last scroll position
+      setScroll(currentScrollY > 50); // For scrolled class (optional)
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
-  const contactClass =
-    location.pathname === "/contact-us" ? "contact-class" : "";
 
   const homeClass = location.pathname === "/" ? "home-class" : "";
 
@@ -31,7 +46,9 @@ const Navbar = () => {
     <nav
       className={`navbar ${
         scroll ? "scrolled" : ""
-      } ${contactClass} ${homeClass}`}
+      }  ${homeClass} ${
+        navbarVisible ? "navbar-visible" : "navbar-hidden"
+      }`}
     >
       {/* Left: Logo */}
       <div className="navbar-left">
@@ -41,7 +58,7 @@ const Navbar = () => {
       </div>
 
       <div className="mobile-Menu">
-        <MobileMenu />
+        <MobileBurger />
       </div>
 
       {/* Right: Navigation Links */}

@@ -25,29 +25,6 @@ a {
     width: 100%;
     z-index: 999;
 
-    &.contact-class{
-   position: relative;
 
-   background: #fff;
-
-   .nav-link {
-     color: #585858 !important;
-
-     &.active-link {
-       color: #000 !important;
-
-       &::after {
-         width: 100%;
-         background: #000 !important;
-       }
-     }
-   }
-
-   .dropdown {
-     .name-link {
-       color: #585858 !important;
-     }
-   }
-    }
   }
 }
