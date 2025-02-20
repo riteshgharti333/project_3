@@ -24,7 +24,7 @@ const ContactSection = () => {
       <div
         className="contactSection-card"
         data-aos="fade-right"
-        // data-aos-offset="1500" // Apply specific offset here
+        // data-aos-offset="1400"
       >
         <div className="contactSection-left">
           <IoIosGlobe className="contactSection-icon" />
@@ -39,7 +39,7 @@ const ContactSection = () => {
       <div
         className="contactSection-card"
         data-aos="fade-right"
-        // data-aos-offset="1500" // Specific offset for this card
+        // data-aos-offset="1400"
       >
         <div className="contactSection-left">
           <CiMobile2 className="contactSection-icon" />
@@ -54,7 +54,7 @@ const ContactSection = () => {
       <div
         className="contactSection-card"
         data-aos="fade-right"
-        // data-aos-offset="1500" // Specific offset for this card
+        // data-aos-offset="1400"
       >
         <div className="contactSection-left">
           <IoLocationOutline className="contactSection-icon" />

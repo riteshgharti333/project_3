@@ -9,8 +9,6 @@ import "swiper/css/navigation";
 import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
 
-
-
 const teamMembers = [
   { name: "Nelson Jameson", role: "Photographer", img: slider_img },
   { name: "Emily Carter", role: "Videographer", img: slider_img },
@@ -31,30 +29,21 @@ const OurCore = () => {
       </div>
 
       <Swiper
-        slidesPerView={3}
+        slidesPerView={3.5}
         spaceBetween={20}
         navigation={{
           prevEl: ".custom-prev",
           nextEl: ".custom-next",
         }}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
-        speed={800}
+        speed={1000}
         modules={[Navigation, Autoplay]}
         className="ourCore-slider"
         breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
+          0: { slidesPerView: 1, spaceBetween: 10 },
+          768: { slidesPerView: 2.5, spaceBetween: 15 }, // Show half of next slide
+          1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Show half of 4th slide
         }}
       >
         {teamMembers.map((member, index) => (

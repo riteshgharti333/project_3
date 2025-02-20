@@ -7,21 +7,47 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 10px 100px;
+  padding: 10px 70px;
   z-index: 1000;
-
+  overflow: visible;
   transition: all 0.5s ease-in-out;
+
+  .mobile-Menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    .social-burger {
+      margin-right: 10px;
+    }
+
+    .mobile-burger {
+      margin-left: 10px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 30px;
+        background-color: #585858;
+
+        @media (min-width: 1025px) {
+          display: none;
+        }
+      }
+    }
+  }
 
   &.navbar-visible {
     transform: translateY(0);
   }
-  
+
   &.navbar-hidden {
     transform: translateY(-100%);
-  }
-
-  @include lg{
-  padding: 10px 20px;
   }
 
   &.home-class {
@@ -118,10 +144,9 @@
     text-transform: uppercase;
     align-items: center;
 
-    @include md{
+    @include lg {
       display: none;
     }
-
 
     .nav-link {
       font-size: 16px;
@@ -245,6 +270,236 @@
         100% {
           opacity: 1;
           transform: translateX(0); // Ends at normal position
+        }
+      }
+    }
+  }
+
+  .nav-social {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      .nav-social-menu {
+        span {
+          &:nth-child(3) {
+            width: 42px;
+          }
+        }
+      }
+    }
+
+    .nav-social-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      span {
+        background: #fff;
+        display: block;
+        color: #fff;
+        width: 42px;
+        height: 1px;
+        transition: all 0.5s ease-in-out;
+
+        &:nth-child(3) {
+          width: 16px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
+.nav-social-card {
+  padding: 30px 65px;
+  background: #fff;
+  max-width: 400px;
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+  z-index: 1500;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transform-origin: right center;
+
+  &.active {
+    visibility: visible;
+    animation: slideInScale 0.5s ease-in-out forwards;
+  }
+
+
+  &.hidden {
+    background: red !important;
+    animation: slideOutScale 5s ease-in-out forwards;
+  }
+  
+
+
+  @keyframes slideInScale {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutScale {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+  }
+
+  @include sm {
+    width: 100%;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px; // Default small scrollbar
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); // Subtle scrollbar
+    border-radius: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .cross-icon {
+      font-size: 50px;
+    }
+  }
+
+  .nav-social-logo {
+    margin: 70px 0px;
+    img {
+      width: 100px;
+    }
+  }
+
+  .nav-social-desc {
+    h6 {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .inside-insta-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 18px;
+      font-style: italic;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .insta-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 70px;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+      }
+    }
+
+    .nav-social-media {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .nav-social-media-item {
+        display: flex;
+        align-items: center;
+        color: #585858;
+        gap: 7px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $primary-color;
+
+          .social-media-icon{
+          border: 1px solid $primary-color;
+
+          }
+        }
+
+        .social-media-icon {
+          border: 1px solid #585858;
+          border-radius: 50%;
+          padding: 2px;
+          font-size: 20px;
+          transition: all 0.2s ease-in-out;
+        }
+
+        span {
+          font-size: 12px;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .nav-social-follow {
+      h6 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .nav-social-follow-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        cursor: pointer;
+
+        .nav-social-follow-icon {
+          background: rgba(221, 221, 221, 1);
+          font-size: 40px;
+          padding: 10px;
+          margin: 0 5px;
         }
       }
     }

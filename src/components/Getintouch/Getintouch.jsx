@@ -1,6 +1,7 @@
 import "./Getintouch.scss";
 
 import overlay1 from "../../assets/images/overlay1.png";
+import ContactSection from "../ContactSection/ContactSection";
 
 const Getintouch = () => {
   return (
@@ -35,6 +36,10 @@ const Getintouch = () => {
           </button>
         </form>
       </div>
+      <div className="contact-getintouch">
+      <ContactSection />
+      </div>
+  
     </div>
   );
 };

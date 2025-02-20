@@ -26,42 +26,22 @@ const Homepage = () => {
       <div className="homepage-container">
         <OurService />
 
-        <RingLine />
-
         <PhotoAlbums />
-
-        <RingLine />
 
         <AboutAgency />
 
-        <RingLine />
-
         <OurFeatures />
-
-        <RingLine />
 
         <OurCore />
 
-        <RingLine />
-
         <OurPorfolio />
-
-        <RingLine />
       </div>
 
       <ClientReview />
 
-      <div className="bottom-ring-line">
-        <RingLine />
-      </div>
-
       <Getintouch />
 
-      <div className="bottom-ring-line">
-        <RingLine />
-      </div>
-
-      <ContactSection />
+      {/* <ContactSection /> */}
 
       <FollowSection />
     </div>

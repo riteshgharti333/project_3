@@ -440,3 +440,20 @@ export const featuresData = [
     },
   },
 ];
+
+export const instaGallery = [
+  {
+    img : card_2
+  },
+  {
+    img : card_2
+  }, {
+    img : card_2
+  }, {
+    img : card_2
+  }, {
+    img : card_2
+  }, {
+    img : card_2
+  },
+]
