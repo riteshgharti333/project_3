@@ -15,6 +15,16 @@ import bg2 from "../assets/images/bg2.jpg";
 
 import album_img from "../assets/images/5.jpg";
 
+import reviewImg1 from "../assets/images/reviewimg/IMG_9016-_1_.webp";
+import reviewImg2 from "../assets/images/reviewimg/IMG_9017.webp";
+import reviewImg3 from "../assets/images/reviewimg/IMG_9019.webp";
+import reviewImg4 from "../assets/images/reviewimg/IMG_9018.webp";
+import reviewImg5 from "../assets/images/reviewimg/IMG_9012.webp";
+import reviewImg6 from "../assets/images/reviewimg/IMG_9021.webp";
+import reviewImg7 from "../assets/images/reviewimg/IMG_9020.webp";
+import reviewImg8 from "../assets/images/reviewimg/IMG_9022.webp";
+import reviewImg9 from "../assets/images/reviewimg/IMG_9015.webp";
+
 export const slides = [
   {
     id: 1,
@@ -119,41 +129,68 @@ export const review_card = [
 
 export const client_reviews = [
   {
-    img: review_img,
+    img: reviewImg1,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
+      "Tk and the entire team who did my photos and videography for my wedding were absolutely amazing and no matter what the situation was they were there to take picture and do their job. I loved all the shots they took and I’m really happy with their results. Definitely recommend 👍",
     review_name: "Ruchika Rathore",
     review_location: "New York",
   },
 
   {
-    img: review_img,
+    img: reviewImg2,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
+      "The photography done by T.k. production film was mind blowing.They had set a benchmark for others.The photos are absolutely stunning and beyond what we expected. All the members in your team were so friendly. A big heartfelt Thankyou for capturing such a beautiful pictures.",
+    review_location: "New York",
+  },
+
+  {
+    img: reviewImg3,
+    review_title:
+      "best photographer and videographer Always professional, fun, capturing our events to perfection!!",
+    review_location: "New York",
+  },
+
+  {
+    img: reviewImg4,
+    review_title: "Had a great experience with them Wonderful team ❤️",
+    review_location: "New York",
+  },
+
+  {
+    img: reviewImg5,
+    review_title:
+      "TK Production Film and Team is definitely a 50 out of 10!! Especially The Owner of Production Taufeq Khan, We really appreciate and thank you for capturing so many special, natural and happy moments of our day perfectly and we will treasure them forever. From the beginning through to the end of the event the team offered endless support, advice and guidance. The team is extremely friendly and cooperative. You were just awesome and made our day even more special. We felt so comfortable with you and can't express how grateful we are. Your professionalism and hard work shines through every frame and picture. The quality, editing, creativity, and the fact that the video really told the story of the event in such a perfect way, was amazing and mesmerizing. The team is nothing but dedicated and highly motivated promising photographers. The service of TK Production Film is highly recommended to everyone. Thank You Once Again For Everything Taufeqbhai.",
     review_name: "Ruchika Rathore",
     review_location: "New York",
   },
 
   {
-    img: review_img,
+    img: reviewImg6,
+    review_title: "Great work and good quality videos and pics really love it",
+    review_name: "MOIN MANSURI ",
+    review_location: "New York",
+  },
+
+  {
+    img: reviewImg7,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
+      "BAST PHOTOGRAPHY. BAST VIDEO GRAPHIC GOOD PARSAN (V GOOD) Positive Responsiveness, Quality, Professionalism, Value",
+    review_name: "Aniket solanki",
+    review_location: "New York",
+  },
+
+  {
+    img: reviewImg8,
+    review_title:
+      "Experience with TK Production Film We had the pleasure of working with TK Production Film for our wedding, and we couldn't be happier with the result! From start to finish, the team was professional, easy to work with, and truly understood our vision. The final video exceeded all of our expectations, capturing every special moment in a beautiful and cinematic way. The editing was flawless, and they managed to weave in all the little details that made our day so memorable",
     review_name: "Ruchika Rathore",
     review_location: "New York",
   },
 
   {
-    img: review_img,
+    img: reviewImg9,
     review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
-    review_name: "Ruchika Rathore",
-    review_location: "New York",
-  },
-
-  {
-    img: review_img,
-    review_title:
-      "Our wedding experience was absolutely magical! From the stunning decorations to the flawless arrangements, everything was beyond perfect. The team was incredibly professional",
+      "Excellent ,creative , surprising photographer with best and polite attitude.thank you Taufikbhai to catch our brother wedding best memories in camera.good wishes for future Review for website",
     review_name: "Ruchika Rathore",
     review_location: "New York",
   },
@@ -443,17 +480,21 @@ export const featuresData = [
 
 export const instaGallery = [
   {
-    img : card_2
+    img: card_2,
   },
   {
-    img : card_2
-  }, {
-    img : card_2
-  }, {
-    img : card_2
-  }, {
-    img : card_2
-  }, {
-    img : card_2
+    img: card_2,
   },
-]
+  {
+    img: card_2,
+  },
+  {
+    img: card_2,
+  },
+  {
+    img: card_2,
+  },
+  {
+    img: card_2,
+  },
+];
