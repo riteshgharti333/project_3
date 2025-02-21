@@ -39,7 +39,7 @@ const HomeBanner = () => {
               <img src={slide.image} alt="Banner" />
             </div>
 
-            <div
+            {/* <div
               className={`homeBanner-desc ${
                 initialized && index === activeIndex ? "animate" : ""
               }`}
@@ -67,7 +67,7 @@ const HomeBanner = () => {
                   </span>
                 </button>
               </div>
-            </div>
+            </div> */}
           </SwiperSlide>
         ))}
       </Swiper>

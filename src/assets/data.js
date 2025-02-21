@@ -33,26 +33,80 @@ import service5 from "../assets/images/serviceicon/service5.svg";
 import service6 from "../assets/images/serviceicon/service6.svg";
 import service7 from "../assets/images/serviceicon/service7.svg";
 
+import banner1 from "../assets/images/bannerimg/banner1.webp";
+import banner2 from "../assets/images/bannerimg/banner2.webp";
+import banner3 from "../assets/images/bannerimg/banner3.webp";
+import banner4 from "../assets/images/bannerimg/banner4.webp";
+import banner5 from "../assets/images/bannerimg/banner5.webp";
+import banner6 from "../assets/images/bannerimg/banner6.webp";
+import banner7 from "../assets/images/bannerimg/banner7.webp";
+import banner8 from "../assets/images/bannerimg/banner8.webp";
+import banner9 from "../assets/images/bannerimg/banner9.webp";
+import banner10 from "../assets/images/bannerimg/banner10.webp";
+
 export const slides = [
   {
     id: 1,
-    image: banner_img1,
-    title: "Make Portfolio With Kimono Studio",
-    desc: "We are dedicated to immortalizing the enchanting moments of your special day. With a blend of classic elegance and modern flair.",
+    image: banner1,
   },
   {
     id: 2,
-    image: banner_img2,
-    title: "Your Dream Wedding Agency",
-    desc: "I have been building blogs and websites since 2002. In that time I have launched several of my own blogs, and helped hundreds of others do the same.",
+    image: banner2,
   },
   {
     id: 3,
-    image: banner_img3,
-    title: "Creating Beautiful Memories",
-    desc: "I know that starting a blog can seem overwhelming and intimidating. This free guide is all about blogging for beginners, and will teach you how to become a blogger.",
+    image: banner3,
+  },
+  {
+    id: 4,
+    image: banner4,
+  },
+  {
+    id: 5,
+    image: banner5,
+  },
+  {
+    id: 6,
+    image: banner6,
+  },
+  {
+    id: 7,
+    image: banner7,
+  },
+  {
+    id: 8,
+    image: banner8,
+  },
+  {
+    id: 9,
+    image: banner9,
+  },
+  {
+    id: 10,
+    image: banner10,
   },
 ];
+
+// export const slides = [
+//   {
+//     id: 1,
+//     image: banner_img1,
+//     title: "Make Portfolio With Kimono Studio",
+//     desc: "We are dedicated to immortalizing the enchanting moments of your special day. With a blend of classic elegance and modern flair.",
+//   },
+//   {
+//     id: 2,
+//     image: banner_img2,
+//     title: "Your Dream Wedding Agency",
+//     desc: "I have been building blogs and websites since 2002. In that time I have launched several of my own blogs, and helped hundreds of others do the same.",
+//   },
+//   {
+//     id: 3,
+//     image: banner_img3,
+//     title: "Creating Beautiful Memories",
+//     desc: "I know that starting a blog can seem overwhelming and intimidating. This free guide is all about blogging for beginners, and will teach you how to become a blogger.",
+//   },
+// ];
 
 export const photoAlbumsData = [
   {
