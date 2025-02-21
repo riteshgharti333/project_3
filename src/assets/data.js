@@ -25,6 +25,14 @@ import reviewImg7 from "../assets/images/reviewimg/IMG_9020.webp";
 import reviewImg8 from "../assets/images/reviewimg/IMG_9022.webp";
 import reviewImg9 from "../assets/images/reviewimg/IMG_9015.webp";
 
+import service1 from "../assets/images/serviceicon/service1.svg";
+import service2 from "../assets/images/serviceicon/service2.svg";
+import service3 from "../assets/images/serviceicon/service3.svg";
+import service4 from "../assets/images/serviceicon/service4.svg";
+import service5 from "../assets/images/serviceicon/service5.svg";
+import service6 from "../assets/images/serviceicon/service6.svg";
+import service7 from "../assets/images/serviceicon/service7.svg";
+
 export const slides = [
   {
     id: 1,
@@ -500,5 +508,43 @@ export const instaGallery = [
   },
   {
     img: card_2,
+  },
+];
+
+export const servicesCards = [
+  {
+    img: service7,
+    no: "01",
+    title: "Wedding Photography & Videography",
+  },
+  {
+    img: service2,
+    no: "02",
+    title: "Pre-Wedding Shoots",
+  },
+  {
+    img: service6,
+    no: "03",
+    title: "Destination Weddings",
+  },
+  {
+    img: service1,
+    no: "04",
+    title: "Concerts & Live Streaming",
+  },
+  {
+    img: service5,
+    no: "05",
+    title: "Corporate Photoshoot",
+  },
+  {
+    img: service4,
+    no: "06",
+    title: "Album Printing & Unique Products",
+  },
+  {
+    img: service3,
+    no: "07",
+    title: "Fast Delivery of Photos & Videos",
   },
 ];

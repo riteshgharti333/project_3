@@ -1,24 +1,22 @@
 import { TiArrowRight } from "react-icons/ti";
 import "./OurService.scss";
 
-import camera from "../../assets/images/camera.svg";
+import camera from "../../assets/images/serviceicon/service1.svg";
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import overlay1 from "../../assets/images/overlay1.png"
-import overlay2 from "../../assets/images/overlay2.png"
-
+import overlay1 from "../../assets/images/overlay1.png";
+import { servicesCards } from "../../assets/data";
 
 const OurService = () => {
-
   useEffect(() => {
     AOS.init({
-      duration: 1000,  
-      easing: "ease", 
-      once: false, 
-      delay: 500, 
+      duration: 1000,
+      easing: "ease",
+      once: false,
+      delay: 500,
     });
 
     AOS.refresh();
@@ -43,55 +41,22 @@ const OurService = () => {
       </div>
 
       <div className="overlay">
-         <img src={overlay1} alt="" />
-         {/* <img src={overlay2} alt="" /> */}
+        <img src={overlay1} alt="" />
+        {/* <img src={overlay2} alt="" /> */}
       </div>
 
       <div className="ourService-bottom">
         <div className="ourService-top-cards">
-          <div className="ourService-top-card" data-aos="fade-right">
-            <img src={camera} alt="" />
+          {servicesCards.map((item) => (
+            <div className="ourService-top-card" data-aos="fade-right">
+              <img src={item.img} alt="" />
 
-            <div className="ourService-top-card-desc">
-              <p>01</p>
-              <h1>
-                <span className="line-break">Wedding </span>Photography
-              </h1>
+              <div className="ourService-top-card-desc">
+                <p>{item.no}</p>
+                <h1>{item.title}</h1>
+              </div>
             </div>
-          </div>
-
-          <div className="ourService-top-card" data-aos="fade-right">
-            <img src={camera} alt="" />
-
-            <div className="ourService-top-card-desc">
-              <p>01</p>
-              <h1>
-                <span className="line-break">Wedding </span>Photography
-              </h1>
-            </div>
-          </div>
-
-          <div className="ourService-top-card" data-aos="fade-left">
-            <img src={camera} alt="" />
-
-            <div className="ourService-top-card-desc">
-              <p>01</p>
-              <h1>
-                <span className="line-break">Wedding </span>Photography
-              </h1>
-            </div>
-          </div>
-
-          <div className="ourService-top-card" data-aos="fade-left">
-            <img src={camera} alt="" />
-
-            <div className="ourService-top-card-desc">
-              <p>01</p>
-              <h1>
-                <span className="line-break">Wedding </span>Photography
-              </h1>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
