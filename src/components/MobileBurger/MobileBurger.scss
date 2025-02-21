@@ -134,14 +134,11 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.5s ease-in-out,
-      // Adjusted transition duration for smoothness
-      opacity 0.5s ease-in-out,
-      // Adjusted transition duration for smoothness
-      padding-top 0.5s ease-in-out; // Adjusted transition duration for smoothness
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      padding-top 0.5s ease-in-out;
 
     &.open {
-      max-height: 500px; // Adjust this value based on your content
+      max-height: 500px;
       opacity: 1;
       padding-top: 20px;
     }

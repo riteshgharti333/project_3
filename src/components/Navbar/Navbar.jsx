@@ -145,7 +145,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="mobile-Menu">
+        <div className="mobile-nav-menu">
           <div className="social-burger">
             <div className="nav-social" onClick={openSocialCard}>
               <div className="nav-social-menu">

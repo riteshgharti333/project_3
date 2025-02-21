@@ -26,6 +26,8 @@ import overlay3 from "../../assets/images/overlay3.png";
 
 import { TbPlayerPlayFilled } from "react-icons/tb";
 
+import about1 from "../../assets/images/bannerimg/banner6.webp";
+
 const lists = [
   {
     title: "Limono Mission",
@@ -90,6 +92,46 @@ const About = () => {
         </div>
       </div>
 
+      <div className="about-content-title">
+        <img src={about1} alt="" />
+
+        <p>
+          Welcome to TK Production Films, your premier destination for capturing
+          the magic of love stories! Founded and led by Taufeq Khan, a
+          passionate filmmaker with over 16 years of experience, we specialize
+          in creating breathtaking wedding videography that resonates across the
+          globe. Taufeq's journey began in Diu, India, where he launched his
+          wedding photography services. With a remarkable portfolio of over 700
+          weddings and 100+ pre-wedding shoots, he possesses a unique talent for
+          crafting captivating narratives that reflect the essence of each
+          couple's celebration. Now proudly settled in London for the past 5
+          years, TK Production extends its artistry throughout the UK, having
+          conducted over 15 pre-wedding and 10+ pre-wedding couple shoots. Our
+          services reach vibrant cities across India, including Mumbai and
+          Ahmedabad, and we capture stunning couple shoots in picturesque
+          locations such as Lisbon, Portugal, enriching your love story with
+          unforgettable backdrops.
+        </p>
+
+        <p>
+          In addition to our photography and videography services, we actively
+          participate in various city trade expos, showcasing our work and
+          connecting with couples seeking to immortalize their special moments.
+          At TK Production, we believe that every couple deserves a unique
+          narrative that shines through in every frame. Our artistic approach
+          and keen attention to detail ensure we create stunning visuals that
+          resonate for a lifetime. Our commitment to excellence guarantees
+          unparalleled service, making your wedding memories truly
+          unforgettable.
+        </p>
+
+        <p>
+          Join us at TK Production Films as we craft timeless memories that you
+          and your loved ones will cherish forever. Let us bring your love story
+          to life!
+        </p>
+      </div>
+
       <div className="about-big-img" data-aos="fade-up">
         <img src={bg17} alt="About Us" />
       </div>
@@ -101,12 +143,7 @@ const About = () => {
       <div className="about-content" ref={aboutContentRef}>
         <div className="about-content-left">
           <div className="about-content-left-top">
-            <img
-              src={bg18}
-              alt=""
-              data-aos="fade-up"
-              data-aos-offset="700"
-            />
+            <img src={bg18} alt="" data-aos="fade-up" data-aos-offset="700" />
 
             <div className="about-content-left-top-right">
               <h1>
@@ -160,12 +197,7 @@ const About = () => {
         </div>
 
         <div className="about-content-right">
-          <img
-            src={bg19}
-            alt=""
-            data-aos="fade-up"
-            data-aos-offset="700"
-          />
+          <img src={bg19} alt="" data-aos="fade-up" data-aos-offset="700" />
         </div>
       </div>
 
