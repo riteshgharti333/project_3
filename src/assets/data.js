@@ -516,35 +516,42 @@ export const servicesCards = [
     img: service7,
     no: "01",
     title: "Wedding Photography & Videography",
+    link: "/wedding-photography-videography",
   },
   {
     img: service2,
     no: "02",
     title: "Pre-Wedding Shoots",
+    link: "/pre-Wedding-shoots",
   },
   {
     img: service6,
     no: "03",
     title: "Destination Weddings",
+    link: "/destination-weddings",
   },
   {
     img: service1,
     no: "04",
     title: "Concerts & Live Streaming",
+    link: "/concerts-live-streaming",
   },
   {
     img: service5,
     no: "05",
     title: "Corporate Photoshoot",
+    link: "/corporate-photoshoots",
   },
   {
     img: service4,
     no: "06",
     title: "Album Printing & Unique Products",
+    link: "/album-printing-unique-products",
   },
   {
     img: service3,
     no: "07",
     title: "Fast Delivery of Photos & Videos",
+    link: "/fast-delivery-photos-videos",
   },
 ];

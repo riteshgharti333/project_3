@@ -35,18 +35,13 @@
       min-height: 100px;
       z-index: 5;
 
-      
-
-      
-
       @include xl {
         left: 50%;
       }
 
-      @include sm{
+      @include sm {
         width: 95%;
         padding: 10px;
-
       }
 
       .clientReview-card-desc {
@@ -143,15 +138,10 @@
             }
           }
         }
-
-
-
       }
     }
   }
 }
-
-
 
 .clientReview-modal {
   position: absolute;
@@ -168,19 +158,17 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 
-
-  /* Enable scrolling inside modal */
-  max-height: 80vh; /* Ensures it doesn't exceed screen height */
+  max-height: 80vh;
   overflow-y: auto;
 
-  @include md{
+  @include md {
     padding: 20px;
   }
 
   @include sm {
     padding: 10px;
     width: 100%;
-    max-height: 90vh; /* Allow more height on small screens */
+    max-height: 90vh;
     overflow-y: auto;
   }
 
@@ -199,16 +187,12 @@
     margin-top: 20px;
     font-size: 16px;
 
-    @include md{
+    @include md {
       margin-top: 30px;
       font-size: 14px;
     }
   }
-
 }
-
-
-
 
 .client-prev,
 .client-next {

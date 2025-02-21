@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 import overlay1 from "../../assets/images/overlay1.png";
 import { servicesCards } from "../../assets/data";
 
+import {Link} from "react-router-dom"
+
 const OurService = () => {
   useEffect(() => {
     AOS.init({
@@ -42,20 +44,21 @@ const OurService = () => {
 
       <div className="overlay">
         <img src={overlay1} alt="" />
-        {/* <img src={overlay2} alt="" /> */}
       </div>
 
       <div className="ourService-bottom">
         <div className="ourService-top-cards">
           {servicesCards.map((item) => (
-            <div className="ourService-top-card" data-aos="fade-right">
-              <img src={item.img} alt="" />
+            <Link to={item.link} key={item.no}>
+              <div className="ourService-top-card" data-aos="fade-right">
+                <img src={item.img} alt="" />
 
-              <div className="ourService-top-card-desc">
-                <p>{item.no}</p>
-                <h1>{item.title}</h1>
+                <div className="ourService-top-card-desc">
+                  <p>{item.no}</p>
+                  <h1>{item.title}</h1>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
