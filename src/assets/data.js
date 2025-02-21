@@ -197,6 +197,10 @@ export const client_reviews = [
 ];
 
 export const services = [
+  {
+    service_name: "Wedding Photography & Videography",
+    link: "/wedding-photography-videography",
+  },
   { service_name: "Pre-Wedding Shoots", link: "/pre-Wedding-shoots" },
   { service_name: "Destination Weddings", link: "/destination-weddings" },
   {

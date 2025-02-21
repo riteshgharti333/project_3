@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-import Homepage from "./pages/Homepage/Homepage.jsx"
+import Homepage from "./pages/Homepage/Homepage.jsx";
 import About from "./pages/About/About.jsx";
 
 import Service1 from "./pages/ServicesPage/Service1/Service1.jsx";
@@ -14,6 +14,7 @@ import Service5 from "./pages/ServicesPage/Service5/Service5.jsx";
 import Service6 from "./pages/ServicesPage/Service6/Service6.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import Gallery from "./components/Gallery/Gallery.jsx";
+import Service7 from "./pages/ServicesPage/Service7/Service7.jsx";
 
 function App() {
   return (
@@ -26,14 +27,19 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/portfolio" element={<Gallery />} />
 
-
+          <Route
+            path="/wedding-photography-videography"
+            element={<Service7 />}
+          />
           <Route path="/pre-Wedding-shoots" element={<Service1 />} />
           <Route path="/destination-weddings" element={<Service2 />} />
           <Route path="/concerts-live-streaming" element={<Service3 />} />
           <Route path="/corporate-photoshoots" element={<Service4 />} />
-          <Route path="/album-printing-unique-products" element={<Service5 />} />
+          <Route
+            path="/album-printing-unique-products"
+            element={<Service5 />}
+          />
           <Route path="/fast-delivery-photos-videos" element={<Service6 />} />
-
         </Routes>
         <Footer />
       </BrowserRouter>

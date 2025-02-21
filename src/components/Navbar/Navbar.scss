@@ -299,10 +299,27 @@
         padding: 10px;
         list-style: none;
         visibility: hidden;
-        transform: translateX(20px);
-
-        animation: slideIn 1s forwards;
+        transform: translateX(0px);
+        animation: slideIn 2s backwards;
       }
+
+      
+      @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(0px); 
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
 
       .dropdown-item {
         display: block;
@@ -316,23 +333,8 @@
         }
       }
 
-      &:hover .dropdown-menu {
-        opacity: 1;
-        visibility: visible; // Becomes visible on hover
-        transform: translateX(0); // Move to normal position
-      }
+     
 
-      // Define the sliding animation
-      @keyframes slideIn {
-        0% {
-          opacity: 0;
-          transform: translateX(20px); // Starts from the right
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0); // Ends at normal position
-        }
-      }
     }
   }
 

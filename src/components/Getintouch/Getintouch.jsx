@@ -37,9 +37,8 @@ const Getintouch = () => {
         </form>
       </div>
       <div className="contact-getintouch">
-      <ContactSection />
+        <ContactSection />
       </div>
-  
     </div>
   );
 };

@@ -22,7 +22,7 @@ const PhotoAlbums = () => {
     <div className="photoAlbums">
       <h1>Photo Albums</h1>
       <p className="photoAlbums-desc">
-        Collection of photos All of Your Best Works
+        Collection of photos All of Our Best Works
       </p>
 
       <div className="photoAlbums-cards">
