@@ -35,8 +35,8 @@
         padding-bottom: 100px;
         overflow: hidden;
 
-        @include lg{
-            padding-top: 50px;
+        @include lg {
+          padding-top: 50px;
         }
 
         .row {
@@ -47,19 +47,17 @@
             align-items: center;
             text-align: center;
 
-            .row1{
-             .footer-widget {
-                ul{
-                    display: flex;
-                    gap: 40px;
-
-                  
+            .row1 {
+              .footer-widget {
+                ul {
+                  display: flex;
+                  gap: 40px;
                 }
-             }   
+              }
             }
 
-            .row2{
-                margin-top: 45px;
+            .row2 {
+              margin-top: 45px;
             }
 
             .row3 {
@@ -73,20 +71,15 @@
             }
           }
 
-          @include sm{
-            .row1{
+          @include sm {
+            .row1 {
               .footer-widget {
-                 ul{
-                     display: flex;
-                     gap: 20px;
- 
-                   
-                 }
-              }   
-             }
-
-
-            
+                ul {
+                  display: flex;
+                  gap: 20px;
+                }
+              }
+            }
           }
           .row1,
           .row1,
@@ -128,12 +121,12 @@
               display: flex;
               flex-direction: column;
               align-items: center;
-              @include sm{
+              @include sm {
                 margin: 0px 10px;
               }
               .footer-logo {
                 img {
-                  width: 200px;
+                  width: 150px;
                 }
               }
 
@@ -145,7 +138,7 @@
                 color: #dddddd;
                 font-weight: 500;
 
-                @include sm{
+                @include sm {
                   font-size: 20px;
                 }
               }
@@ -155,7 +148,7 @@
                 display: flex;
                 border: 1px solid #3c3c3c;
 
-                @include sm{
+                @include sm {
                   flex-direction: column;
                 }
 
@@ -167,7 +160,7 @@
                   font-size: 16px;
                   color: #fff;
 
-                  @include sm{
+                  @include sm {
                     text-align: center;
                   }
                 }
@@ -200,8 +193,8 @@
                   border-left: 1px solid #3c3c3c;
                   color: #fff;
                   font-weight: 500;
-                  
-                  @include sm{
+
+                  @include sm {
                     border: none;
                   }
                 }
@@ -273,11 +266,10 @@
       align-items: center;
       justify-content: space-between;
 
-      @include sm{
+      @include sm {
         flex-direction: column;
         text-align: center;
         gap: 20px;
-    
       }
 
       p {
@@ -287,8 +279,6 @@
       .footer-icons {
         display: flex;
         gap: 10px;
-
-      
 
         .footer-icon {
           font-size: 40px;
