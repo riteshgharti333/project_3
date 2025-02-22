@@ -8,7 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import overlay1 from "../../assets/images/overlay1.png";
-import { servicesCards } from "../../assets/data";
+import { services, servicesCards } from "../../assets/data";
 
 import {Link} from "react-router-dom"
 
@@ -48,14 +48,14 @@ const OurService = () => {
 
       <div className="ourService-bottom">
         <div className="ourService-top-cards">
-          {servicesCards.map((item) => (
+          {services.map((item) => (
             <Link to={item.link} key={item.no}>
               <div className="ourService-top-card" data-aos="fade-right">
                 <img src={item.img} alt="" />
 
                 <div className="ourService-top-card-desc">
                   <p>{item.no}</p>
-                  <h1>{item.title}</h1>
+                  <h1>{item.service_name}</h1>
                 </div>
               </div>
             </Link>

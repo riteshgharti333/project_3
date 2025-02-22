@@ -29,7 +29,7 @@ const Service2 = () => {
           <div className="service2-container-content">
             <div className="service2-container-content-top">
               <img src={details} alt="" />
-              <h1>Destination Weddings</h1>
+              <h1>Pre-Wedding Films & Photography</h1>
               <p>
                 The talent at kimono runs wide and deep. Across many markets,
                 geographies & typologies, our team members are some of the

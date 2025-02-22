@@ -27,7 +27,7 @@ const Service7 = () => {
         <div className="service7-container-content">
           <div className="service7-container-content-top">
             <img src={details} alt="" />
-            <h1>Wedding Photography & Videography</h1>
+            <h1>Graduation Photography</h1>
             <p>
               The talent at kimono runs wide and deep. Across many markets,
               geographies & typologies, our team members are some of the finest

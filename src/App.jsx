@@ -39,19 +39,21 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/portfolio" element={<Gallery />} />
 
+          
+          <Route path="/wedding-photography-cinematography" element={<Service1 />} />
+          <Route path="/pre-Wedding-films-photography" element={<Service2 />} />
+          <Route path="/birthday-Photography-films" element={<Service3 />} />
+          <Route path="/baby-shower-photography" element={<Service4 />} />
           <Route
-            path="/wedding-photography-videography"
-            element={<Service7 />}
-          />
-          <Route path="/pre-Wedding-shoots" element={<Service1 />} />
-          <Route path="/destination-weddings" element={<Service2 />} />
-          <Route path="/concerts-live-streaming" element={<Service3 />} />
-          <Route path="/corporate-photoshoots" element={<Service4 />} />
-          <Route
-            path="/album-printing-unique-products"
+            path="/civil-marriage-photography"
             element={<Service5 />}
           />
-          <Route path="/fast-delivery-photos-videos" element={<Service6 />} />
+          <Route path="/engagement-photography-couple-portraits" element={<Service6 />} />
+
+          <Route
+            path="/graduation-photography"
+            element={<Service7 />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

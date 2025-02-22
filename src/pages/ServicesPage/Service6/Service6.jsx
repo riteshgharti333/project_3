@@ -29,7 +29,7 @@ const Service6 = () => {
           <div className="service6-container-content">
             <div className="service6-container-content-top">
               <img src={details} alt="" />
-              <h1>Fast Delivery of Photos & Videos</h1>
+              <h1>Engagement Photography & Couple Portraits</h1>
               <p>
                 The talent at kimono runs wide and deep. Across many markets,
                 geographies & typologies, our team members are some of the

@@ -30,7 +30,7 @@ const Service5 = () => {
           <div className="service5-container-content">
             <div className="service5-container-content-top">
               <img src={details} alt="" />
-              <h1>Album Printing & Unique Products</h1>
+              <h1>Civil Marriage Photography</h1>
               <p>
                 The talent at kimono runs wide and deep. Across many markets,
                 geographies & typologies, our team members are some of the

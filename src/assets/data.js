@@ -33,6 +33,12 @@ import service5 from "../assets/images/serviceicon/service5.svg";
 import service6 from "../assets/images/serviceicon/service6.svg";
 import service7 from "../assets/images/serviceicon/service7.svg";
 
+import service8 from "../assets/images/serviceicon/service8.svg";
+import service9 from "../assets/images/serviceicon/service9.svg";
+import service10 from "../assets/images/serviceicon/service10.svg";
+import service11 from "../assets/images/serviceicon/service11.svg";
+
+
 import banner1 from "../assets/images/bannerimg/banner1.webp";
 import banner2 from "../assets/images/bannerimg/banner2.webp";
 import banner3 from "../assets/images/bannerimg/banner3.webp";
@@ -106,21 +112,20 @@ export const selectOptions = [
 
 export const footerLinks = [
   {
-    name  : "Portfolio",
-    link: "/portfolio"
+    name: "Portfolio",
+    link: "/portfolio",
   },
 
   {
-    name  : "About Us",
-    link: "/about-us"
+    name: "About Us",
+    link: "/about-us",
   },
 
   {
-    name  : "Contact Us",
-    link: "/contact-us"
+    name: "Contact Us",
+    link: "/contact-us",
   },
-
-]
+];
 
 // export const slides = [
 //   {
@@ -295,23 +300,47 @@ export const client_reviews = [
 
 export const services = [
   {
-    service_name: "Wedding Photography & Videography",
-    link: "/wedding-photography-videography",
-  },
-  { service_name: "Pre-Wedding Shoots", link: "/pre-Wedding-shoots" },
-  { service_name: "Destination Weddings", link: "/destination-weddings" },
-  {
-    service_name: "Concerts & Live Streaming",
-    link: "/concerts-live-streaming",
-  },
-  { service_name: "Corporate Photoshoots", link: "/corporate-photoshoots" },
-  {
-    service_name: "Album Printing & Unique Products",
-    link: "/album-printing-unique-products",
+    service_name: "Wedding Photography & Cinematography",
+    link: "/wedding-photography-cinematography",
+    no: "01",
+    img: service7,
   },
   {
-    service_name: "Fast Delivery of Photos & Videos",
-    link: "/fast-delivery-photos-videos",
+    service_name: "Pre-Wedding Films & Photography",
+    link: "/pre-Wedding-films-photography",
+    no: "02",
+    img: service2,
+  },
+
+  {
+    service_name: "Birthday Photography & Films",
+    link: "/birthday-Photography-films",
+    no: "03",
+    img: service9,
+  },
+  {
+    service_name: "Baby Shower Photography",
+    link: "/baby-shower-photography",
+    no: "04",
+    img: service8,
+  },
+  {
+    service_name: "Civil Marriage Photography",
+    link: "/civil-marriage-photography",
+    no: "05",
+    img: service6,
+  },
+  {
+    service_name: "Engagement Photography & Couple Portraits",
+    link: "/engagement-photography-couple-portraits",
+    no: "06",
+    img: service10,
+  },
+  {
+    service_name: "Graduation Photography",
+    link: "/graduation-photography",
+    no: "07",
+    img: service11,
   },
 ];
 

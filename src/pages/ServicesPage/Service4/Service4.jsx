@@ -29,7 +29,7 @@ const Service4 = () => {
           <div className="service4-container-content">
             <div className="service4-container-content-top">
               <img src={details} alt="" />
-              <h1>Corporate Photoshoots</h1>
+              <h1>Baby Shower Photography</h1>
               <p>
                 The talent at kimono runs wide and deep. Across many markets,
                 geographies & typologies, our team members are some of the

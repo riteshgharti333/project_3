@@ -3,7 +3,7 @@ import "./Footer.scss";
 
 import logo from "../../assets/images/logo2.png";
 import { BsArrowUpRight } from "react-icons/bs";
-import { footerLinks, servicesCards } from "../../assets/data";
+import { footerLinks, services, servicesCards } from "../../assets/data";
 
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -64,9 +64,9 @@ const Footer = () => {
               <div className="row3">
                 <div className="footer-widget">
                   <ul>
-                    {servicesCards.map((item) => (
+                    {services.map((item) => (
                       <li key={item.no}>
-                        <Link to={item.link}>{item.title}</Link>
+                        <Link to={item.link}>{item.service_name}</Link>
                       </li>
                     ))}
                   </ul>
