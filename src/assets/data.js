@@ -104,6 +104,24 @@ export const selectOptions = [
   },
 ];
 
+export const footerLinks = [
+  {
+    name  : "Portfolio",
+    link: "/portfolio"
+  },
+
+  {
+    name  : "About Us",
+    link: "/about-us"
+  },
+
+  {
+    name  : "Contact Us",
+    link: "/contact-us"
+  },
+
+]
+
 // export const slides = [
 //   {
 //     id: 1,
