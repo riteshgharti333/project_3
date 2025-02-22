@@ -87,6 +87,23 @@ export const slides = [
   },
 ];
 
+export const selectOptions = [
+  {
+    option: "Google",
+  },
+  {
+    option: "Social Media",
+  },
+
+  {
+    option: "Recommendation",
+  },
+
+  {
+    option: "Others",
+  },
+];
+
 // export const slides = [
 //   {
 //     id: 1,
