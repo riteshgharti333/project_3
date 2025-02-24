@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import "./OurPorfolio.scss";
-import card_1 from "../../assets/images/1.jpg";
-import card_2 from "../../assets/images/2.jpg";
 import { portfolioImgs } from "../../assets/data";
+import { Link } from "react-router-dom";
 
 const OurPorfolio = () => {
   useEffect(() => {
@@ -50,27 +49,32 @@ const OurPorfolio = () => {
     <div className="ourPorfolio">
       <div className="ourPorfolio-top">
         <h1>Our Portfolio</h1>
-        <p>TK Production Films captures all your beautiful memories with elegance, turning every special moment into a timeless masterpiece.</p>
+        <p>
+          TK Production Films captures all your beautiful memories with
+          elegance, turning every special moment into a timeless masterpiece.
+        </p>
       </div>
 
       <div className="ourPorfolio-cards">
         {portfolioImgs.map((item) => (
           <div className="ourPorfolio-card">
-          <div className="ourPorfolio-card-inner">
-            <img src={item.img} alt="California Fall Collection 2023" />
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
+            <div className="ourPorfolio-card-inner">
+              <img src={item.img} alt="California Fall Collection 2023" />
+              <h2>{item.title}</h2>
+              <p>{item.desc}</p>
+            </div>
           </div>
-        </div>
         ))}
       </div>
 
-      <button>
-        <div className="btn-wrap">
-          <span>Discover All Projects</span>
-          <span>Discover All Projects</span>
-        </div>
-      </button>
+      <Link to={"/porfolio"} className="porfolio-link">
+        <button>
+          <div className="btn-wrap">
+            <span>Discover All Projects</span>
+            <span>Discover All Projects</span>
+          </div>
+        </button>
+      </Link>
     </div>
   );
 };

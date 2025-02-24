@@ -36,28 +36,19 @@ const Footer = () => {
                     <img src={logo} alt="" />
                   </div>
                   <h6 className="row2-title">
-                    Sign up for all the latests
-                    <br />
-                    news and offers
+                    Contact us for a great photography <br /> session &
+                    beautiful captured moments
                   </h6>
                   <div className="row2-input">
-                    <form
-                      action="
-                    "
-                    >
-                      <input
-                        type="email"
-                        placeholder="Enter Your Email"
-                        required
-                      />
-                      <button type="submit" className="book-kimono">
-                        Subscribe
+                    <Link to={"/contact-us"}>
+                      <button className="book-kimono">
+                        Book Us Now
                         <span className="arrows">
                           <BsArrowUpRight className="up-arrow first-arrow" />
                           <BsArrowUpRight className="up-arrow second-arrow" />
                         </span>
                       </button>
-                    </form>
+                    </Link>
                   </div>
                 </div>
               </div>

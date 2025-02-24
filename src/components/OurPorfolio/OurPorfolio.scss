@@ -15,9 +15,9 @@
     h1 {
       font-size: 50px;
 
-    @include sm{
-      font-size: 40px;
-    }
+      @include sm {
+        font-size: 40px;
+      }
     }
     p {
       font-size: 25px;
@@ -43,13 +43,13 @@
       margin-bottom: 20px;
       break-inside: avoid;
       position: relative;
-      perspective: 50000px; // Add perspective to the parent
+      perspective: 50000px;
 
       .ourPorfolio-card-inner {
         width: 100%;
         height: 100%;
         transition: transform 0.5s ease-in-out;
-        transform-style: preserve-3d; // Enable 3D transformations
+        transform-style: preserve-3d;
       }
 
       img {
@@ -64,94 +64,98 @@
     }
   }
 
-  button {
-    position: relative;
-    margin-top: 40px;
+  .porfolio-link {
     width: 100%;
-    min-width: 190px;
-    height: 50px;
-    padding: 10px 35px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.3125rem;
 
-    text-transform: uppercase;
-    color: #fff;
-    background: $primary-color;
-    border: none;
-    border-radius: 0;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-
-    &::before {
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      content: "";
-      top: -200%;
-      left: 50%;
-      background-color: $primary-color;
-      border-radius: 50%;
-      z-index: 1;
-      transform: translateX(-50%);
-      transition: all 0.5s ease-in-out;
-    }
-
-    &:hover {
-      background: #fff;
-      color: $primary-color;
-
-      .btn-wrap {
-        span {
-          color: $primary-color;
-        }
-      }
-
-      &::before {
-        top: -40%;
-        width: calc(50% - 5px);
-        height: calc(50% - 5px);
-      }
-    }
-
-    .btn-wrap {
+    button {
       position: relative;
-      z-index: 1;
-      overflow: hidden;
-      display: flex;
+      margin-top: 40px;
+      width: 100%;
+      min-width: 190px;
+      height: 50px;
+      padding: 10px 35px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3125rem;
 
-      span {
-        display: block;
-        transition: all 0.3s ease;
-        color: #fff;
+      text-transform: uppercase;
+      color: #fff;
+      background: $primary-color;
+      border: none;
+      border-radius: 0;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
 
-        &:first-child {
-          position: relative;
+      &::before {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        content: "";
+        top: -200%;
+        left: 50%;
+        background-color: $primary-color;
+        border-radius: 50%;
+        z-index: 1;
+        transform: translateX(-50%);
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:hover {
+        background: #fff;
+        color: $primary-color;
+
+        .btn-wrap {
+          span {
+            color: $primary-color;
+          }
         }
 
-        &:last-child {
-          position: absolute;
-          top: 100%;
+        &::before {
+          top: -40%;
+          width: calc(50% - 5px);
+          height: calc(50% - 5px);
         }
       }
-    }
 
-    &:hover .btn-wrap {
-      span:first-child {
-        transform: translateY(-150%);
+      .btn-wrap {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          display: block;
+          transition: all 0.3s ease;
+          color: #fff;
+
+          &:first-child {
+            position: relative;
+          }
+
+          &:last-child {
+            position: absolute;
+            top: 100%;
+          }
+        }
       }
 
-      span:last-child {
-        top: 50%;
-        transform: translateY(-50%);
+      &:hover .btn-wrap {
+        span:first-child {
+          transform: translateY(-150%);
+        }
+
+        span:last-child {
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
     }
   }

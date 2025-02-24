@@ -25,11 +25,15 @@
         font-size: 60px;
 
         @include sm {
-          font-size: 50px;
+          font-size: 40px;
         }
       }
       .serviceContact-left-desc {
         font-size: 25px;
+
+        @include sm{
+          font-size: 20px;
+        }
       }
     }
 
@@ -38,7 +42,6 @@
         font-size: 23px;
         font-weight: 600;
 
-        &:last-child {
           transition: all 0.3s ease-in-out;
           cursor: pointer;
 
@@ -48,7 +51,7 @@
           &:hover {
             color: #b90808;
           }
-        }
+        
 
         &:first-child {
           text-transform: uppercase;

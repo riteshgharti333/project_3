@@ -32,9 +32,10 @@ const OurService = () => {
           At <span className="bold-text">TK Production Films</span>, we capture life’s precious moments with elegance. From engagements to weddings, birthdays to graduations, and baby showers to civil marriages, our personalized photography services ensure every milestone is beautifully preserved. Let us turn your special moments into timeless memories you'll cherish forever.
           </p>
 
-          <span className="read-more">
+            <Link to={"/wedding-photography-cinematography"} className="read-more">
             Read More <TiArrowRight className="right-arrow" />
-          </span>
+
+            </Link>
         </div>
       </div>
 

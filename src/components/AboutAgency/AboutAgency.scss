@@ -46,8 +46,6 @@
       letter-spacing: 0.8px;
       cursor: pointer;
       overflow: hidden;
-      // -webkit-transition: var(--transition-base);
-      // transition: var(--transition-base);
       display: flex;
       align-items: center;
       transition: all 0.5s ease-in-out;
@@ -130,8 +128,8 @@
 
       &:hover {
         &:first-child {
-          background: #151515;
-          color: #fff;
+          background: #fff;
+          color: $primary-color;
         }
         .arrows {
           overflow: hidden;

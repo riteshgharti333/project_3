@@ -1,15 +1,29 @@
 import { useState, useRef, useEffect } from "react";
+import axios from "axios";
 import "./Contact.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import { selectOptions } from "../../assets/data";
-
 import ContactSection from "../../components/ContactSection/ContactSection";
+
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedOption, setSelectedOption] = useState(""); // Empty means nothing is selected
   const [isValid, setIsValid] = useState(true); // Validation state
   const selectRef = useRef(null);
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    eventDetail: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleOpenSelect = () => {
     setOpenSelect((prev) => !prev);
@@ -34,13 +48,44 @@ const Contact = () => {
     };
   }, []);
 
-  const handleSubmit = (event) => {
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     if (!selectedOption) {
       setIsValid(false); // Show validation error if no option is selected
-    } else {
-      console.log("Form submitted with:", selectedOption);
-      // Proceed with form submission logic
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setErrorMessage("");
+      setSuccessMessage("");
+
+      const response = await axios.post(
+        "http://localhost:3000/api/contact2/new-contact2",
+        {
+          ...formData,
+          howDidYouHearAboutUs: selectedOption,
+        }
+      );
+
+      toast.success(response.data.message);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        eventDetail: "",
+      });
+      setSelectedOption("");
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Something went wrong");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -51,39 +96,71 @@ const Contact = () => {
       <div className="contact-card">
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <input type="text" required />
-
-            <label htmlFor="">
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+            <label>
               First Name <span className="required">(Required)</span>
             </label>
           </div>
+
           <div className="form-group">
-            <input type="text" required />
-            <label htmlFor="">
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+            <label>
               Last Name <span className="required">(Required)</span>
             </label>
           </div>
+
           <div className="form-group">
-            <input type="email" required />
-            <label htmlFor="">
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <label>
               Email <span className="required">(Required)</span>
             </label>
           </div>
-          <div className="form-group">
-            <input type="number" required />
 
-            <label htmlFor="">
+          <div className="form-group">
+            <input
+              type="number"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <label>
               Phone Number <span className="required">(Required)</span>
             </label>
           </div>
-          <div className="form-group">
-            <textarea rows="5" required className="event-input" />
 
-            <label htmlFor="" className="event-label">
+          <div className="form-group">
+            <textarea
+              rows="5"
+              name="eventDetail"
+              value={formData.eventDetail}
+              onChange={handleChange}
+              required
+              className="event-input"
+            />
+            <label className="event-label">
               Event Details <span className="required">(Required)</span>
               <p>
-                Date and Times, home and vanue address(es), number of guests,
-                play any additional requirements{" "}
+                Date and Times, home and venue address(es), number of guests,
+                and any additional requirements
               </p>
             </label>
           </div>
@@ -101,7 +178,6 @@ const Contact = () => {
                 onClick={handleOpenSelect}
               >
                 {selectedOption || "Select an option"}{" "}
-                {/* Show selected option */}
                 <IoIosArrowDown className="select-options-icon" />
               </span>
               {openSelect && (
@@ -120,8 +196,11 @@ const Contact = () => {
             {!isValid && <p className="error-text">This field is required</p>}
           </div>
 
-          <button type="submit" className="submit-button">
-            Send
+          {/* {/* {successMessage && <p className="success-message">{successMessage}</p>} */}
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+          <button type="submit" className="submit-button" disabled={loading}>
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </div>

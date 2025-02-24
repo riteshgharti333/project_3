@@ -129,7 +129,7 @@
               }
 
               .row2-title {
-                font-size: 25px;
+                font-size: 18px;
                 text-align: center;
                 padding: 30px 0px;
                 text-transform: uppercase;
@@ -141,27 +141,9 @@
                 }
               }
 
-              form {
-                background-color: rgba(39, 39, 39, (0.3));
-                display: flex;
-                border: 1px solid #3c3c3c;
+          
 
-                @include sm {
-                  flex-direction: column;
-                }
-
-                input {
-                  background: transparent;
-                  outline: none;
-                  border: none;
-                  padding: 15px 20px;
-                  font-size: 16px;
-                  color: #fff;
-
-                  @include sm {
-                    text-align: center;
-                  }
-                }
+             
 
                 button {
                   position: relative;
@@ -188,9 +170,9 @@
                   align-items: center;
                   transition: all 0.5s ease-in-out;
                   text-transform: uppercase;
-                  border-left: 1px solid #3c3c3c;
                   color: #fff;
                   font-weight: 500;
+                  border: 1px solid #ddddddb7;
 
                   @include sm {
                     border: none;
@@ -311,4 +293,4 @@
       }
     }
   }
-}
+

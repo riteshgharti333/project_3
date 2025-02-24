@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo2.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { instaGallery, services } from "../../assets/data";
+import { bigBanner, instaGallery, menuImgs, services } from "../../assets/data";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import MobileBurger from "../MobileBurger/MobileBurger";
 
@@ -176,7 +176,7 @@ const Navbar = () => {
             <img src={logo} alt="" />
           </div>
           <div className="nav-social-desc">
-            <h6>// Instagram</h6>
+            <h6>TK Production Films</h6>
             <div className="inside-insta-logo">
               <a
                 href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
@@ -188,9 +188,9 @@ const Navbar = () => {
             </div>
 
             <div className="insta-gallery">
-              {instaGallery.map((item) => (
+              {menuImgs.map((item) => (
                 <div className="gallery-img">
-                  <img src={item.img} />
+                  <img src={item.image} />
                 </div>
               ))}
             </div>

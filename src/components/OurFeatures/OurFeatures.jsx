@@ -6,6 +6,7 @@ import { TiArrowRight } from "react-icons/ti";
 import { gsap } from "gsap";
 
 import { featuresData } from "../../assets/data";
+import { Link } from "react-router-dom";
 
 const OurFeatures = () => {
   const [hoveredItem, setHoveredItem] = useState(featuresData[0]);
@@ -36,7 +37,9 @@ const OurFeatures = () => {
             <div className="ourFeatures-mobile-desc" key={feature.id}>
               <h1>{feature.title}</h1>
               <p>{feature.cardContent.description}</p>
+              <Link to={"/about-us"}>
               <button>Read More</button>
+              </Link>
             </div>
           ))}
         </div>
@@ -48,18 +51,26 @@ const OurFeatures = () => {
         <div className="ourFeatures-left-desc">
           <ul>
             {featuresData.map((item) => (
-            <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
-            <BsArrowUpRight className="up-arrow" />
-            {item.title}
-        
-            <div className={`ourFeatures-left-card ${hoveredItem?.card_fit || ""}`} ref={cardRef}>
-                <p>{hoveredItem?.cardContent.description}</p>
-                <span className="read-more">
-                    {hoveredItem?.cardContent.readMore} <TiArrowRight className="right-arrow" />
-                </span>
-            </div>
-        </li>
-        
+              <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
+                <BsArrowUpRight className="up-arrow" />
+                {item.title}
+
+                <div
+                  className={`ourFeatures-left-card ${
+                    hoveredItem?.card_fit || ""
+                  }`}
+                  ref={cardRef}
+                >
+                  <p>{hoveredItem?.cardContent.description}</p>
+                  <Link to={"/about-us"}>
+                  <span className="read-more">
+                    {hoveredItem?.cardContent.readMore}{" "}
+                    <TiArrowRight className="right-arrow" />
+                  </span>
+                  </Link>
+                  
+                </div>
+              </li>
             ))}
           </ul>
         </div>

@@ -17,6 +17,9 @@ import Gallery from "./components/Gallery/Gallery.jsx";
 import Service7 from "./pages/ServicesPage/Service7/Service7.jsx";
 import { useEffect } from "react";
 
+import { Toaster } from "react-hot-toast";
+
+
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -56,6 +59,17 @@ function App() {
           />
         </Routes>
         <Footer />
+
+        <Toaster
+          toastOptions={{
+            className: "",
+            style: {
+              fontFamily: "Sora, serif",
+              fontSize: "18px",
+              fontWeight: "600",
+            },
+          }}
+        />
       </BrowserRouter>
     </div>
   );

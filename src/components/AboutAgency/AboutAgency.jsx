@@ -2,45 +2,51 @@ import "./AboutAgency.scss";
 
 import bg7 from "../../assets/images/7.png";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const AboutAgency = () => {
   return (
     <div className="aboutAgency">
       <div className="aboutAgency-top">
         <h1>About Agency</h1>
-
-        <button className="book-kimono">
-          Book Us Now
-          <span className="corner top-left"></span>
-          <span className="corner top-right"></span>
-          <span className="corner bottom-left"></span>
-          <span className="corner bottom-right"></span>
-          <span className="arrows">
-            <BsArrowUpRight className="up-arrow first-arrow" />
-            <BsArrowUpRight className="up-arrow second-arrow" />
-          </span>
-        </button>
+        <Link to={"/contact-us"}>
+          <button className="book-kimono">
+            Book Us Now
+            <span className="corner top-left"></span>
+            <span className="corner top-right"></span>
+            <span className="corner bottom-left"></span>
+            <span className="corner bottom-right"></span>
+            <span className="arrows">
+              <BsArrowUpRight className="up-arrow first-arrow" />
+              <BsArrowUpRight className="up-arrow second-arrow" />
+            </span>
+          </button>
+        </Link>
       </div>
 
       <div className="aboutAgency-bottom">
         <div className="aboutAgency-bottom-left">
           <img src={bg7} alt="" />
 
-          <div className="aboutAgency-bottom-left-desc">
-            Explore Us
-            <span className="arrows">
-              <BsArrowUpRight className="up-arrow first-arrow" />
-              <BsArrowUpRight className="up-arrow second-arrow" />
-            </span>
-          </div>
+          <Link to={"/about-us"}>
+            <div className="aboutAgency-bottom-left-desc">
+              Read More
+              <span className="arrows">
+                <BsArrowUpRight className="up-arrow first-arrow" />
+                <BsArrowUpRight className="up-arrow second-arrow" />
+              </span>
+            </div>
+          </Link>
 
-          <div className="aboutAgency-bottom-left-btn">
-            Explore Us
-            <span className="arrows">
-              <BsArrowUpRight className="up-arrow first-arrow" />
-              <BsArrowUpRight className="up-arrow second-arrow" />
-            </span>
-          </div>
+          <Link to={"/about-us"}>
+            <div className="aboutAgency-bottom-left-btn">
+              Read More
+              <span className="arrows">
+                <BsArrowUpRight className="up-arrow first-arrow" />
+                <BsArrowUpRight className="up-arrow second-arrow" />
+              </span>
+            </div>
+          </Link>
         </div>
 
         <div className="aboutAgency-bottom-right">

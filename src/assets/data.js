@@ -169,6 +169,33 @@ export const smBanner = [
   },
 ];
 
+export const menuImgs = [
+  {
+    id: 1,
+    image: banner1,
+  },
+  {
+    id: 3,
+    image: banner3,
+  },
+  {
+    id: 4,
+    image: banner4,
+  },
+  {
+    id: 5,
+    image: banner5,
+  },
+  {
+    id: 6,
+    image: banner6,
+  },
+  {
+    id: 7,
+    image: banner7,
+  },
+];
+
 export const selectOptions = [
   {
     option: "Google",
