@@ -105,6 +105,7 @@
         height: auto;
         object-fit: cover;
         height: 400px;
+        object-position: top;
 
         @include sm {
           max-width: 100%;
