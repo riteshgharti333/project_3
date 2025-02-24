@@ -4,8 +4,7 @@ import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import bg15 from "../../assets/images/bg15.jpg";
-import { gallery } from "../../assets/data";
+import { portfolioImgs } from "../../assets/data";
 
 const Gallery = () => {
   const [overlayDirection, setOverlayDirection] = useState("");
@@ -32,7 +31,7 @@ const Gallery = () => {
 
   // Calculate the cards to display for the current page
   const offset = currentPage * cardsPerPage;
-  const currentCards = gallery.slice(offset, offset + cardsPerPage);
+  const currentCards = portfolioImgs.slice(offset, offset + cardsPerPage);
 
   // Handle page change with scroll to top
   const handlePageChange = ({ selected }) => {
@@ -85,7 +84,7 @@ const Gallery = () => {
               <FaChevronRight />
             </span>
           }
-          pageCount={Math.ceil(gallery.length / cardsPerPage)}
+          pageCount={Math.ceil(portfolioImgs.length / cardsPerPage)}
           onPageChange={handlePageChange}
           containerClassName={"pagination"}
           pageClassName={"page-item"}

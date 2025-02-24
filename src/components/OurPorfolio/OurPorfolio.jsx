@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./OurPorfolio.scss";
 import card_1 from "../../assets/images/1.jpg";
 import card_2 from "../../assets/images/2.jpg";
+import { portfolioImgs } from "../../assets/data";
 
 const OurPorfolio = () => {
   useEffect(() => {
@@ -53,37 +54,15 @@ const OurPorfolio = () => {
       </div>
 
       <div className="ourPorfolio-cards">
-        <div className="ourPorfolio-card">
+        {portfolioImgs.map((item) => (
+          <div className="ourPorfolio-card">
           <div className="ourPorfolio-card-inner">
-            <img src={card_1} alt="California Fall Collection 2023" />
-            <h2>California Fall Collection 2023</h2>
-            <p>By Jonathon Willson</p>
+            <img src={item.img} alt="California Fall Collection 2023" />
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
           </div>
         </div>
-
-        <div className="ourPorfolio-card">
-          <div className="ourPorfolio-card-inner">
-            <img src={card_2} alt="California Fall Collection 2023" />
-            <h2>California Fall Collection 2023</h2>
-            <p>By Jonathon Willson</p>
-          </div>
-        </div>
-
-        <div className="ourPorfolio-card">
-          <div className="ourPorfolio-card-inner">
-            <img src={card_2} alt="California Fall Collection 2023" />
-            <h2>California Fall Collection 2023</h2>
-            <p>By Jonathon Willson</p>
-          </div>
-        </div>
-
-        <div className="ourPorfolio-card">
-          <div className="ourPorfolio-card-inner">
-            <img src={card_1} alt="California Fall Collection 2023" />
-            <h2>California Fall Collection 2023</h2>
-            <p>By Jonathon Willson</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <button>

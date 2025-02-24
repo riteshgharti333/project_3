@@ -41,7 +41,6 @@ const Homepage = () => {
 
       <Getintouch />
 
-      {/* <ContactSection /> */}
 
       <FollowSection />
     </div>

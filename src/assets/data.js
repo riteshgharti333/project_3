@@ -48,13 +48,73 @@ import banner5 from "../assets/images/bannerimg/banner5.webp";
 import banner6 from "../assets/images/bannerimg/banner6.webp";
 import banner7 from "../assets/images/bannerimg/banner7.webp";
 
-
-
 // mobile home banner
 import mobilebanner1 from "../assets/images/bannerimg/mobileBanner.webp";
 import mobilebanner2 from "../assets/images/bannerimg/mobileBanner2.webp";
 import mobilebanner3 from "../assets/images/bannerimg/mobileBanner3.webp";
 import mobilebanner4 from "../assets/images/bannerimg/mobileBanner4.webp";
+
+export const portfolioImgs = [
+  {
+    img: banner1,
+    title: "California Fall Collection 2023",
+    desc: "Jonathon Willson",
+  },
+  {
+    img: banner2,
+    title: "Urban Street Style 2023",
+    desc: "Emily Carter",
+  },
+  {
+    img: mobilebanner1,
+    title: "Mobile Exclusive Collection",
+    desc: "Emma Scott",
+  },
+  {
+    img: banner3,
+    title: "Modern Elegance Shoot",
+    desc: "Michael Smith",
+  },
+  {
+    img: banner4,
+    title: "Summer Vibes 2023",
+    desc: "Sophia Anderson",
+  },
+
+  {
+    img: mobilebanner2,
+    title: "Casual Wear Trends",
+    desc: "James Taylor",
+  },
+  {
+    img: banner5,
+    title: "Luxury Fashion Week",
+    desc: "Daniel Roberts",
+  },
+  {
+    img: banner6,
+    title: "Bohemian Chic Collection",
+    desc: "Olivia Brown",
+  },
+
+  {
+    img: mobilebanner4,
+    title: "Elegant Evening Wear",
+    desc: "Liam Johnson",
+  },
+
+  {
+    img: banner7,
+    title: "Classic Vintage Look",
+    desc: "David Wilson",
+  },
+
+  {
+    img: mobilebanner3,
+    title: "Winter Wonderland 2023",
+    desc: "Sophia Martinez",
+  },
+];
 
 export const bigBanner = [
   {
@@ -586,7 +646,7 @@ export const featuresData = [
     id: 1,
     title: "16 + Years of Experience",
     image: bg12,
-    card_fit : "fit",
+    card_fit: "fit",
     cardContent: {
       description:
         "At TK Production Films, we blend cinematic excellence with heartfelt storytelling.  700+ weddings captured, we ensure every moment shines. Our expert team delivers stunning photography and videography across the UK and beyond, turning your special memories into timeless masterpieces.",

@@ -145,6 +145,24 @@
       margin-right: 10px;
 
       .nav-social {
+          position: relative;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          border-radius: 0;
+          text-align: center;
+          transition: all 0.5s ease-in-out;
+      
+          &:hover {
+            .nav-social-menu {
+              span {
+                &:nth-child(3) {
+                  width: 42px;
+                }
+              }
+            }
+          }
+        
         .nav-social-menu {
           display: flex;
           flex-direction: column;
@@ -192,7 +210,7 @@
 
   .navbar-left {
     .logo img {
-      width: 100px;
+      width: 90px;
       transition: transform 0.3s ease;
 
       &:hover {
@@ -290,8 +308,6 @@
         transform: rotate(180deg);
       }
 
-      
-
       .dropdown-menu {
         position: absolute;
         top: 100%;
@@ -323,7 +339,7 @@
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
-      } 
+      }
 
       .dropdown-item {
         display: block;
@@ -339,29 +355,11 @@
     }
   }
 
-  .nav-social {
-    position: relative;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 0;
-    text-align: center;
-    transition: all 0.5s ease-in-out;
-
-    &:hover {
-      .nav-social-menu {
-        span {
-          &:nth-child(3) {
-            width: 42px;
-          }
-        }
-      }
-    }
-  }
+ 
 }
 
 .nav-social-card {
-  padding: 30px 65px;
+  padding: 30px 60px;
   background: #fff;
   max-width: 400px;
   height: 100vh;
@@ -385,7 +383,6 @@
     background: red !important;
     animation: slideOutScale 0.5s ease-in-out forwards;
   }
-  
 
   @keyframes slideInScale {
     0% {
@@ -404,7 +401,7 @@
       opacity: 1;
     }
     99% {
-      visibility: visible; // Keep it visible until just before hiding
+      visibility: visible; 
     }
     100% {
       transform: scale(0.5);
@@ -412,19 +409,19 @@
       visibility: hidden;
     }
   }
-  
 
   @include sm {
     width: 100%;
+    padding: 30px 20px;
   }
 
   &::-webkit-scrollbar {
-    width: 6px; // Default small scrollbar
+    width: 6px;
     display: none;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); // Subtle scrollbar
+    background-color: rgba(0, 0, 0, 0.3); 
     border-radius: 10px;
   }
 
@@ -463,14 +460,17 @@
     }
 
     .inside-insta-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 18px;
-      font-style: italic;
-      color: #000;
+     
       margin-bottom: 20px;
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 18px;
+        font-style: italic;
+        color: #000;
+      }
     }
 
     .insta-gallery {
@@ -500,6 +500,7 @@
         gap: 7px;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        align-items: center;
 
         &:hover {
           color: $primary-color;

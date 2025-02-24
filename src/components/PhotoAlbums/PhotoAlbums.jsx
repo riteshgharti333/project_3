@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { photoAlbumsData } from "../../assets/data";
+import { bigBanner, photoAlbumsData } from "../../assets/data";
 import { useEffect, useState } from "react";
 
 const PhotoAlbums = () => {
@@ -43,7 +43,7 @@ const PhotoAlbums = () => {
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               spaceBetween: 15,
             },
             1024: {
@@ -52,7 +52,7 @@ const PhotoAlbums = () => {
             },
           }}
         >
-          {photoAlbumsData.map((album , index) => (
+          {bigBanner.map((album , index) => (
             <SwiperSlide key={album.id} className="photoAlbums-card">
               <div className="photoAlbums-card-content">
                 <img src={album.image} alt={album.title} />
@@ -63,8 +63,8 @@ const PhotoAlbums = () => {
                   }`}
                 >
                   <div className="photoAlbums-card-content-desc">
-                    <h3>{album.title}</h3>
-                    <p>{album.description}</p>
+                    <h3>Birght Boho Sunshine</h3>
+                    <p>By Jonathan Wilson</p>
                   </div>
                 </div>
               </div>

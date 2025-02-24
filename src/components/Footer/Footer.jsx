@@ -3,12 +3,13 @@ import "./Footer.scss";
 
 import logo from "../../assets/images/logo2.png";
 import { BsArrowUpRight } from "react-icons/bs";
-import { footerLinks, services, servicesCards } from "../../assets/data";
+import { footerLinks, services } from "../../assets/data";
 
 import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -92,10 +93,30 @@ const Footer = () => {
           </p>
 
           <div className="footer-icons">
-            <FaFacebook className="footer-icon" />
-            <FaInstagram className="footer-icon" />
-            <FaLinkedin className="footer-icon" />
-            <FaYoutube className="footer-icon" />
+            <a
+              href="https://www.facebook.com/tkproductionfilm?mibextid=wwXIfr&rdid=shqDkdh9xtXyGSgN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163hvW8GX9%2F%3Fmibextid%3DwwXIfr#"
+              target="_blank"
+            >
+              <FaFacebook className="footer-icon" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
+              target="_blank"
+            >
+              <FaInstagram className="footer-icon" />
+            </a>
+
+            <a href="https://www.youtube.com/@tkproductionfilm" target="_blank">
+              <FaYoutube className="footer-icon" />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@takproductionsltd?_t=ZN-8uBFBGxMNMc&_r=1"
+              target="_blank"
+            >
+              <FaTiktok className="footer-icon" />
+            </a>
           </div>
         </div>
       </div>

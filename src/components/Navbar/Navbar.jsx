@@ -17,6 +17,7 @@ import { SlScreenSmartphone } from "react-icons/sl";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -163,9 +164,10 @@ const Navbar = () => {
       </nav>
 
       {openFollowCard && (
-       
-       <div key={openFollowCard} className={`nav-social-card ${openFollowCard ? "active" : "hidden"}`}>
-
+        <div
+          key={openFollowCard}
+          className={`nav-social-card ${openFollowCard ? "active" : "hidden"}`}
+        >
           <button onClick={openSocialCard}>
             Close <RxCross1 className="cross-icon" />
           </button>
@@ -176,8 +178,13 @@ const Navbar = () => {
           <div className="nav-social-desc">
             <h6>// Instagram</h6>
             <div className="inside-insta-logo">
-              <FaInstagram className="insta-icon" />
-              Instagram
+              <a
+                href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
+                target="_blank"
+              >
+                <FaInstagram className="insta-icon" />
+                Instagram
+              </a>
             </div>
 
             <div className="insta-gallery">
@@ -191,29 +198,51 @@ const Navbar = () => {
             <div className="nav-social-media">
               <div className="nav-social-media-item">
                 <CiMail className="social-media-icon" />
-                <span>kimocare@gmail.com</span>
+                <span>Support@tkproductionfilm.com</span>
               </div>
 
               <div className="nav-social-media-item">
                 <CiLocationOn className="social-media-icon" />
-                <span>28 Street, New York, USA</span>
+                <span>506a Ladymargret Road Southall ub1 2np</span>
               </div>
 
               <div className="nav-social-media-item">
                 <SlScreenSmartphone className="social-media-icon" />
-                <span>(+987) 654 321 228 11</span>
+                <span>+447884537171</span>
+                <span>+919725621316</span>
               </div>
             </div>
 
             <div className="nav-social-follow">
               <h6>// Follow Us</h6>
               <div className="nav-social-follow-icons">
-                <FaFacebook className="nav-social-follow-icon" />
+                <a
+                  href="https://www.facebook.com/tkproductionfilm?mibextid=wwXIfr&rdid=shqDkdh9xtXyGSgN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163hvW8GX9%2F%3Fmibextid%3DwwXIfr#"
+                  target="_blank"
+                >
+                  <FaFacebook className="nav-social-follow-icon" />
+                </a>
 
-                <FaInstagram className="nav-social-follow-icon" />
+                <a
+                  href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
+                  target="_blank"
+                >
+                  <FaInstagram className="nav-social-follow-icon" />
+                </a>
 
-                <FaLinkedin className="nav-social-follow-icon" />
-                <FaYoutube className="nav-social-follow-icon" />
+                <a
+                  href="https://www.youtube.com/@tkproductionfilm"
+                  target="_blank"
+                >
+                  <FaYoutube className="nav-social-follow-icon" />
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@takproductionsltd?_t=ZN-8uBFBGxMNMc&_r=1"
+                  target="_blank"
+                >
+                  <FaTiktok className="nav-social-follow-icon" />
+                </a>
               </div>
             </div>
           </div>

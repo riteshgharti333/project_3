@@ -29,6 +29,8 @@ import { TbPlayerPlayFilled } from "react-icons/tb";
 import about1 from "../../assets/images/bannerimg/about-banner1.webp";
 import { aboutLists } from "../../assets/data";
 
+import founder_img from "../../assets/images/founder.jpeg";
+
 const About = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -129,7 +131,12 @@ const About = () => {
       <div className="about-content" ref={aboutContentRef}>
         <div className="about-content-left">
           <div className="about-content-left-top">
-            <img src={bg18} alt="" data-aos="fade-up" data-aos-offset="700" />
+            <img
+              src={founder_img}
+              alt=""
+              data-aos="fade-up"
+              data-aos-offset="700"
+            />
 
             <div className="about-content-left-top-right">
               <h1>
@@ -263,9 +270,11 @@ const About = () => {
         <OurCore />
       </div>
 
-      <ClientReview />
+      <div className="about-client">
+        <ClientReview />
+      </div>
 
-      <OurPhotography />
+      {/* <OurPhotography /> */}
     </div>
   );
 };

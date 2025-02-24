@@ -26,10 +26,8 @@
   .photoAlbums-cards {
     width: 100%;
     max-width: 1200px;
-    // display: flex;
-    // gap: 20px;
     position: relative;
-    overflow: visible; /* Allowing shadow overflow */
+    overflow: visible; 
 
     .photoAlbums-slider {
       position: relative;
@@ -53,12 +51,15 @@
 
       .photoAlbums-card-content {
         position: relative;
+        width: 100%;
 
         img {
           width: 100%;
+          height: 300px;
           display: block;
-          object-fit: contain;
+          object-fit: cover;
           border-radius: 20px;
+          filter: brightness(0.6);
         }
 
         .photoAlbums-card-content-desc {
@@ -85,6 +86,10 @@
             font-size: 25px;
             margin-bottom: 5px;
             transition: all 0.3s ease-in-out;
+
+            @include sm{
+              font-size: 22px;
+            }
 
             &:hover {
               color: $primary-color;
