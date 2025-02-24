@@ -24,7 +24,7 @@ const ServiceContact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/contact/submit-contact", formData, {
+      const response = await axios.post("https://project-3-backend-1.onrender.com/contact/submit-contact", formData, {
         headers: { "Content-Type": "application/json" },
       });
 

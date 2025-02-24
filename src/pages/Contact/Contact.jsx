@@ -66,7 +66,7 @@ const Contact = () => {
       setSuccessMessage("");
 
       const response = await axios.post(
-        "http://localhost:3000/api/contact2/new-contact2",
+        "https://project-3-backend-1.onrender.com/api/contact2/new-contact2",
         {
           ...formData,
           howDidYouHearAboutUs: selectedOption,
