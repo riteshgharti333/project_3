@@ -108,7 +108,6 @@
 
         @include sm {
           max-width: 100%;
-          height: auto;
         }
       }
 
@@ -196,23 +195,23 @@
   }
 
   @media (max-width: 650px) {
-    top: 30%;
+    top: 26%;
   }
 
   @media (max-width: 600px) {
-    top: 30%;
+    top: 28%;
   }
 
   @include sm {
-    top: 34%;
+    top: 28%;
   }
 
   @media (max-width: 420px) {
-    top: 36%;
+    top: 30%;
   }
 
   @media (max-width: 340px) {
-    top: 40%;
+    top: 30%;
   }
 
   &::before {

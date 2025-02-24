@@ -35,7 +35,7 @@ const OurCore = () => {
         modules={[Navigation, Autoplay]}
         className="ourCore-slider"
         breakpoints={{
-          0: { slidesPerView: 1.5, spaceBetween: 10 },
+          0: { slidesPerView: 1, spaceBetween: 10 },
           480: { slidesPerView: 2, spaceBetween: 10 },
           768: { slidesPerView: 2.5, spaceBetween: 15 }, // Show half of next slide
           1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Show half of 4th slide
