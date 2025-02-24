@@ -23,8 +23,7 @@ const OurCore = () => {
       <div className="ourCore-top">
         <h1>Our Team</h1>
         <p>
-          We’re deeply passionate about capturing your lovely memories and
-          conveying your love for every moment of life.
+        At <span className="bold-text">TK Production Films</span>, we’re passionate about capturing your precious memories, preserving your love, and celebrating every beautiful moment of life.
         </p>
       </div>
 
@@ -41,7 +40,8 @@ const OurCore = () => {
         modules={[Navigation, Autoplay]}
         className="ourCore-slider"
         breakpoints={{
-          0: { slidesPerView: 1, spaceBetween: 10 },
+          0: { slidesPerView: 1.5, spaceBetween: 10 },
+          480: { slidesPerView: 2, spaceBetween: 10 },
           768: { slidesPerView: 2.5, spaceBetween: 15 }, // Show half of next slide
           1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Show half of 4th slide
         }}

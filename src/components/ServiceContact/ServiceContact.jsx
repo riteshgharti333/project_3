@@ -13,12 +13,13 @@ const ServiceContact = () => {
 
         <div className="serviceContact-left-desc">
           <p>Call Us For Query</p>
-          <p>+123 45677347</p>
+          <p>+447884537171</p>
+          <p>+919725621316</p>
         </div>
 
         <div className="serviceContact-left-desc">
           <p>SEND US EMAIL</p>
-          <p>kimonophotography@email.com</p>
+          <p>Support@tkproductionfilm.com</p>
         </div>
       </div>
 

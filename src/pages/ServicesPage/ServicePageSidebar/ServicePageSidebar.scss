@@ -4,11 +4,11 @@
   width: 400px;
   color: #000;
 
-  @include lg{
-    width: 350px;
-  }
+  // @include lg{
+  //   width: 350px;
+  // }
 
-  @include md{
+  @include lg {
     width: 100%;
   }
 
@@ -20,7 +20,7 @@
       .servicePageSidebar-item {
         p,
         .servicePageSidebar-icon {
-          color: #b90808; 
+          color: #b90808;
         }
       }
     }

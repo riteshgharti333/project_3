@@ -15,6 +15,7 @@ import bg2 from "../assets/images/bg2.jpg";
 
 import album_img from "../assets/images/5.jpg";
 
+// review img
 import reviewImg1 from "../assets/images/reviewimg/IMG_9016-_1_.webp";
 import reviewImg2 from "../assets/images/reviewimg/IMG_9017.webp";
 import reviewImg3 from "../assets/images/reviewimg/IMG_9019.webp";
@@ -25,6 +26,7 @@ import reviewImg7 from "../assets/images/reviewimg/IMG_9020.webp";
 import reviewImg8 from "../assets/images/reviewimg/IMG_9022.webp";
 import reviewImg9 from "../assets/images/reviewimg/IMG_9015.webp";
 
+// services img
 import service1 from "../assets/images/serviceicon/service1.svg";
 import service2 from "../assets/images/serviceicon/service2.svg";
 import service3 from "../assets/images/serviceicon/service3.svg";
@@ -32,13 +34,12 @@ import service4 from "../assets/images/serviceicon/service4.svg";
 import service5 from "../assets/images/serviceicon/service5.svg";
 import service6 from "../assets/images/serviceicon/service6.svg";
 import service7 from "../assets/images/serviceicon/service7.svg";
-
 import service8 from "../assets/images/serviceicon/service8.svg";
 import service9 from "../assets/images/serviceicon/service9.svg";
 import service10 from "../assets/images/serviceicon/service10.svg";
 import service11 from "../assets/images/serviceicon/service11.svg";
 
-
+// home banners
 import banner1 from "../assets/images/bannerimg/banner1.webp";
 import banner2 from "../assets/images/bannerimg/banner2.webp";
 import banner3 from "../assets/images/bannerimg/banner3.webp";
@@ -46,11 +47,16 @@ import banner4 from "../assets/images/bannerimg/banner4.webp";
 import banner5 from "../assets/images/bannerimg/banner5.webp";
 import banner6 from "../assets/images/bannerimg/banner6.webp";
 import banner7 from "../assets/images/bannerimg/banner7.webp";
-import banner8 from "../assets/images/bannerimg/banner8.webp";
-import banner9 from "../assets/images/bannerimg/banner9.webp";
-import banner10 from "../assets/images/bannerimg/banner10.webp";
 
-export const slides = [
+
+
+// mobile home banner
+import mobilebanner1 from "../assets/images/bannerimg/mobileBanner.webp";
+import mobilebanner2 from "../assets/images/bannerimg/mobileBanner2.webp";
+import mobilebanner3 from "../assets/images/bannerimg/mobileBanner3.webp";
+import mobilebanner4 from "../assets/images/bannerimg/mobileBanner4.webp";
+
+export const bigBanner = [
   {
     id: 1,
     image: banner1,
@@ -79,17 +85,27 @@ export const slides = [
     id: 7,
     image: banner7,
   },
+];
+
+export const smBanner = [
   {
-    id: 8,
-    image: banner8,
+    id: 1,
+    image: mobilebanner1,
   },
+
   {
-    id: 9,
-    image: banner9,
+    id: 2,
+    image: mobilebanner2,
   },
+
   {
-    id: 10,
-    image: banner10,
+    id: 3,
+    image: mobilebanner3,
+  },
+
+  {
+    id: 4,
+    image: mobilebanner4,
   },
 ];
 
@@ -568,31 +584,12 @@ export const gallery = [
 export const featuresData = [
   {
     id: 1,
-    title: "20+ Years Experience",
+    title: "16 + Years of Experience",
     image: bg12,
+    card_fit : "fit",
     cardContent: {
       description:
-        "Kimono has 20+ years of experience in photography & videography, which makes us pioneers in this profession. We are having so much fun doing this.",
-      readMore: "Read More",
-    },
-  },
-  {
-    id: 2,
-    title: "Creative Shoot Ideas",
-    image: bg2,
-    cardContent: {
-      description:
-        "We bring unique and creative ideas to every shoot, ensuring your photos stand out. Our team is always innovating to capture the perfect moment.",
-      readMore: "Read More",
-    },
-  },
-  {
-    id: 3,
-    title: "Globally Awarded",
-    image: bg12,
-    cardContent: {
-      description:
-        "Our work has been recognized globally with numerous awards. We take pride in delivering excellence in every project we undertake.",
+        "At TK Production Films, we blend cinematic excellence with heartfelt storytelling.  700+ weddings captured, we ensure every moment shines. Our expert team delivers stunning photography and videography across the UK and beyond, turning your special memories into timeless masterpieces.",
       readMore: "Read More",
     },
   },
@@ -602,7 +599,7 @@ export const featuresData = [
     image: bg2,
     cardContent: {
       description:
-        "We use state-of-the-art equipment and techniques to ensure the highest quality photos. Your memories deserve nothing but the best.",
+        "We use cutting-edge equipment and techniques to deliver exceptional quality, ensuring your precious memories are captured with perfection and elegance.",
       readMore: "Read More",
     },
   },
@@ -671,5 +668,16 @@ export const servicesCards = [
     no: "07",
     title: "Fast Delivery of Photos & Videos",
     link: "/fast-delivery-photos-videos",
+  },
+];
+
+export const aboutLists = [
+  {
+    title: "TK Production Films Mission",
+    desc: "At TK Production Films, our mission is to capture the essence of love through stunning visuals. We craft timeless wedding narratives with artistry and passion, ensuring every couple’s story is beautifully told and cherished for a lifetime.",
+  },
+  {
+    title: "Our Strategy",
+    desc: "Our strategy at TK Production Films focuses on blending creativity with cutting-edge technology to craft stunning wedding narratives. We expand globally, engage in trade expos, and personalize every project, ensuring each couple’s love story is beautifully captured and cherished forever.",
   },
 ];

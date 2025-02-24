@@ -4,8 +4,6 @@
   background-image: url("../../assets/images/footer.png");
   position: relative;
   z-index: 1;
-  // font-size: var(--fs-16);
-  // font-weight: var(--fw-light);
   line-height: 34px;
   color: #fff;
   background-color: #121212;
@@ -261,12 +259,16 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 27px 20px;
 
+    @include sm {
+      padding: 10px;
+    }
+
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      @include sm {
+      @include lg {
         flex-direction: column;
         text-align: center;
         gap: 20px;
@@ -274,6 +276,16 @@
 
       p {
         font-size: 18px;
+
+        .star-link {
+          border-bottom: 1px solid #fff;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+          }
+        }
       }
 
       .footer-icons {

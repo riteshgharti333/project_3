@@ -26,22 +26,8 @@ import overlay3 from "../../assets/images/overlay3.png";
 
 import { TbPlayerPlayFilled } from "react-icons/tb";
 
-import about1 from "../../assets/images/bannerimg/banner6.webp";
-
-const lists = [
-  {
-    title: "Limono Mission",
-    desc: "Our business consulting programs help break the performance of your business down into customers and product groups so you know exactly which customers or product groups are working.",
-  },
-  {
-    title: "Our Strategy",
-    desc: "We provide strategic insights that empower businesses to make data-driven decisions and optimize their performance in a competitive market.",
-  },
-  {
-    title: "Customer-Centric Approach",
-    desc: "Our approach ensures that our clients receive personalized solutions that cater to their unique business needs.",
-  },
-];
+import about1 from "../../assets/images/bannerimg/about-banner1.webp";
+import { aboutLists } from "../../assets/data";
 
 const About = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -150,12 +136,15 @@ const About = () => {
                 Our <span className="line-break">Vision</span>
               </h1>
               <p>
-                Our vision is to create a visual narrative that captures the
-                essence of love and celebration. We strive to tell your unique
-                story through our lens, creating a legacy of timeless memories.
-                Our vision is to create a visual narrative that captures the
-                essence of love and celebration. We strive to tell your unique
-                story through our lens, creating a legacy of timeless memories.
+                At <span className="bold-text">TK Production Films</span>, we
+                craft visual narratives that embody love and celebration.
+                Through our lens, we capture the essence of your unique story,
+                preserving moments that turn into timeless memories. Our passion
+                lies in storytelling, ensuring every frame reflects the beauty,
+                joy, and emotions of your special journey. With creativity and
+                dedication, we transform fleeting moments into a lasting legacy,
+                allowing you to relive your cherished experiences for years to
+                come. Your story, beautifully told.
               </p>
             </div>
           </div>
@@ -166,7 +155,7 @@ const About = () => {
                 <h1>
                   <CountUp
                     start={startCount ? 0 : null}
-                    end={100}
+                    end={70}
                     duration={2.5}
                   />
                   %
@@ -182,7 +171,7 @@ const About = () => {
                 <h1>
                   <CountUp
                     start={startCount ? 0 : null}
-                    end={350}
+                    end={1500}
                     duration={2.5}
                   />
                   +
@@ -212,7 +201,7 @@ const About = () => {
           </h1>
 
           <div className="about-content2-lists">
-            {lists.map((list, index) => (
+            {aboutLists.map((list, index) => (
               <div key={index} className="about-content2-list">
                 <div
                   className={`about-content2-list-top ${
@@ -240,7 +229,7 @@ const About = () => {
 
           <div className="experience">
             <div className="experience-circle">
-              <h4>15+</h4>
+              <h4>16+</h4>
             </div>
             <h2>Years Experience</h2>
           </div>
@@ -250,14 +239,14 @@ const About = () => {
       <div class="about-content3">
         <div class="scrolling-container">
           <div class="scrolling-content">
-            <h1>Photography</h1>
-            <h1>Studio</h1>
-            <h1>Agency</h1>
+            <h1>TK</h1>
+            <h1>Production </h1>
+            <h1>Films</h1>
           </div>
           <div class="scrolling-content">
-            <h1>Photography</h1>
-            <h1>Studio</h1>
-            <h1>Agency</h1>
+            <h1>TK</h1>
+            <h1>Production </h1>
+            <h1>Films</h1>
           </div>
         </div>
       </div>

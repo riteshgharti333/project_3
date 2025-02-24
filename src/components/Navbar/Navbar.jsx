@@ -163,11 +163,9 @@ const Navbar = () => {
       </nav>
 
       {openFollowCard && (
-        <div
-          className={`nav-social-card ${
-            openFollowCard ? "active" : "hidden"
-          } show`}
-        >
+       
+       <div key={openFollowCard} className={`nav-social-card ${openFollowCard ? "active" : "hidden"}`}>
+
           <button onClick={openSocialCard}>
             Close <RxCross1 className="cross-icon" />
           </button>

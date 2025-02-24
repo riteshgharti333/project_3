@@ -1,13 +1,17 @@
 import "./Service3.scss";
 
-import bg22 from "../../../assets/images/bg22.jpg";
-
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
+import {
+  service1Data,
+  service1Steps,
+  service3Data,
+  service3Steps,
+} from "../../../assets/servicesData";
 
 const Service3 = () => {
   return (
@@ -28,59 +32,51 @@ const Service3 = () => {
         <div className="service3-container-content">
           <div className="service3-container-content-top">
             <img src={details} alt="" />
-            <h1>Birthday Photography & Films</h1>
+            <h1>Birthday Photography & Films by TK Production Films</h1>
             <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.
+              Celebrate life’s special milestones with TK Production Films!
+              Whether it's a grand birthday celebration or an intimate
+              gathering, we capture every joyful moment with creativity and
+              precision. Our expert team ensures that your birthday memories are
+              beautifully preserved through high-quality photography and
+              cinematic films, making them unforgettable.
             </p>
           </div>
 
-          <div className="service3-steps">
-            <h1>Service Steps</h1>
-            <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep.
-            </p>
+          <div className="service3-services">
+            <h1>Our Birthday Services</h1>
 
             <ul>
-              <li>
-                <FaCheck className="check-icon" /> The talent at Kimono runs
-                wide and deep. Across many markets, geographies
-              </li>
-              <li>
-                <FaCheck className="check-icon" /> Our team members are some of
-                the finest professionals in the industry
-              </li>
+              {service3Data.map((item) => (
+                <li key={item.title}>
+                  <FaCheck className="check-icon" />
+                  <div className="services-desc">
+                    <p>{item.title} :&nbsp;</p>
+                    <p>{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <li>
-                <FaCheck className="check-icon" />
-                Organized to deliver the most specialized service possible and
-                enriched by the
-              </li>
+          <div className="service3-steps">
+            <h1>Our Service Steps</h1>
+
+            <ul>
+              {service3Steps.map((item) => (
+                <li>
+                  <p>{item.no}</p>
+                  <p>
+                    <span>{item.title} – </span> {item.desc}
+                  </p>
+                </li>
+              ))}
             </ul>
 
             <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.
-            </p>
-
-            <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.The talent at kimora runs wide and deep. Across many
-              markets, geographies & typologies, our team members are some of
-              the finest professionals in the industry wide and deep. Across
-              many markets, geographies and typologies, our team members are
-              some of the finest.
+              At TK Production Films, we turn your birthday moments into
+              timeless memories. Let us capture your special day with elegance
+              and creativity!
             </p>
           </div>
         </div>

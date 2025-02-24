@@ -79,17 +79,27 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="container">
-            <p>kimono photography, All Rights Reserved</p>
+          <p>
+            TK Production Films all rights reserved Devloped and Design by&nbsp;
+            <a
+              href="https://www.Wingstarnarketing.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="star-link"
+            >
+              Star Marketing
+            </a>
+          </p>
 
-            <div className="footer-icons">
-              <FaFacebook className="footer-icon" />
-              <FaInstagram className="footer-icon" />
-              <FaLinkedin className="footer-icon" />
-              <FaYoutube className="footer-icon" />
-            </div>
+          <div className="footer-icons">
+            <FaFacebook className="footer-icon" />
+            <FaInstagram className="footer-icon" />
+            <FaLinkedin className="footer-icon" />
+            <FaYoutube className="footer-icon" />
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

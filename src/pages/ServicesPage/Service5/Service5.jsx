@@ -1,19 +1,16 @@
 import "./Service5.scss";
 
-import bg22 from "../../../assets/images/bg22.jpg";
-
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
+import { service1Data, service1Steps, service5Data, service5Steps } from "../../../assets/servicesData";
 
 const Service5 = () => {
   return (
     <div className="service5">
-      
-       
       <div className="service5-top-banner">
         <div className="service5-banner">
           <div className="service5-banner-desc">
@@ -22,79 +19,66 @@ const Service5 = () => {
         </div>
       </div>
 
-        <div className="service5-container">
-          <div className="service5-container-sidebar">
-            <ServicePageSidebar />
+      <div className="service5-container">
+        <div className="service5-container-sidebar">
+          <ServicePageSidebar />
+        </div>
+
+        <div className="service5-container-content">
+          <div className="service5-container-content-top">
+            <img src={details} alt="" />
+            <h1>Civil Marriage Photography by TK Production Films</h1>
+            <p>
+              A civil marriage is a beautiful and intimate celebration of love,
+              and at TK Production Films, we specialize in capturing its essence
+              with elegance and authenticity. Whether it’s a simple registry
+              ceremony or a grand celebration with loved ones, our expert
+              photography ensures every heartfelt moment is preserved forever.
+            </p>
           </div>
 
-          <div className="service5-container-content">
-            <div className="service5-container-content-top">
-              <img src={details} alt="" />
-              <h1>Civil Marriage Photography</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-            </div>
+          <div className="service5-services">
+            <h1>Our Civil Marriage Photography Services</h1>
 
-            <div className="service5-steps">
-              <h1>Service Steps</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep.
-              </p>
-
-              <ul>
-                <li>
-                  <FaCheck className="check-icon" /> The talent at Kimono runs
-                  wide and deep. Across many markets, geographies
-                </li>
-                <li>
-                  <FaCheck className="check-icon" /> Our team members are some
-                  of the finest professionals in the industry
-                </li>
-
-                <li>
+            <ul>
+              {service5Data.map((item) => (
+                <li key={item.title}>
                   <FaCheck className="check-icon" />
-                  Organized to deliver the most specialized service possible and
-                  enriched by the
+                  <div className="services-desc">
+                    <p>{item.title} :&nbsp;</p>
+                    <p>{item.desc}</p>
+                  </div>
                 </li>
-              </ul>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.The talent at kimora runs wide and deep. Across
-                many markets, geographies & typologies, our team members are
-                some of the finest professionals in the industry wide and deep.
-                Across many markets, geographies and typologies, our team
-                members are some of the finest.
-              </p>
-            </div>
+              ))}
+            </ul>
           </div>
 
-        </div>
+          <div className="service5-steps">
+            <h1>Our Service Steps</h1>
 
-        <div className="service-contact">
+            <ul>
+              {service5Steps.map((item) => (
+                <li key={item.no}>
+                  <p>{item.no}</p>
+                  <p>
+                    <span>{item.title} – </span> {item.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <p>
+            At TK Production Films, we turn your civil marriage into a timeless visual story. Let us capture your love with beauty and elegance!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="service-contact">
         <ServiceContact />
-
-        </div>
-     
+      </div>
     </div>
   );
 };
+
 export default Service5;

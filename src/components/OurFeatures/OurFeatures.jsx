@@ -35,11 +35,7 @@ const OurFeatures = () => {
           {featuresData.map((feature) => (
             <div className="ourFeatures-mobile-desc" key={feature.id}>
               <h1>{feature.title}</h1>
-              <p>
-                We use state-of-the-art equipment and techniques to ensure the
-                highest quality photos. Your memories deserve nothing but the
-                best.
-              </p>
+              <p>{feature.cardContent.description}</p>
               <button>Read More</button>
             </div>
           ))}
@@ -52,23 +48,21 @@ const OurFeatures = () => {
         <div className="ourFeatures-left-desc">
           <ul>
             {featuresData.map((item) => (
-              <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
-                <BsArrowUpRight className="up-arrow" />
-                {item.title}
-
-                <div className="ourFeatures-left-card" ref={cardRef}>
-          <p>{hoveredItem.cardContent.description}</p>
-          <span className="read-more">
-            {hoveredItem.cardContent.readMore}{" "}
-            <TiArrowRight className="right-arrow" />
-          </span>
-        </div>
-              </li>
+            <li key={item.id} onMouseEnter={() => setHoveredItem(item)}>
+            <BsArrowUpRight className="up-arrow" />
+            {item.title}
+        
+            <div className={`ourFeatures-left-card ${hoveredItem?.card_fit || ""}`} ref={cardRef}>
+                <p>{hoveredItem?.cardContent.description}</p>
+                <span className="read-more">
+                    {hoveredItem?.cardContent.readMore} <TiArrowRight className="right-arrow" />
+                </span>
+            </div>
+        </li>
+        
             ))}
           </ul>
         </div>
-
-       
       </div>
 
       <div className="ourFeatures-right">

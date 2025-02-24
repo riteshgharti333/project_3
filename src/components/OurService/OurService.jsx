@@ -1,14 +1,13 @@
 import { TiArrowRight } from "react-icons/ti";
 import "./OurService.scss";
 
-import camera from "../../assets/images/serviceicon/service1.svg";
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import overlay1 from "../../assets/images/overlay1.png";
-import { services, servicesCards } from "../../assets/data";
+import { services } from "../../assets/data";
 
 import {Link} from "react-router-dom"
 
@@ -30,10 +29,7 @@ const OurService = () => {
         <h1>Our Services</h1>
         <div className="ourService-top-right">
           <p>
-            We offer a range of personalized services: from engagement shoots to
-            wedding day photography, each session is tailored to capture your
-            story with elegance. Our commitment is to turn your precious moments
-            into everlasting memories.
+          At <span className="bold-text">TK Production Films</span>, we capture life’s precious moments with elegance. From engagements to weddings, birthdays to graduations, and baby showers to civil marriages, our personalized photography services ensure every milestone is beautifully preserved. Let us turn your special moments into timeless memories you'll cherish forever.
           </p>
 
           <span className="read-more">

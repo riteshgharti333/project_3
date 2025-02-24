@@ -4,7 +4,11 @@
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
-
+ 
+  @media (min-width: 1025px) {
+    height: 400px;
+  }
+  
   .ourFeatures-mobile {
     @media screen and (min-width: 1025px) {
       display: none;
@@ -12,13 +16,12 @@
     .ourFeatures-mobile-title {
       font-size: 50px;
 
-
       @include lg {
         text-align: center;
         margin-bottom: 40px;
       }
 
-      @include sm{
+      @include sm {
         font-size: 40px;
       }
     }
@@ -44,53 +47,19 @@
 
         button {
           background: $primary-color;
-          width: fit-content;
           color: #fff;
-          padding: 10px 15px;
-          font-size: 1rem;
+          padding: 12px 20px;
+          font-size: 16px;
           font-weight: bold;
           border: none;
           cursor: pointer;
           position: relative;
-          transition: 0.3s ease-in-out, transform 0.2s ease,
-            box-shadow 0.2s ease;
+          transition: all 0.5s ease-in-out;
           overflow: hidden;
           text-transform: uppercase;
-          border: 1px solid #fff;
           &:hover {
             background-color: #fff;
             color: $primary-color;
-            transform: translateY(-5px);
-            border: 1px solid $primary-color;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              width: 300%;
-              height: 300%;
-              border-radius: 50%;
-              transition: 0.4s ease;
-              transform: translate(-50%, -50%);
-            }
-          }
-
-          &:active {
-            animation: buttonBounce 0.2s ease-in-out;
-          }
-
-          @keyframes buttonBounce {
-            0% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-5px);
-            }
-            100% {
-              transform: translateY(0);
-            }
           }
         }
       }
@@ -119,7 +88,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+    
         li {
           font-size: 30px;
           display: flex;
@@ -128,29 +97,30 @@
           cursor: pointer;
           border-bottom: 1px solid rgba(221, 221, 221, 0.5);
           padding: 20px 0px;
-
+    
           @include lg {
             font-size: 20px;
           }
-
+    
           &:hover {
             color: $primary-color;
           }
-
+    
           .up-arrow {
             margin-right: 40px;
             color: $primary-color;
             transition: transform 0.3s ease-in-out;
           }
-
+    
           &:hover {
-            .ourFeatures-left-card {
-              // transform: rotate(180deg);
-            }
             .up-arrow {
               transform: rotate(46deg);
             }
           }
+    
+        
+          
+         
 
           .ourFeatures-left-card {
             background: #fff;
@@ -161,8 +131,12 @@
             padding: 70px 40px;
             color: #fff;
             z-index: 2;
-            transition: all 5s ease-in-out;
+            transition: all .3s ease-in-out;
 
+           &.fit{
+           padding: 40px 10px;
+           }
+    
             @include lg {
               background: #b90808;
               position: absolute;
@@ -173,12 +147,12 @@
               color: #fff;
               z-index: 2;
             }
-
+    
             p {
               font-size: 16px;
               color: #585858;
             }
-
+    
             .read-more {
               display: flex;
               align-items: center;
@@ -192,24 +166,24 @@
               overflow: hidden;
               align-self: flex-end;
               font-weight: 600;
-
+    
               &:hover {
                 color: $primary-color;
                 .right-arrow {
                   transform: translateX(5px);
                 }
-
+    
                 &::after {
                   width: 100%;
                 }
               }
-
+    
               .right-arrow {
                 font-size: 25px;
                 margin-left: 5px;
                 transition: transform 0.3s ease-in-out;
               }
-
+    
               &::after {
                 content: "";
                 position: absolute;
@@ -225,6 +199,14 @@
         }
       }
     }
+
+   
+    .ourFeatures-left-desc .ourFeatures-left-card {
+      &:nth-of-type(1) {
+      }
+    }
+    
+    
   }
 
   .ourFeatures-right {

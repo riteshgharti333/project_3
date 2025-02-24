@@ -1,19 +1,17 @@
 import "./Service6.scss";
 
-import bg22 from "../../../assets/images/bg22.jpg";
-
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
+import { service1Data, service1Steps, service6Data, service6Steps } from "../../../assets/servicesData";
 
 const Service6 = () => {
   return (
     <div className="service6">
-     
-     <div className="service6-top-banner">
+      <div className="service6-top-banner">
         <div className="service6-banner">
           <div className="service6-banner-desc">
             <h1>Service Details</h1>
@@ -21,78 +19,69 @@ const Service6 = () => {
         </div>
       </div>
 
-        <div className="service6-container">
-          <div className="service6-container-sidebar">
-            <ServicePageSidebar />
+      <div className="service6-container">
+        <div className="service6-container-sidebar">
+          <ServicePageSidebar />
+        </div>
+
+        <div className="service6-container-content">
+          <div className="service6-container-content-top">
+            <img src={details} alt="" />
+            <h1>
+              Engagement Photography & Couple Portraits by TK Production Films
+            </h1>
+            <p>
+              Your engagement marks the beginning of a beautiful journey, and at
+              TK Production Films, we capture this special moment with
+              creativity and elegance. Whether it’s an intimate proposal, a
+              grand engagement celebration, or a romantic couple shoot, our
+              expert photography ensures your love story is beautifully
+              preserved.
+            </p>
           </div>
 
-          <div className="service6-container-content">
-            <div className="service6-container-content-top">
-              <img src={details} alt="" />
-              <h1>Engagement Photography & Couple Portraits</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-            </div>
+          <div className="service6-services">
+            <h1>Our Services</h1>
 
-            <div className="service6-steps">
-              <h1>Service Steps</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep.
-              </p>
-
-              <ul>
-                <li>
-                  <FaCheck className="check-icon" /> The talent at Kimono runs
-                  wide and deep. Across many markets, geographies
-                </li>
-                <li>
-                  <FaCheck className="check-icon" /> Our team members are some
-                  of the finest professionals in the industry
-                </li>
-
-                <li>
+            <ul>
+              {service6Data.map((item) => (
+                <li key={item.title}>
                   <FaCheck className="check-icon" />
-                  Organized to deliver the most specialized service possible and
-                  enriched by the
+                  <div className="services-desc">
+                    <p>{item.title} :&nbsp;</p>
+                    <p>{item.desc}</p>
+                  </div>
                 </li>
-              </ul>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.The talent at kimora runs wide and deep. Across
-                many markets, geographies & typologies, our team members are
-                some of the finest professionals in the industry wide and deep.
-                Across many markets, geographies and typologies, our team
-                members are some of the finest.
-              </p>
-            </div>
+              ))}
+            </ul>
           </div>
 
-        </div>
+          <div className="service6-steps">
+            <h1>Our Service Steps</h1>
 
-        <div className="service-contact">
+            <ul>
+              {service6Steps.map((item) => (
+                <li key={item.no}>
+                  <p>{item.no}</p>
+                  <p>
+                    <span>{item.title} – </span> {item.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <p>
+              At TK Production Films, we turn your engagement into timeless
+              memories. Let us capture the love, excitement, and beauty of your
+              journey together!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="service-contact">
         <ServiceContact />
-
-        </div>
-   
+      </div>
     </div>
   );
 };

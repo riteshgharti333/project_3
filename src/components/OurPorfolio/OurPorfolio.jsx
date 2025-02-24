@@ -49,7 +49,7 @@ const OurPorfolio = () => {
     <div className="ourPorfolio">
       <div className="ourPorfolio-top">
         <h1>Our Portfolio</h1>
-        <p>Kimono captures all of your beautiful memories</p>
+        <p>TK Production Films captures all your beautiful memories with elegance, turning every special moment into a timeless masterpiece.</p>
       </div>
 
       <div className="ourPorfolio-cards">

@@ -1,16 +1,16 @@
 import "./Service7.scss";
-import bg22 from "../../../assets/images/bg22.jpg";
+
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
+import { service1Data, service1Steps, service7Data, service7Steps } from "../../../assets/servicesData";
 
 const Service7 = () => {
   return (
     <div className="service7">
-      
       <div className="service7-top-banner">
         <div className="service7-banner">
           <div className="service7-banner-desc">
@@ -27,59 +27,49 @@ const Service7 = () => {
         <div className="service7-container-content">
           <div className="service7-container-content-top">
             <img src={details} alt="" />
-            <h1>Graduation Photography</h1>
+            <h1>Graduation Photography by TK Production Films</h1>
             <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.
+              Graduation is a milestone achievement, marking years of dedication
+              and hard work. At TK Production Films, we specialize in capturing
+              this proud moment with stunning photography and cinematic visuals.
+              Whether it's an individual session, a group celebration, or a full
+              graduation event, we ensure that your success story is beautifully
+              documented.
             </p>
           </div>
 
-          <div className="service7-steps">
-            <h1>Service Steps</h1>
-            <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep.
-            </p>
+          <div className="service7-services">
+            <h1>Our Graduation Photography Services</h1>
 
             <ul>
-              <li>
-                <FaCheck className="check-icon" /> The talent at Kimono runs
-                wide and deep. Across many markets, geographies
-              </li>
-              <li>
-                <FaCheck className="check-icon" /> Our team members are some of
-                the finest professionals in the industry
-              </li>
+              {service7Data.map((item) => (
+                <li key={item.title}>
+                  <FaCheck className="check-icon" />
+                  <div className="services-desc">
+                    <p>{item.title} :&nbsp;</p>
+                    <p>{item.desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <li>
-                <FaCheck className="check-icon" />
-                Organized to deliver the most specialized service possible and
-                enriched by the
-              </li>
+          <div className="service7-steps">
+            <h1>Our Service Steps</h1>
+
+            <ul>
+              {service7Steps.map((item) => (
+                <li key={item.no}>
+                  <p>{item.no}</p>
+                  <p>
+                    <span>{item.title} – </span> {item.desc}
+                  </p>
+                </li>
+              ))}
             </ul>
 
             <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.
-            </p>
-
-            <p>
-              The talent at kimono runs wide and deep. Across many markets,
-              geographies & typologies, our team members are some of the finest
-              professionals in the industry wide and deep. Across many markets,
-              geographies and typologies, our team members are some of the
-              finest.The talent at kimora runs wide and deep. Across many
-              markets, geographies & typologies, our team members are some of
-              the finest professionals in the industry wide and deep. Across
-              many markets, geographies and typologies, our team members are
-              some of the finest.
+            At TK Production Films, we make your graduation memories last a lifetime. Let us celebrate your achievement with photography that reflects your success!
             </p>
           </div>
         </div>

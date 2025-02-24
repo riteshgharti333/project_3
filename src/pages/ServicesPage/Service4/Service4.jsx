@@ -1,19 +1,22 @@
 import "./Service4.scss";
 
-import bg22 from "../../../assets/images/bg22.jpg";
-
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
 import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
+import {
+  service1Data,
+  service1Steps,
+  service4Data,
+  service4Steps,
+} from "../../../assets/servicesData";
 
 const Service4 = () => {
   return (
     <div className="service4">
-     
-     <div className="service4-top-banner">
+      <div className="service4-top-banner">
         <div className="service4-banner">
           <div className="service4-banner-desc">
             <h1>Service Details</h1>
@@ -21,78 +24,67 @@ const Service4 = () => {
         </div>
       </div>
 
-        <div className="service4-container">
-          <div className="service4-container-sidebar">
-            <ServicePageSidebar />
+      <div className="service4-container">
+        <div className="service4-container-sidebar">
+          <ServicePageSidebar />
+        </div>
+
+        <div className="service4-container-content">
+          <div className="service4-container-content-top">
+            <img src={details} alt="" />
+            <h1>Baby Shower Photography by TK Production Films</h1>
+            <p>
+              A baby shower is a beautiful celebration of love, joy, and new
+              beginnings. At TK Production Films, we specialize in capturing
+              these heartfelt moments with elegance and creativity. Whether it’s
+              an intimate gathering or a grand event, we ensure every special
+              detail, emotion, and laughter is beautifully preserved through our
+              expert photography and videography.
+            </p>
           </div>
 
-          <div className="service4-container-content">
-            <div className="service4-container-content-top">
-              <img src={details} alt="" />
-              <h1>Baby Shower Photography</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-            </div>
+          <div className="service4-services">
+            <h1>Our Baby Shower Photography Services</h1>
 
-            <div className="service4-steps">
-              <h1>Service Steps</h1>
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep.
-              </p>
-
-              <ul>
-                <li>
-                  <FaCheck className="check-icon" /> The talent at Kimono runs
-                  wide and deep. Across many markets, geographies
-                </li>
-                <li>
-                  <FaCheck className="check-icon" /> Our team members are some
-                  of the finest professionals in the industry
-                </li>
-
-                <li>
+            <ul>
+              {service4Data.map((item) => (
+                <li key={item.title}>
                   <FaCheck className="check-icon" />
-                  Organized to deliver the most specialized service possible and
-                  enriched by the
+                  <div className="services-desc">
+                    <p>{item.title} :&nbsp;</p>
+                    <p>{item.desc}</p>
+                  </div>
                 </li>
-              </ul>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.
-              </p>
-
-              <p>
-                The talent at kimono runs wide and deep. Across many markets,
-                geographies & typologies, our team members are some of the
-                finest professionals in the industry wide and deep. Across many
-                markets, geographies and typologies, our team members are some
-                of the finest.The talent at kimora runs wide and deep. Across
-                many markets, geographies & typologies, our team members are
-                some of the finest professionals in the industry wide and deep.
-                Across many markets, geographies and typologies, our team
-                members are some of the finest.
-              </p>
-            </div>
+              ))}
+            </ul>
           </div>
 
-        </div>
+          <div className="service4-steps">
+            <h1>Our Service Steps</h1>
 
-        <div className="service-contact">
+            <ul>
+              {service4Steps.map((item) => (
+                <li key={item.no}>
+                  <p>{item.no}</p>
+                  <p>
+                    <span>{item.title} – </span> {item.desc}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <p>
+              At TK Production Films, we turn your baby shower into timeless
+              memories. Let us capture this joyous milestone with love and
+              perfection!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="service-contact">
         <ServiceContact />
-
-        </div>
-      
+      </div>
     </div>
   );
 };

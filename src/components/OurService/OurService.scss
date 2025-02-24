@@ -13,7 +13,7 @@
     justify-content: space-between;
     gap: 10%;
 
-    @include md {
+    @include lg {
       flex-direction: column;
       gap: 20px;
     }
@@ -33,10 +33,20 @@
     .ourService-top-right {
       display: flex;
       flex-direction: column;
+
       p {
-        font-size: 20px;
+        font-size: 18px;
         color: #585858;
-        text-align: justify;
+        line-height: 1.75rem;
+
+        .bold-text {
+          color: #000;
+          font-weight: 500;
+        }
+
+        @include md {
+          text-align: justify;
+        }
       }
 
       .read-more {
@@ -89,9 +99,6 @@
       padding-bottom: 80px;
       gap: 40px;
 
-      
-
-
       @include xl {
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
@@ -134,7 +141,7 @@
         @include lg {
           margin: 0 auto;
           padding: 40px 50px;
-          width: 270px;
+          width: 100%;
         }
 
         @include md {
@@ -144,9 +151,7 @@
 
         @include sm {
           margin: 0 auto;
-          padding: 40px 50px;
-
-          width: 270px;
+          width: 100%;
         }
 
         &:hover {

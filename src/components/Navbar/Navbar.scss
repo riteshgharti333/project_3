@@ -383,8 +383,9 @@
 
   &.hidden {
     background: red !important;
-    animation: slideOutScale 5s ease-in-out forwards;
+    animation: slideOutScale 0.5s ease-in-out forwards;
   }
+  
 
   @keyframes slideInScale {
     0% {
@@ -402,12 +403,16 @@
       transform: scale(1);
       opacity: 1;
     }
+    99% {
+      visibility: visible; // Keep it visible until just before hiding
+    }
     100% {
       transform: scale(0.5);
       opacity: 0;
       visibility: hidden;
     }
   }
+  
 
   @include sm {
     width: 100%;
