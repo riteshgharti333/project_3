@@ -8,14 +8,7 @@ import "swiper/css/navigation";
 
 import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
-
-const teamMembers = [
-  { name: "Nelson Jameson", role: "Photographer", img: slider_img },
-  { name: "Emily Carter", role: "Videographer", img: slider_img },
-  { name: "David Smith", role: "Editor", img: slider_img },
-  { name: "Sophia Brown", role: "Director", img: slider_img },
-  { name: "Michael Lee", role: "Designer", img: slider_img },
-];
+import { teamImgs } from "../../assets/data";
 
 const OurCore = () => {
   return (
@@ -23,7 +16,9 @@ const OurCore = () => {
       <div className="ourCore-top">
         <h1>Our Team</h1>
         <p>
-        At <span className="bold-text">TK Production Films</span>, we’re passionate about capturing your precious memories, preserving your love, and celebrating every beautiful moment of life.
+          At <span className="bold-text">TK Production Films</span>, we’re
+          passionate about capturing your precious memories, preserving your
+          love, and celebrating every beautiful moment of life.
         </p>
       </div>
 
@@ -46,11 +41,11 @@ const OurCore = () => {
           1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Show half of 4th slide
         }}
       >
-        {teamMembers.map((member, index) => (
+        {teamImgs.map((member, index) => (
           <SwiperSlide key={index} className="ourCore-slider-card">
-            <img src={member.img} alt={member.name} />
+            <img src={member.image} alt={member.title} />
             <h2>{member.name}</h2>
-            <p>{member.role}</p>
+            <p>{member.title}</p>
           </SwiperSlide>
         ))}
       </Swiper>

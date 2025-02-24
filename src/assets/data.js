@@ -54,6 +54,12 @@ import mobilebanner2 from "../assets/images/bannerimg/mobileBanner2.webp";
 import mobilebanner3 from "../assets/images/bannerimg/mobileBanner3.webp";
 import mobilebanner4 from "../assets/images/bannerimg/mobileBanner4.webp";
 
+// team imgs
+
+import team1 from "../assets/images/teamImgs/team1.jpg";
+import team2 from "../assets/images/teamImgs/team2.jpg";
+import team3 from "../assets/images/teamImgs/team3.jpg";
+
 export const portfolioImgs = [
   {
     img: banner1,
@@ -767,4 +773,10 @@ export const aboutLists = [
     title: "Our Strategy",
     desc: "Our strategy at TK Production Films focuses on blending creativity with cutting-edge technology to craft stunning wedding narratives. We expand globally, engage in trade expos, and personalize every project, ensuring each couple’s love story is beautifully captured and cherished forever.",
   },
+];
+
+export const teamImgs = [
+  { image: team2, title: "Founder", name: "Taufeq Khan" },
+  { image: team1, title: "Operational Manager", name: "Mohshin Qadri " },
+  { image: team3, title: "Videographer & Editor", name: "Sahenul Khan " },
 ];
