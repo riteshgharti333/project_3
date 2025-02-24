@@ -52,7 +52,7 @@ const Gallery = () => {
       <div className="gallery-container">
         <div className="gallery-container-top">
           <h1> Our Portfolio</h1>
-          <p>Kimono captures All of Your beautiful memories</p>
+          <p>TK Production Films All of your beautiful memories</p>
         </div>
 
         <div className="gallery-cards">

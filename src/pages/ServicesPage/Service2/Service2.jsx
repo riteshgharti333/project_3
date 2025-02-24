@@ -7,6 +7,9 @@ import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import { service1Data, service1Steps, service2Data, service2Steps } from "../../../assets/servicesData";
 
+import s2 from "../../../assets/images/serviceimgs/s2.jpeg"
+
+
 const Service2 = () => {
   return (
     <div className="service2">
@@ -25,7 +28,7 @@ const Service2 = () => {
 
         <div className="service2-container-content">
           <div className="service2-container-content-top">
-            <img src={details} alt="" />
+            <img src={s2} alt="" />
             <h1>Pre-Wedding Films & Photography by TK Production Films</h1>
             <p>
             A pre-wedding shoot is the perfect way to celebrate your love story before the big day. At TK Production Films, we specialize in capturing the chemistry, emotions, and unique connection between couples through breathtaking pre-wedding photography and films. Whether in iconic cityscapes, lush landscapes, or dreamy international locations like Lisbon, Portugal, our expert team ensures your love story is beautifully told.

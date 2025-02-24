@@ -13,6 +13,8 @@ import {
   service3Steps,
 } from "../../../assets/servicesData";
 
+import s3 from "../../../assets/images/serviceimgs/s3.jpeg"
+
 const Service3 = () => {
   return (
     <div className="service3">
@@ -31,7 +33,7 @@ const Service3 = () => {
 
         <div className="service3-container-content">
           <div className="service3-container-content-top">
-            <img src={details} alt="" />
+            <img src={s3} alt="" />
             <h1>Birthday Photography & Films by TK Production Films</h1>
             <p>
               Celebrate life’s special milestones with TK Production Films!

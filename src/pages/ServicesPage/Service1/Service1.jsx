@@ -8,6 +8,8 @@ import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import { service1Data, service1Steps } from "../../../assets/servicesData";
 
+import s1 from "../../../assets/images/serviceimgs/s1.jpeg"
+
 const Service1 = () => {
   return (
     <div className="service1">
@@ -26,7 +28,7 @@ const Service1 = () => {
 
         <div className="service1-container-content">
           <div className="service1-container-content-top">
-            <img src={details} alt="" />
+            <img src={s1} alt="" />
             <h1>Wedding Photography & Cinematography by TK Production Films</h1>
             <p>
               At TK Production Films, we bring your love story to life through
