@@ -67,7 +67,7 @@ const OurPorfolio = () => {
         ))}
       </div>
 
-      <Link to={"/porfolio"} className="porfolio-link">
+      <Link to={"/portfolio"} className="porfolio-link">
         <button>
           <div className="btn-wrap">
             <span>Discover All Projects</span>
