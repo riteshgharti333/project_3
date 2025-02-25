@@ -21,20 +21,20 @@ import { Toaster } from "react-hot-toast";
 
 
 function App() {
-  // const ScrollToTop = () => {
-  //   const { pathname } = useLocation();
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
 
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, [pathname]);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
 
-  //   return null;
-  // };
+    return null;
+  };
 
   return (
     <div className="app">
       <BrowserRouter>
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
