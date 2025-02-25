@@ -6,6 +6,7 @@ import { selectOptions } from "../../assets/data";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 import toast from "react-hot-toast";
+import { baseUrl } from "../../main";
 
 const Contact = () => {
   const [openSelect, setOpenSelect] = useState(false);
@@ -66,7 +67,7 @@ const Contact = () => {
       setSuccessMessage("");
 
       const response = await axios.post(
-        "https://project-3-backend-1.onrender.com/api/contact2/new-contact2",
+        `${baseUrl}/contact2/new-contact2`,
         {
           ...formData,
           howDidYouHearAboutUs: selectedOption,

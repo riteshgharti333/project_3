@@ -4,6 +4,7 @@ import ContactSection from "../ContactSection/ContactSection";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../../main";
 
 const Getintouch = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +27,7 @@ const Getintouch = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post("https://project-3-backend-1.onrender.com/api/contact/submit-contact", formData, {
+      const response = await axios.post(`${baseUrl}/contact/submit-contact`, formData, {
         headers: { "Content-Type": "application/json" },
       });
 

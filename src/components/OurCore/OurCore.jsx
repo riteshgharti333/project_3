@@ -1,5 +1,5 @@
 import "./OurCore.scss";
-import slider_img from "../../assets/images/3.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Importing icons
@@ -23,7 +23,7 @@ const OurCore = () => {
       </div>
 
       <Swiper
-        slidesPerView={3.5}
+        slidesPerView={3}
         spaceBetween={20}
         navigation={{
           prevEl: ".custom-prev",
@@ -31,14 +31,14 @@ const OurCore = () => {
         }}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
-        speed={1000}
+        speed={1200}
         modules={[Navigation, Autoplay]}
         className="ourCore-slider"
         breakpoints={{
-          0: { slidesPerView: 1, spaceBetween: 10 },
+          0: { slidesPerView: 1.5, spaceBetween: 10 },
           480: { slidesPerView: 2, spaceBetween: 10 },
-          768: { slidesPerView: 2.5, spaceBetween: 15 }, // Show half of next slide
-          1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Show half of 4th slide
+          768: { slidesPerView: 2.5, spaceBetween: 15 }, 
+          1024: { slidesPerView: 3, spaceBetween: 15 }, 
         }}
       >
         {teamImgs.map((member, index) => (

@@ -30,6 +30,7 @@ import about1 from "../../assets/images/bannerimg/about-banner1.webp";
 import { aboutLists } from "../../assets/data";
 
 import founder_img from "../../assets/images/founder.jpeg";
+import Video from "../../components/Video/Video";
 
 const About = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -259,11 +260,7 @@ const About = () => {
       </div>
 
       <div className="about-content4">
-        <img src={bg23} alt="" />
-
-        <div className="player">
-          <TbPlayerPlayFilled className="player-icon" />
-        </div>
+      <Video videoUrl="https://www.youtube.com/watch?v=TkX1fn7XBO8" />       
       </div>
 
       <div className="core-option">

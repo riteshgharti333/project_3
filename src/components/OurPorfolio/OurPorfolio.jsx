@@ -60,8 +60,8 @@ const OurPorfolio = () => {
           <div className="ourPorfolio-card">
             <div className="ourPorfolio-card-inner">
               <img src={item.img} alt="California Fall Collection 2023" />
-              <h2>{item.title}</h2>
-              <p>{item.desc}</p>
+              {/* <h2>{item.title}</h2>
+              <p>{item.desc}</p> */}
             </div>
           </div>
         ))}

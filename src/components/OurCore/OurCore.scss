@@ -50,6 +50,7 @@
     width: 100%;
     overflow: hidden;
     display: flex;
+    justify-content: center;
     
     @include xl{
       padding-top: 60px;
@@ -97,7 +98,7 @@
         right: -10px;
         height: 100%;
         width: 1px;
-        background-color: #dddddd; // Customize color
+        background-color: #dddddd;
       }
 
       img {
@@ -115,14 +116,12 @@
       h2 {
         font-size: 25px;
         margin-top: 10px;
-        margin-left: 15px;
       }
 
       p {
         margin-top: 10px;
         font-size: 20px;
         margin-bottom: 10px;
-        margin-left: 15px;
       }
     }
   }

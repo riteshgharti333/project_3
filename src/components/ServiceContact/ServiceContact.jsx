@@ -2,6 +2,7 @@ import "./ServiceContact.scss";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { baseUrl } from "../../main";
 
 const ServiceContact = () => {
   const [formData, setFormData] = useState({
@@ -24,9 +25,13 @@ const ServiceContact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://project-3-backend-1.onrender.com/contact/submit-contact", formData, {
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await axios.post(
+        `${baseUrl}/contact/submit-contact`,
+        formData,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
       if (response.data.success) {
         toast.success("Message sent successfully!");
@@ -45,7 +50,8 @@ const ServiceContact = () => {
         <div className="serviceContact-left-top">
           <h1>Get In Touch</h1>
           <p className="serviceContact-left-desc">
-            Contact us for a great photography session & beautiful captured moments
+            Contact us for a great photography session & beautiful captured
+            moments
           </p>
         </div>
 
@@ -64,16 +70,44 @@ const ServiceContact = () => {
       <div className="serviceContact-right">
         <form className="serviceContact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <input type="text" name="name" placeholder="Name" required value={formData.name} onChange={handleChange} />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
           <div className="form-group">
-            <input type="email" name="email" placeholder="Email" required value={formData.email} onChange={handleChange} />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
           <div className="form-group">
-            <input type="text" name="subject" placeholder="Subject" required value={formData.subject} onChange={handleChange} />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+              value={formData.subject}
+              onChange={handleChange}
+            />
           </div>
           <div className="form-group">
-            <textarea name="message" placeholder="Your Message" rows="5" required value={formData.message} onChange={handleChange}></textarea>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
           </div>
           <button type="submit" className="submit-button" disabled={loading}>
             {loading ? "Sending..." : "Send Mail"}

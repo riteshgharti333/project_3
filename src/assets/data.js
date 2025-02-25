@@ -55,10 +55,11 @@ import mobilebanner3 from "../assets/images/bannerimg/mobileBanner3.webp";
 import mobilebanner4 from "../assets/images/bannerimg/mobileBanner4.webp";
 
 // team imgs
-
 import team1 from "../assets/images/teamImgs/team1.jpg";
 import team2 from "../assets/images/teamImgs/team2.jpg";
 import team3 from "../assets/images/teamImgs/team3.jpg";
+import team4 from "../assets/images/teamImgs/team4.jpg";
+
 
 export const portfolioImgs = [
   {
@@ -777,6 +778,11 @@ export const aboutLists = [
 
 export const teamImgs = [
   { image: team2, title: "Founder", name: "Taufeq Khan" },
-  { image: team1, title: "Operational Manager", name: "Mohshin Qadri " },
-  { image: team3, title: "Videographer & Editor", name: "Sahenul Khan " },
+  { image: team3, title: "Operational Manager", name: "Mohshin Qadri" },
+  { image:  team1, title: "Videographer & Editor", name: "Sahenul Khan" },
+  { image: team4, title: "Video Editor", name: "Moinuddin Khan" },
+
+  
 ];
+
+
