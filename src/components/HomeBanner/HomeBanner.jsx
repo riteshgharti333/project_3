@@ -40,7 +40,7 @@ const HomeBanner = () => {
         effect="fade"
         loop={true}
         speed={1200}
-        autoplay={{ delay: 3000, disableOnInteraction: false }} // Add this line
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         pagination={{ clickable: true }}
         navigation={{
