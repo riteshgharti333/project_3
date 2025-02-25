@@ -60,7 +60,6 @@ import team2 from "../assets/images/teamImgs/team2.jpg";
 import team3 from "../assets/images/teamImgs/team3.jpg";
 import team4 from "../assets/images/teamImgs/team4.jpg";
 
-
 export const portfolioImgs = [
   {
     img: banner1,
@@ -779,10 +778,6 @@ export const aboutLists = [
 export const teamImgs = [
   { image: team2, title: "Founder", name: "Taufeq Khan" },
   { image: team3, title: "Operational Manager", name: "Mohshin Qadri" },
-  { image:  team1, title: "Videographer & Editor", name: "Sahenul Khan" },
+  { image: team1, title: "Videographer & Editor", name: "Sahenul Khan" },
   { image: team4, title: "Video Editor", name: "Moinuddin Khan" },
-
-  
 ];
-
-
