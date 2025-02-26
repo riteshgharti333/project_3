@@ -10,7 +10,7 @@
     padding: 100px 10px 10px 10px;
   }
 
-  .contact-title{
+  .contact-title {
     text-align: center;
     font-size: 60px;
 
@@ -34,6 +34,15 @@
         position: relative;
 
         
+       .event-title{
+        font-size: 18px;
+        color: #585858;
+
+        .required {
+          font-size: 12px;
+          margin-left: 10px;
+        }
+       }
 
         label {
           color: #999;
@@ -47,27 +56,30 @@
           -moz-transition: 0.2s ease all;
           -webkit-transition: 0.2s ease all;
 
-          .required{
+          .required {
             font-size: 12px;
             margin-left: 10px;
           }
 
-          &.event-label{
-           @include sm{}
+          &.event-label {
+            @include sm {
+            }
           }
-         }
+        }
 
-         input:focus ~ label, input:valid ~ label {
+        input:focus ~ label,
+        input:valid ~ label {
           top: -10px;
           font-size: 14px;
           color: $primary-color;
-         }
+        }
 
-         textarea:focus ~ label, textarea:valid ~ label {
+        textarea:focus ~ label,
+        textarea:valid ~ label {
           top: -10px;
           font-size: 14px;
-          color:  $primary-color;
-         }
+          color: $primary-color;
+        }
 
         input,
         textarea {
@@ -81,7 +93,6 @@
           border: none;
           border-bottom: 1px solid #dddd;
           font-family: "Sora", serif;
-        
 
           &::placeholder {
             color: #585858;
@@ -90,8 +101,6 @@
           &:focus {
             outline: none;
           }
-
-          
         }
 
         textarea {
@@ -99,14 +108,12 @@
           min-height: 150px;
           padding: 30px 15px;
 
-          @include md{
-              padding: 50px 0px 15px 15px;
-            
+          @include md {
+            padding: 50px 0px 15px 15px;
           }
-          @include sm{
+          @include sm {
             padding: 70px 0px 15px 15px;
           }
-          
         }
 
         &.select-option {
@@ -114,7 +121,7 @@
             font-size: 18px;
             color: #585858;
 
-            .required{
+            .required {
               font-size: 12px;
               margin-left: 10px;
             }
@@ -157,7 +164,7 @@
               top: -125px;
               left: 109%;
 
-              @include sm{
+              @include sm {
                 left: 130px;
               }
               span {
@@ -180,7 +187,11 @@
       .form-group:nth-child(4),
       .form-group:nth-child(5),
       .form-group:nth-child(6),
-      .form-group:nth-child(7) {
+      .form-group:nth-child(7),
+      .form-group:nth-child(8),
+      .form-group:nth-child(9),
+      .form-group:nth-child(10),
+      .form-group:nth-child(11) {
         grid-column: span 2;
       }
 
@@ -206,7 +217,7 @@
     }
   }
 
-  .contact2-section{
+  .contact2-section {
     margin: 80px 0px;
   }
   .contact-map {

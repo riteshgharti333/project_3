@@ -5,27 +5,31 @@
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   padding-bottom: 20px;
   padding: 0px 20px;
+  align-items: center;
 
-  @include xxl{
-    gap: 10px;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
 
-  @include xl {
+  .contactSection-left-cont {
     display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-  
+    flex-direction: column;
+    gap: 30px;
+
+    @include lg{
+      flex-direction: row;
+    }
+
+    @include md{
+      flex-direction: column;
+    }
   }
 
-  @include md {
-    display: grid;
+  @include lg {
     grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    justify-content: center;
     gap: 30px;
   }
 
@@ -34,17 +38,12 @@
     gap: 20px;
     flex: 1;
     text-align: start;
-      // flex-direction: column;
+    // flex-direction: column;
 
-    @include xl{
-      flex-direction: column;
+    @include xl {
     }
 
     @include lg {
-      margin: 0 auto;
-    }
-
-    @include md {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -64,13 +63,17 @@
     .contactSection-right {
       &.address-tk {
         text-align: start;
+        display: flex;
+        flex-direction: column;
+       
 
-        @include md{
+        @include lg {
           text-align: center;
+          gap: 20px;
         }
         span {
           border-bottom: none;
-         text-transform: capitalize;
+          text-transform: capitalize;
           &:hover {
             border-bottom: none;
           }
@@ -78,30 +81,36 @@
 
         .address {
           .sm-address {
-            span {
-              &:nth-child(2) {
-                margin: 10px 0px;
-              }
+        
             }
 
             .view-map {
               border-bottom: 1px solid #000;
-             text-transform: uppercase;
+              text-transform: uppercase;
+              margin-top: 10px;
               &:hover {
                 color: $primary-color;
                 border-bottom: 1px solid $primary-color;
               }
-            }
           }
         }
       }
 
-      h1 {
-      }
       p {
         color: #585858;
         margin: 10px 0px;
         font-size: 18px;
+        display: flex;
+        align-items: center;
+
+        @include lg {
+          justify-content: center;
+        }
+
+        img {
+          width: 20px;
+          margin: 0px 5px;
+        }
       }
       span {
         display: inline-block;

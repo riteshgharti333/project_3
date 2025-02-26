@@ -18,23 +18,24 @@ import Service7 from "./pages/ServicesPage/Service7/Service7.jsx";
 import { useEffect } from "react";
 
 import { Toaster } from "react-hot-toast";
-
+import Service8 from "./pages/ServicesPage/Service8/Service8.jsx";
+import Service9 from "./pages/ServicesPage/Service9/Service9.jsx";
 
 function App() {
-  const ScrollToTop = () => {
-    const { pathname } = useLocation();
+  // const ScrollToTop = () => {
+  //   const { pathname } = useLocation();
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, [pathname]);
 
-    return null;
-  };
+  //   return null;
+  // };
 
   return (
     <div className="app">
       <BrowserRouter>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -42,21 +43,24 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/portfolio" element={<Gallery />} />
 
-          
-          <Route path="/wedding-photography-cinematography" element={<Service1 />} />
-          <Route path="/pre-Wedding-films-photography" element={<Service2 />} />
-          <Route path="/birthday-Photography-films" element={<Service3 />} />
-          <Route path="/baby-shower-photography" element={<Service4 />} />
+          {/* services */}
+          <Route path="/wedding-photography" element={<Service1 />} />
+          <Route path="/wedding-cinematography" element={<Service2 />} />
+          <Route path="/pre-wedding-films" element={<Service3 />} />
+          <Route path="/pre-wedding-photography" element={<Service4 />} />
+          <Route path="/civil-marriage-photography" element={<Service5 />} />
           <Route
-            path="/civil-marriage-photography"
-            element={<Service5 />}
+            path="/engagement-photography-couple-portraits"
+            element={<Service6 />}
           />
-          <Route path="/engagement-photography-couple-portraits" element={<Service6 />} />
 
-          <Route
-            path="/graduation-photography"
-            element={<Service7 />}
-          />
+          <Route path="/birthday-photography" element={<Service7 />} />
+
+          <Route path="/baby-shower-photography" element={<Service8 />} />
+
+          <Route path="/graduation-photography" element={<Service9 />} />
+
+          {/* services */}
         </Routes>
         <Footer />
 

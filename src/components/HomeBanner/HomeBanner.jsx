@@ -8,6 +8,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { bigBanner, smBanner } from "../../assets/data";
 
+import homeBanner from "../../assets/images/banner2.jpg"
+
+
 const HomeBanner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [initialized, setInitialized] = useState(false);

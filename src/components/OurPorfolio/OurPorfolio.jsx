@@ -57,11 +57,10 @@ const OurPorfolio = () => {
 
       <div className="ourPorfolio-cards">
         {portfolioImgs.map((item) => (
-          <div className="ourPorfolio-card">
+          <div className="ourPorfolio-card" key={item.img}>
             <div className="ourPorfolio-card-inner">
               <img src={item.img} alt="California Fall Collection 2023" />
-              {/* <h2>{item.title}</h2>
-              <p>{item.desc}</p> */}
+             
             </div>
           </div>
         ))}

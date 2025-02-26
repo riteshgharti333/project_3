@@ -66,13 +66,10 @@ const Contact = () => {
       setErrorMessage("");
       setSuccessMessage("");
 
-      const response = await axios.post(
-        `${baseUrl}/contact2/new-contact2`,
-        {
-          ...formData,
-          howDidYouHearAboutUs: selectedOption,
-        }
-      );
+      const response = await axios.post(`${baseUrl}/contact2/new-contact2`, {
+        ...formData,
+        howDidYouHearAboutUs: selectedOption,
+      });
 
       toast.success(response.data.message);
       setFormData({
@@ -149,20 +146,75 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <textarea
-              rows="5"
-              name="eventDetail"
-              value={formData.eventDetail}
+            <p className="event-title event">
+              Event Details
+              <span className="required">(Required)</span>
+            </p>
+          </div>
+
+          <div className="form-group event-options">
+            <p className="event-title">
+              Date <span className="required">(Required)</span>
+            </p>
+            <input
+              type="date"
+              name="phoneNumber"
+              // value={formData.phoneNumber}
               onChange={handleChange}
               required
-              className="event-input"
             />
-            <label className="event-label">
-              Event Details <span className="required">(Required)</span>
-              <p>
-                Date and Times, home and venue address(es), number of guests,
-                and any additional requirements
-              </p>
+          </div>
+
+          <div className="form-group">
+            <p className="event-title">
+              Time <span className="required">(Required)</span>
+            </p>
+            <input
+              type="time"
+              name=""
+              // value={formData.}phoneNumber
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <input
+              type="text"
+              name=""
+              // value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <label>
+              Vanue Address <span className="required">(Required)</span>
+            </label>
+          </div>
+
+          <div className="form-group">
+            <input
+              type="number"
+              name=""
+              // value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <label>
+              Number of Guests <span className="required">(Required)</span>
+            </label>
+          </div>
+
+          <div className="form-group">
+            <input
+              type="text"
+              name=""
+              // value={formData.phoneNumber}1
+              onChange={handleChange}
+              required
+            />
+            <label>
+              Additional Requirements{" "}
+              <span className="required">(Required)</span>
             </label>
           </div>
 

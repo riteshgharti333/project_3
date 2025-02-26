@@ -6,7 +6,7 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 import { client_reviews } from "../../assets/data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -43,7 +43,7 @@ const ClientReview = () => {
 
         <div className="clientReview-card">
           <Swiper
-            modules={[Pagination, Navigation]}
+            modules={[Pagination, Navigation, Autoplay]}
             slidesPerView={1}
             spaceBetween={20}
             loop={true}
@@ -99,7 +99,7 @@ const ReviewCard = ({ review, isActive, onExpand }) => {
     const element = textRef.current;
     if (element) {
       const lineHeight = parseFloat(getComputedStyle(element).lineHeight);
-      const maxHeight = lineHeight * 4; 
+      const maxHeight = lineHeight * 3; 
       setIsTruncated(element.scrollHeight > maxHeight);
     }
   }, [review]);
@@ -134,7 +134,6 @@ const ReviewCard = ({ review, isActive, onExpand }) => {
         <img src={review.img} alt={review.review_name} />
         <div className="review-name-desc">
           <p>{review.review_name}</p>
-          <p>{review.review_location}</p>
         </div>
       </div>
     </div>

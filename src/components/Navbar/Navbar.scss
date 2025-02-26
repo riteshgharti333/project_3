@@ -145,24 +145,24 @@
       margin-right: 10px;
 
       .nav-social {
-          position: relative;
-          cursor: pointer;
-          border: none;
-          outline: none;
-          border-radius: 0;
-          text-align: center;
-          transition: all 0.5s ease-in-out;
-      
-          &:hover {
-            .nav-social-menu {
-              span {
-                &:nth-child(3) {
-                  width: 42px;
-                }
+        position: relative;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 0;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          .nav-social-menu {
+            span {
+              &:nth-child(3) {
+                width: 42px;
               }
             }
           }
-        
+        }
+
         .nav-social-menu {
           display: flex;
           flex-direction: column;
@@ -354,13 +354,18 @@
       }
     }
   }
-
- 
 }
 
 .nav-social-card {
   padding: 30px 60px;
-  background: #fff;
+  // background: #6ee2e2;
+  background: -webkit-linear-gradient(
+    to right bottom,
+    #00ffff,
+    #00ffbf,
+    #00ff6a
+  );
+  background: linear-gradient(to right bottom, #00ffff, #00ffbf, #00ff6a);
   max-width: 400px;
   height: 100vh;
   text-align: center;
@@ -401,7 +406,7 @@
       opacity: 1;
     }
     99% {
-      visibility: visible; 
+      visibility: visible;
     }
     100% {
       transform: scale(0.5);
@@ -421,7 +426,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
   }
 
@@ -460,16 +465,24 @@
     }
 
     .inside-insta-logo {
-     
       margin-bottom: 20px;
-      a{
+      a {
+        background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        font-size: 18px;
-        font-style: italic;
-        color: #000;
+        gap: 5px;
+
+        .insta-icon {
+          color: #e4405f;
+          font-size: 23px;
+        }
       }
     }
 
@@ -502,6 +515,16 @@
         transition: all 0.2s ease-in-out;
         align-items: center;
 
+        &.call-item {
+          &:hover {
+            color: #585858;
+
+            .social-media-icon {
+              color: #585858;
+            }
+          }
+        }
+
         &:hover {
           color: $primary-color;
 
@@ -516,6 +539,19 @@
           padding: 2px;
           font-size: 20px;
           transition: all 0.2s ease-in-out;
+        }
+
+        .social-media-icon-top {
+          .social-media-icon-item {
+            .whatsapp-link {
+              margin-left: 10px;
+              border-bottom: 1px solid #585858;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
         }
 
         span {
@@ -542,6 +578,21 @@
           font-size: 40px;
           padding: 10px;
           margin: 0 5px;
+          color: #fff;
+          border-radius: 10px;
+
+          &.facebook {
+            background: linear-gradient(45deg, #1877f2, #4a90e2);
+          }
+          &.insta {
+            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+          }
+          &.youtube {
+            background: linear-gradient(45deg, #ff0000, #ff4c4c);
+          }
+          &.tiktok {
+            background: linear-gradient(45deg, #000000, #00f2ea, #ff0050);
+          }
         }
       }
     }

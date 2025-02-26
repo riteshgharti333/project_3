@@ -31,27 +31,26 @@
       .serviceContact-left-desc {
         font-size: 25px;
 
-        @include sm{
+        @include sm {
           font-size: 20px;
         }
       }
     }
 
     .serviceContact-left-desc {
+   
       p {
         font-size: 23px;
         font-weight: 600;
 
-          transition: all 0.3s ease-in-out;
-          cursor: pointer;
-
-          @include sm {
-            font-size: 17px;
-          }
-          &:hover {
-            color: #b90808;
-          }
+        @include sm {
+          font-size: 17px;
+        }
         
+        &.s2-no{
+          margin-top: 15px;
+        }
+     
 
         &:first-child {
           text-transform: uppercase;
@@ -59,6 +58,22 @@
           color: #585858;
           font-weight: normal;
           margin-bottom: 10px;
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: inline-block;
+
+      
+
+        &:hover {
+          color: $primary-color;
+          border-bottom: 1px solid $primary-color;
         }
       }
     }

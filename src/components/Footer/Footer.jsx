@@ -88,25 +88,25 @@ const Footer = () => {
               href="https://www.facebook.com/tkproductionfilm?mibextid=wwXIfr&rdid=shqDkdh9xtXyGSgN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163hvW8GX9%2F%3Fmibextid%3DwwXIfr#"
               target="_blank"
             >
-              <FaFacebook className="footer-icon" />
+              <FaFacebook className="footer-icon facebook" />
             </a>
 
             <a
               href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
               target="_blank"
             >
-              <FaInstagram className="footer-icon" />
+              <FaInstagram className="footer-icon insta" />
             </a>
 
             <a href="https://www.youtube.com/@tkproductionfilm" target="_blank">
-              <FaYoutube className="footer-icon" />
+              <FaYoutube className="footer-icon youtube" />
             </a>
 
             <a
               href="https://www.tiktok.com/@takproductionsltd?_t=ZN-8uBFBGxMNMc&_r=1"
               target="_blank"
             >
-              <FaTiktok className="footer-icon" />
+              <FaTiktok className="footer-icon tiktok" />
             </a>
           </div>
         </div>

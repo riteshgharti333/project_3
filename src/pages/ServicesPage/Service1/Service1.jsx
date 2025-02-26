@@ -29,9 +29,9 @@ const Service1 = () => {
         <div className="service1-container-content">
           <div className="service1-container-content-top">
             <img src={s1} alt="" />
-            <h1>Wedding Photography & Cinematography by TK Production Films</h1>
+            <h1>Wedding Photography by TK Production Film</h1>
             <p>
-              At TK Production Films, we bring your love story to life through
+              At TK Production Film, we bring your love story to life through
               stunning wedding photography and cinematography. Led by Taufeq
               Khan, with over 16 years of experience and 700+ weddings captured,
               we specialize in creating timeless memories that reflect the
@@ -71,7 +71,7 @@ const Service1 = () => {
 
             <p>
               With a commitment to excellence and attention to detail, TK
-              Production Films creates unforgettable wedding memories worldwide.
+              Production Film creates unforgettable wedding memories worldwide.
               Let us capture your love story beautifully!
             </p>
           </div>

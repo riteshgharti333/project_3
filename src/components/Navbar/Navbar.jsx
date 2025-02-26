@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/images/logo2.png";
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { bigBanner, instaGallery, menuImgs, services } from "../../assets/data";
+import { menuImgs, services } from "../../assets/data";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import MobileBurger from "../MobileBurger/MobileBurger";
 
@@ -206,10 +206,35 @@ const Navbar = () => {
                 <span>506a Ladymargret Road Southall ub1 2np</span>
               </div>
 
-              <div className="nav-social-media-item">
+              <div className="nav-social-media-item call-item">
                 <SlScreenSmartphone className="social-media-icon" />
-                <span>+447884537171</span>
-                <span>+919725621316</span>
+                <div className="social-media-icon-top">
+                  <div className="social-media-icon-item">
+                    <span>+447884537171</span>
+                    <span className="whatsapp-link">
+                      <a
+                        href="https://wa.me/447884537171"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Call Now
+                      </a>
+                    </span>
+                  </div>
+
+                  <div className="social-media-icon-item">
+                    <span>+919725621316</span>
+                    <span className="whatsapp-link">
+                      <a
+                        href="https://wa.me/919725621316"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Call Now
+                      </a>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -220,28 +245,28 @@ const Navbar = () => {
                   href="https://www.facebook.com/tkproductionfilm?mibextid=wwXIfr&rdid=shqDkdh9xtXyGSgN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F163hvW8GX9%2F%3Fmibextid%3DwwXIfr#"
                   target="_blank"
                 >
-                  <FaFacebook className="nav-social-follow-icon" />
+                  <FaFacebook className="nav-social-follow-icon facebook" />
                 </a>
 
                 <a
                   href="https://www.instagram.com/tk_production_film/?igsh=dmg3cm5tdXBxN3R1&utm_source=qr#"
                   target="_blank"
                 >
-                  <FaInstagram className="nav-social-follow-icon" />
+                  <FaInstagram className="nav-social-follow-icon insta" />
                 </a>
 
                 <a
                   href="https://www.youtube.com/@tkproductionfilm"
                   target="_blank"
                 >
-                  <FaYoutube className="nav-social-follow-icon" />
+                  <FaYoutube className="nav-social-follow-icon youtube" />
                 </a>
 
                 <a
                   href="https://www.tiktok.com/@takproductionsltd?_t=ZN-8uBFBGxMNMc&_r=1"
                   target="_blank"
                 >
-                  <FaTiktok className="nav-social-follow-icon" />
+                  <FaTiktok className="nav-social-follow-icon tiktok" />
                 </a>
               </div>
             </div>

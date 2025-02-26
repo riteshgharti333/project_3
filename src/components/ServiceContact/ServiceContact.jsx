@@ -58,7 +58,27 @@ const ServiceContact = () => {
         <div className="serviceContact-left-desc">
           <p>Call Us For Query</p>
           <p>+447884537171</p>
-          <p>+919725621316</p>
+          <span>
+              <a
+                href="https://wa.me/447884537171"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-link"
+              >
+                Call Now
+              </a>
+            </span>
+          <p className="s2-no">+919725621316</p>
+          <span>
+              <a
+                href="https://wa.me/919725621316"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-link"
+              >
+                Call Now
+              </a>
+            </span>
         </div>
 
         <div className="serviceContact-left-desc">

@@ -94,19 +94,19 @@
   .ourService-bottom {
     .ourService-top-cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      grid-template-columns: repeat(4, 1fr);
       margin-top: 30px;
       padding-bottom: 80px;
       gap: 40px;
 
       @include xl {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        
       }
 
       @include lg {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
       }
 
       @include md {
@@ -120,7 +120,7 @@
       }
       .ourService-top-card {
         width: 270px;
-        height: 360px;
+        height: 340px;
         padding: 40px 20px;
         border-radius: 35px;
         display: flex;
@@ -132,26 +132,25 @@
         overflow: hidden;
         background: #f5f5f5;
         margin: 0 auto;
-
-        @include xl {
-          width: 100%;
-          padding: 20px;
-        }
+        align-items: center;
 
         @include lg {
           margin: 0 auto;
-          padding: 40px 50px;
-          width: 100%;
+          padding: 20px 10px;
+          width: 250px;
+          height: 280px;
         }
 
         @include md {
           width: 100%;
           padding: 20px;
+          height: 280px;
         }
 
         @include sm {
           margin: 0 auto;
-          width: 100%;
+          width: 270px;
+          height: 220px;
         }
 
         &:hover {
@@ -172,10 +171,6 @@
           }
 
           .ourService-top-card-desc {
-            p {
-              color: #f5f5f5;
-            }
-
             h5 {
               color: #fff;
             }
@@ -185,24 +180,21 @@
         img {
           width: 90px;
           transition: transform 0.3s ease-in-out;
+
+          @include sm {
+            width: 70px;
+          }
         }
 
         .ourService-top-card-desc {
-          p {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #585858;
-            transition: all 0.5s ease-in-out;
-          }
-
           h1 {
-            font-size: 22px;
+            font-size: 20px;
             transition: all 0.5s ease-in-out;
-          }
+            text-align: center;
 
-          h5 {
-            color: #fff;
-            transition: all 0.5s ease-in-out;
+            @include sm {
+              font-size: 20px;
+            }
           }
         }
       }

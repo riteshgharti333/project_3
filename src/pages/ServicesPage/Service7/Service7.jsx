@@ -6,7 +6,7 @@ import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
-import { service1Data, service1Steps, service7Data, service7Steps } from "../../../assets/servicesData";
+import {  service7Data, service7Steps } from "../../../assets/servicesData";
 
 const Service7 = () => {
   return (
@@ -27,7 +27,7 @@ const Service7 = () => {
         <div className="service7-container-content">
           <div className="service7-container-content-top">
             <img src={details} alt="" />
-            <h1>Graduation Photography by TK Production Films</h1>
+            <h1>Birthdat Photography by TK Production Film</h1>
             <p>
               Graduation is a milestone achievement, marking years of dedication
               and hard work. At TK Production Films, we specialize in capturing

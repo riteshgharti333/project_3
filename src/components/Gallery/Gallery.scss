@@ -115,7 +115,7 @@
 
     .gallery-cards {
       column-count: 2;
-      column-gap: 150px;
+      column-gap: 60px;
       margin-top: 50px;
 
       @include xl {
@@ -137,7 +137,7 @@
       .gallery-card {
         display: inline-block;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         break-inside: avoid;
         position: relative;
         overflow: hidden;

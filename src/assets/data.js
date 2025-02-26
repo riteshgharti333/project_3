@@ -38,6 +38,8 @@ import service8 from "../assets/images/serviceicon/service8.svg";
 import service9 from "../assets/images/serviceicon/service9.svg";
 import service10 from "../assets/images/serviceicon/service10.svg";
 import service11 from "../assets/images/serviceicon/service11.svg";
+import service12 from "../assets/images/serviceicon/service12.svg";
+import service13 from "../assets/images/serviceicon/service13.svg";
 
 // home banners
 import banner1 from "../assets/images/bannerimg/banner1.webp";
@@ -60,66 +62,31 @@ import team2 from "../assets/images/teamImgs/team2.jpg";
 import team3 from "../assets/images/teamImgs/team3.jpg";
 import team4 from "../assets/images/teamImgs/team4.jpg";
 
+//photo albums
+import photoAlbums1 from "../assets/images/photoAlbums/photoAlbum1.jpeg";
+import photoAlbums2 from "../assets/images/photoAlbums/photoAlbum2.jpeg";
+import photoAlbums3 from "../assets/images/photoAlbums/photoAlbum3.jpeg";
+import photoAlbums4 from "../assets/images/photoAlbums/photoAlbum4.jpeg";
+import photoAlbums5 from "../assets/images/photoAlbums/photoAlbum5.jpeg";
+import photoAlbums6 from "../assets/images/photoAlbums/photoAlbum6.jpeg";
+import photoAlbums7 from "../assets/images/photoAlbums/photoAlbum7.jpeg";
+
 export const portfolioImgs = [
-  {
-    img: banner1,
-    title: "California Fall Collection 2023",
-    desc: "Jonathon Willson",
-  },
-  {
-    img: banner2,
-    title: "Urban Street Style 2023",
-    desc: "Emily Carter",
-  },
-  {
-    img: mobilebanner1,
-    title: "Mobile Exclusive Collection",
-    desc: "Emma Scott",
-  },
-  {
-    img: banner3,
-    title: "Modern Elegance Shoot",
-    desc: "Michael Smith",
-  },
-  {
-    img: banner4,
-    title: "Summer Vibes 2023",
-    desc: "Sophia Anderson",
-  },
+  { img: card_1 },
+  { img: card_2 },
+  { img: card_2 },
+  { img: card_1 },
+  { img: card_2 },
 
-  {
-    img: mobilebanner2,
-    title: "Casual Wear Trends",
-    desc: "James Taylor",
-  },
-  {
-    img: banner5,
-    title: "Luxury Fashion Week",
-    desc: "Daniel Roberts",
-  },
-  {
-    img: banner6,
-    title: "Bohemian Chic Collection",
-    desc: "Olivia Brown",
-  },
+  { img: card_1 },
+  { img: card_2 },
 
-  {
-    img: mobilebanner4,
-    title: "Elegant Evening Wear",
-    desc: "Liam Johnson",
-  },
+  { img: card_1 },
 
-  {
-    img: banner7,
-    title: "Classic Vintage Look",
-    desc: "David Wilson",
-  },
-
-  {
-    img: mobilebanner3,
-    title: "Winter Wonderland 2023",
-    desc: "Sophia Martinez",
-  },
+  { img: card_1 },
+  { img: card_2 },
+  { img: card_2 },
+  { img: card_1 },
 ];
 
 export const bigBanner = [
@@ -257,45 +224,6 @@ export const footerLinks = [
 //   },
 // ];
 
-export const photoAlbumsData = [
-  {
-    id: 1,
-    title: "Jeniffer in Green",
-    description: "By Jonathon Willson",
-    image: album_img,
-  },
-  {
-    id: 2,
-    title: "California Dreaming",
-    description: "By Mary Doe",
-    image: album_img,
-  },
-  {
-    id: 3,
-    title: "Mountain Adventures",
-    description: "By Emily Carter",
-    image: album_img,
-  },
-  {
-    id: 4,
-    title: "Autumn in Paris",
-    description: "By Michael Smith",
-    image: album_img,
-  },
-  {
-    id: 5,
-    title: "Winter Wonderland",
-    description: "By Sarah Brown",
-    image: album_img,
-  },
-  {
-    id: 6,
-    title: "Desert Dunes",
-    description: "By Oliver James",
-    image: album_img,
-  },
-];
-
 export const review_card = [
   {
     id: 1,
@@ -343,112 +271,112 @@ export const client_reviews = [
     img: reviewImg1,
     review_title:
       "Tk and the entire team who did my photos and videography for my wedding were absolutely amazing and no matter what the situation was they were there to take picture and do their job. I loved all the shots they took and I’m really happy with their results. Definitely recommend 👍",
-    review_name: "Ruchika Rathore",
-    review_location: "New York",
+    review_name: "Kajal & Chandrashekhar",
   },
 
   {
     img: reviewImg2,
     review_title:
       "The photography done by T.k. production film was mind blowing.They had set a benchmark for others.The photos are absolutely stunning and beyond what we expected. All the members in your team were so friendly. A big heartfelt Thankyou for capturing such a beautiful pictures.",
-    review_location: "New York",
+    review_name: "Kinjal & Moulik",
   },
 
   {
     img: reviewImg3,
     review_title:
       "best photographer and videographer Always professional, fun, capturing our events to perfection!!",
-    review_location: "New York",
+    review_name: "Bipin & Ashwini",
   },
 
   {
     img: reviewImg4,
     review_title: "Had a great experience with them Wonderful team ❤️",
-    review_location: "New York",
+    review_name: "Radhika & Dr. Mayur",
   },
 
   {
     img: reviewImg5,
     review_title:
       "TK Production Film and Team is definitely a 50 out of 10!! Especially The Owner of Production Taufeq Khan, We really appreciate and thank you for capturing so many special, natural and happy moments of our day perfectly and we will treasure them forever. From the beginning through to the end of the event the team offered endless support, advice and guidance. The team is extremely friendly and cooperative. You were just awesome and made our day even more special. We felt so comfortable with you and can't express how grateful we are. Your professionalism and hard work shines through every frame and picture. The quality, editing, creativity, and the fact that the video really told the story of the event in such a perfect way, was amazing and mesmerizing. The team is nothing but dedicated and highly motivated promising photographers. The service of TK Production Film is highly recommended to everyone. Thank You Once Again For Everything Taufeqbhai.",
-    review_name: "Ruchika Rathore",
-    review_location: "New York",
+    review_name: "Moin Mansuri",
   },
 
   {
     img: reviewImg6,
     review_title: "Great work and good quality videos and pics really love it",
-    review_name: "MOIN MANSURI ",
-    review_location: "New York",
+    review_name: "Aniket Solanki",
   },
 
   {
     img: reviewImg7,
     review_title:
       "BAST PHOTOGRAPHY. BAST VIDEO GRAPHIC GOOD PARSAN (V GOOD) Positive Responsiveness, Quality, Professionalism, Value",
-    review_name: "Aniket solanki",
-    review_location: "New York",
+    review_name: "Samir & Sumera",
   },
 
   {
     img: reviewImg8,
     review_title:
       "Experience with TK Production Film We had the pleasure of working with TK Production Film for our wedding, and we couldn't be happier with the result! From start to finish, the team was professional, easy to work with, and truly understood our vision. The final video exceeded all of our expectations, capturing every special moment in a beautiful and cinematic way. The editing was flawless, and they managed to weave in all the little details that made our day so memorable",
-    review_name: "Ruchika Rathore",
-    review_location: "New York",
+    review_name: "Chirag & Tanvika",
   },
 
   {
     img: reviewImg9,
     review_title:
       "Excellent ,creative , surprising photographer with best and polite attitude.thank you Taufikbhai to catch our brother wedding best memories in camera.good wishes for future Review for website",
-    review_name: "Ruchika Rathore",
-    review_location: "New York",
+    review_name: "Mayur & Radhika",
   },
 ];
 
 export const services = [
   {
-    service_name: "Wedding Photography & Cinematography",
-    link: "/wedding-photography-cinematography",
-    no: "01",
-    img: service7,
+    service_name: "Wedding Photography",
+    link: "/wedding-photography",
+    img: service2,
   },
   {
-    service_name: "Pre-Wedding Films & Photography",
-    link: "/pre-Wedding-films-photography",
-    no: "02",
-    img: service2,
+    service_name: "Wedding Cinematography",
+    link: "/wedding-cinematography",
+    img: service7,
   },
 
   {
-    service_name: "Birthday Photography & Films",
-    link: "/birthday-Photography-films",
-    no: "03",
-    img: service9,
+    service_name: "Pre-Wedding Films",
+    link: "/pre-wedding-films",
+    img: service12,
   },
+
   {
-    service_name: "Baby Shower Photography",
-    link: "/baby-shower-photography",
-    no: "04",
-    img: service8,
+    service_name: "Pre-Wedding Photography",
+    link: "/pre-wedding-photography",
+    img: service13,
   },
+
   {
     service_name: "Civil Marriage Photography",
     link: "/civil-marriage-photography",
-    no: "05",
     img: service6,
   },
   {
     service_name: "Engagement Photography & Couple Portraits",
     link: "/engagement-photography-couple-portraits",
-    no: "06",
     img: service10,
+  },
+
+  {
+    service_name: "Birthday Photography",
+    link: "/birthday-photography",
+    img: service9,
+  },
+  {
+    service_name: "Baby Shower Photography",
+    link: "/baby-shower-photography",
+    img: service8,
   },
   {
     service_name: "Graduation Photography",
     link: "/graduation-photography",
-    no: "07",
     img: service11,
   },
 ];
@@ -676,18 +604,16 @@ export const gallery = [
 
 export const featuresData = [
   {
-    id: 1,
     title: "16 + Years of Experience",
     image: bg12,
     card_fit: "fit",
     cardContent: {
       description:
-        "At TK Production Films, we blend cinematic excellence with heartfelt storytelling.  700+ weddings captured, we ensure every moment shines. Our expert team delivers stunning photography and videography across the UK and beyond, turning your special memories into timeless masterpieces.",
+        "At TK Production Film, we blend cinematic excellence with heartfelt storytelling.  700+ weddings captured, we ensure every moment shines. Our expert team delivers stunning photography and videography across the UK and beyond, turning your special memories into timeless masterpieces.",
       readMore: "Read More",
     },
   },
   {
-    id: 4,
     title: "Best Quality Photos",
     image: bg2,
     cardContent: {
@@ -719,51 +645,6 @@ export const instaGallery = [
   },
 ];
 
-export const servicesCards = [
-  {
-    img: service7,
-    no: "01",
-    title: "Wedding Photography & Videography",
-    link: "/wedding-photography-videography",
-  },
-  {
-    img: service2,
-    no: "02",
-    title: "Pre-Wedding Shoots",
-    link: "/pre-Wedding-shoots",
-  },
-  {
-    img: service6,
-    no: "03",
-    title: "Destination Weddings",
-    link: "/destination-weddings",
-  },
-  {
-    img: service1,
-    no: "04",
-    title: "Concerts & Live Streaming",
-    link: "/concerts-live-streaming",
-  },
-  {
-    img: service5,
-    no: "05",
-    title: "Corporate Photoshoot",
-    link: "/corporate-photoshoots",
-  },
-  {
-    img: service4,
-    no: "06",
-    title: "Album Printing & Unique Products",
-    link: "/album-printing-unique-products",
-  },
-  {
-    img: service3,
-    no: "07",
-    title: "Fast Delivery of Photos & Videos",
-    link: "/fast-delivery-photos-videos",
-  },
-];
-
 export const aboutLists = [
   {
     title: "TK Production Films Mission",
@@ -780,4 +661,14 @@ export const teamImgs = [
   { image: team3, title: "Operational Manager", name: "Mohshin Qadri" },
   { image: team1, title: "Videographer & Editor", name: "Sahenul Khan" },
   { image: team4, title: "Video Editor", name: "Moinuddin Khan" },
+];
+
+export const photoAlbums = [
+  { image: photoAlbums1 },
+  { image: photoAlbums2 },
+  { image: photoAlbums3 },
+  { image: photoAlbums4 },
+  { image: photoAlbums5 },
+  { image: photoAlbums6 },
+  { image: photoAlbums7 },
 ];

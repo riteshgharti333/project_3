@@ -16,7 +16,7 @@ const OurCore = () => {
       <div className="ourCore-top">
         <h1>Our Team</h1>
         <p>
-          At <span className="bold-text">TK Production Films</span>, we’re
+          At <span className="bold-text">TK Production Film</span>, we’re
           passionate about capturing your precious memories, preserving your
           love, and celebrating every beautiful moment of life.
         </p>

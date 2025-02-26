@@ -1,22 +1,21 @@
 import "./PhotoAlbums.scss";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { bigBanner, photoAlbumsData } from "../../assets/data";
+import { photoAlbums } from "../../assets/data";
 import { useEffect, useState } from "react";
 
-const PhotoAlbums = () => {
 
+const PhotoAlbums = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-   const [initialized, setInitialized] = useState(false);
-  
-    // Set the animation trigger after component mounts
-    useEffect(() => {
-      setInitialized(true);
-    }, []);
-  
+  const [initialized, setInitialized] = useState(false);
+
+  // Set the animation trigger after component mounts
+  useEffect(() => {
+    setInitialized(true);
+  }, []);
 
   return (
     <div className="photoAlbums">
@@ -27,13 +26,16 @@ const PhotoAlbums = () => {
 
       <div className="photoAlbums-cards">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={1}
           centeredSlides={true}
-          navigation={true}
           spaceBetween={20}
           loop={true}
-          speed={2000}
-          modules={[Navigation]}
+          speed={3000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
           className="photoAlbums-slider album-swiper"
           initialSlide={1}
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -43,29 +45,29 @@ const PhotoAlbums = () => {
               spaceBetween: 10,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
             1024: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
           }}
         >
-          {bigBanner.map((album , index) => (
-            <SwiperSlide key={album.id} className="photoAlbums-card">
+          {photoAlbums.map((album, index) => (
+            <SwiperSlide key={album.image} className="photoAlbums-card">
               <div className="photoAlbums-card-content">
-                <img src={album.image} alt={album.title} />
+                <img src={album.image} alt={album.image} />
 
                 <div
                   className={`homeBanner-desc ${
                     initialized && index === activeIndex ? "animate" : ""
                   }`}
                 >
-                  <div className="photoAlbums-card-content-desc">
+                  {/* <div className="photoAlbums-card-content-desc">
                     <h3>Birght Boho Sunshine</h3>
                     <p>By Jonathan Wilson</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </SwiperSlide>

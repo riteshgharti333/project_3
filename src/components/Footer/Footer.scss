@@ -29,7 +29,7 @@
 
       .footer-inner {
         position: relative;
-        padding-top: 155px;
+        padding-top: 130px;
         padding-bottom: 100px;
         overflow: hidden;
 
@@ -274,20 +274,32 @@
         display: flex;
         gap: 10px;
 
+       
+
         .footer-icon {
           font-size: 40px;
-          border: 1px solid #fff;
           padding: 10px;
           cursor: pointer;
           border-radius: 50%;
           transition: all 0.3s ease-in-out;
 
+
+          &.facebook {
+            background: linear-gradient(45deg, #1877f2, #4a90e2);
+          }
+          &.insta {
+            background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+          }
+          &.youtube {
+            background: linear-gradient(45deg, #ff0000, #ff4c4c);
+          }
+          &.tiktok {
+            background: linear-gradient(45deg, #000000, #00f2ea, #ff0050);
+          }
+
           &:hover {
-            background: $primary-color;
-            color: #000;
             transform: translateY(-4px);
 
-            border: 1px solid $primary-color;
           }
         }
       }

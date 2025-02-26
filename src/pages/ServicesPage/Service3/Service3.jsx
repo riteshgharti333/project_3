@@ -9,11 +9,11 @@ import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import {
   service1Data,
   service1Steps,
-  service3Data,
-  service3Steps,
+  service2Data,
+  service2Steps,
 } from "../../../assets/servicesData";
 
-import s3 from "../../../assets/images/serviceimgs/s3.jpeg"
+import s3 from "../../../assets/images/serviceimgs/s3.jpeg";
 
 const Service3 = () => {
   return (
@@ -30,26 +30,26 @@ const Service3 = () => {
         <div className="service3-container-sidebar">
           <ServicePageSidebar />
         </div>
-
         <div className="service3-container-content">
           <div className="service3-container-content-top">
             <img src={s3} alt="" />
-            <h1>Birthday Photography & Films by TK Production Films</h1>
+            <h1>Pre Wedding Films by TK Production Film</h1>
             <p>
-              Celebrate life’s special milestones with TK Production Films!
-              Whether it's a grand birthday celebration or an intimate
-              gathering, we capture every joyful moment with creativity and
-              precision. Our expert team ensures that your birthday memories are
-              beautifully preserved through high-quality photography and
-              cinematic films, making them unforgettable.
+              A pre-wedding shoot is the perfect way to celebrate your love
+              story before the big day. At TK Production Film, we specialize in
+              capturing the chemistry, emotions, and unique connection between
+              couples through breathtaking pre-wedding photography and films.
+              Whether in iconic cityscapes, lush landscapes, or dreamy
+              international locations like Lisbon, Portugal, our expert team
+              ensures your love story is beautifully told.
             </p>
           </div>
 
           <div className="service3-services">
-            <h1>Our Birthday Services</h1>
+            <h1>Our Pre-Wedding Services</h1>
 
             <ul>
-              {service3Data.map((item) => (
+              {service2Data.map((item) => (
                 <li key={item.title}>
                   <FaCheck className="check-icon" />
                   <div className="services-desc">
@@ -65,8 +65,8 @@ const Service3 = () => {
             <h1>Our Service Steps</h1>
 
             <ul>
-              {service3Steps.map((item) => (
-                <li>
+              {service2Steps.map((item) => (
+                <li key={item.no}>
                   <p>{item.no}</p>
                   <p>
                     <span>{item.title} – </span> {item.desc}
@@ -76,9 +76,9 @@ const Service3 = () => {
             </ul>
 
             <p>
-              At TK Production Films, we turn your birthday moments into
-              timeless memories. Let us capture your special day with elegance
-              and creativity!
+              With creativity, passion, and technical expertise, TK Production
+              Film makes your pre-wedding moments truly magical. Let us turn
+              your love story into a cinematic masterpiece!
             </p>
           </div>
         </div>

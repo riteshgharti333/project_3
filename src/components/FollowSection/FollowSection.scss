@@ -4,78 +4,125 @@
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
-  .followSection-imgs {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    overflow: hidden;
 
-    @include md {
-      grid-template-columns: repeat(3, 1fr);
-      align-items: center;
-      justify-content: center;
-    }
+  // .followSection-imgs {
+  //   display: grid;
+  //   grid-template-columns: repeat(5, 1fr);
+  //   width: 100%;
+  //   overflow: hidden;
 
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
+  //   @include md {
+  //     grid-template-columns: repeat(3, 1fr);
+  //     align-items: center;
+  //     justify-content: center;
+  //   }
 
-    @media (max-width: 768px) {
-      & > img:nth-child(4),
-      & > img:nth-child(5) {
-        display: none;
-      }
-    }
+  //   img {
+  //     width: 100%;
+  //     height: auto;
+  //     object-fit: contain;
+  //   }
+
+  //   @media (max-width: 768px) {
+  //     & > img:nth-child(4),
+  //     & > img:nth-child(5) {
+  //       display: none;
+  //     }
+  //   }
+  // }
+  margin-bottom: 50px;
+
+  h1 {
+    text-align: center;
   }
 
-  .followSection-desc {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: $primary-color;
-    text-align: center;
-    padding: 20px 30px;
-    color: #fff;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-
-    @include sm {
-      padding: 10px;
+  .followSection-cards {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    justify-content: space-between;
+    width: 100%;
+    @include lg{
+      gap: 10px;
     }
 
-    .followSection-icon {
-      font-size: 30px;
-      margin-bottom: 5px;
-      color: #fff;
-      transition: transform 0.3s ease-in-out;
+
+    @include md{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 40px;
     }
 
-    p {
-      font-size: 18px;
-      font-weight: 500;
-      margin: 0;
-      color: #fff;
 
-      @include sm {
-        font-size: 14px;
+    @include sm{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 5px;
+    }
+   
+
+    .followSection-card {
+      text-align: center;
+      padding: 20px 30px;
+      color: #fff;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      background: $primary-color;
+      width: 200px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      @include lg{
+        width: 170px;
       }
-    }
 
-    &:hover {
-      background: #fff;
-      color: $primary-color;
+      @include sm{
+       width: 160px;
+      }
 
+
+
+
+
+
+      &:nth-child(1) {
+        background: linear-gradient(45deg, #1877f2, #4a90e2);
+      }
+    
+      &:nth-child(2) {
+        background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+      }
+    
+      &:nth-child(3) {
+        background: linear-gradient(45deg, #ff0000, #ff4c4c);
+      }
+    
+      &:nth-child(4) {
+        background: linear-gradient(45deg, #000000, #00f2ea, #ff0050);
+      }
+
+      
       .followSection-icon {
-        transform: scale(1.2);
-        color: $primary-color;
+        font-size: 40px;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease-in-out;
       }
 
       p {
-        color: $primary-color;
+        font-size: 22px;
+        font-weight: 500;
+        transition: transform 0.3s ease-in-out;
+       
+      }
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transform: translateY(-6px);
+      
       }
     }
   }

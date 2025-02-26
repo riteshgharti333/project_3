@@ -29,7 +29,7 @@ const OurService = () => {
         <h1>Our Services</h1>
         <div className="ourService-top-right">
           <p>
-          At <span className="bold-text">TK Production Films</span>, we capture life’s precious moments with elegance. From engagements to weddings, birthdays to graduations, and baby showers to civil marriages, our personalized photography services ensure every milestone is beautifully preserved. Let us turn your special moments into timeless memories you'll cherish forever.
+          At <span className="bold-text">TK Production Film</span>, we capture life’s precious moments with elegance. From engagements to weddings, birthdays to graduations, and baby showers to civil marriages, our personalized photography services ensure every milestone is beautifully preserved. Let us turn your special moments into timeless memories you'll cherish forever.
           </p>
 
             <Link to={"/wedding-photography-cinematography"} className="read-more">
@@ -51,7 +51,6 @@ const OurService = () => {
                 <img src={item.img} alt="" />
 
                 <div className="ourService-top-card-desc">
-                  <p>{item.no}</p>
                   <h1>{item.service_name}</h1>
                 </div>
               </div>

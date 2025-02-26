@@ -18,7 +18,7 @@
       font-size: 50px;
       text-transform: uppercase;
 
-      @include sm{
+      @include sm {
         font-size: 40px;
       }
     }
@@ -235,8 +235,6 @@
           }
         }
 
-       
-
         .arrows {
           position: relative;
           display: inline-block;
@@ -392,15 +390,16 @@
       .about-desc1 {
         font-size: 20px;
 
-        @include sm{
+        @include sm {
           text-align: justify;
         }
       }
 
       .about-desc2 {
         color: #989898;
+        font-size: 18px;
 
-        @include sm{
+        @include sm {
           text-align: justify;
         }
       }

@@ -85,7 +85,7 @@ const About = () => {
         <img src={about1} alt="" />
 
         <p>
-          Welcome to TK Production Films, your premier destination for capturing
+          Welcome to TK Production Film, your premier destination for capturing
           the magic of love stories! Founded and led by Taufeq Khan, a
           passionate filmmaker with over 16 years of experience, we specialize
           in creating breathtaking wedding videography that resonates across the
@@ -115,7 +115,7 @@ const About = () => {
         </p>
 
         <p>
-          Join us at TK Production Films as we craft timeless memories that you
+          Join us at TK Production Film as we craft timeless memories that you
           and your loved ones will cherish forever. Let us bring your love story
           to life!
         </p>
@@ -144,7 +144,7 @@ const About = () => {
                 Our <span className="line-break">Vision</span>
               </h1>
               <p>
-                At <span className="bold-text">TK Production Films</span>, we
+                At <span className="bold-text">TK Production Film</span>, we
                 craft visual narratives that embody love and celebration.
                 Through our lens, we capture the essence of your unique story,
                 preserving moments that turn into timeless memories. Our passion
@@ -163,7 +163,7 @@ const About = () => {
                 <h1>
                   <CountUp
                     start={startCount ? 0 : null}
-                    end={70}
+                    end={95}
                     duration={2.5}
                   />
                   %
@@ -179,13 +179,13 @@ const About = () => {
                 <h1>
                   <CountUp
                     start={startCount ? 0 : null}
-                    end={1500}
+                    end={800}
                     duration={2.5}
                   />
                   +
                 </h1>
 
-                <p>Photography Session</p>
+                <p>Wedding + Pre-Wedding Internationally</p>
               </div>
 
               <hr className="about-content-left-bottom-line" />
@@ -249,12 +249,12 @@ const About = () => {
           <div class="scrolling-content">
             <h1>TK</h1>
             <h1>Production </h1>
-            <h1>Films</h1>
+            <h1>Film</h1>
           </div>
           <div class="scrolling-content">
             <h1>TK</h1>
             <h1>Production </h1>
-            <h1>Films</h1>
+            <h1>Film</h1>
           </div>
         </div>
       </div>
