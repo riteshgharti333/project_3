@@ -10,6 +10,7 @@ import { MdMailOutline } from "react-icons/md";
 
 import flag1 from "../../assets/images/flag1.svg";
 import flag2 from "../../assets/images/flag2.svg";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   useEffect(() => {
@@ -121,8 +122,9 @@ const ContactSection = () => {
               <div className="sm-address">
                 <span>Main bazar Near.sbi bank Diu (362520)</span>
               </div>
-
-              <span className="view-map">View Map</span>
+              <Link to="/contact-us#map">
+                <span className="view-map">View Map</span>
+              </Link>
             </div>
           </div>
         </div>

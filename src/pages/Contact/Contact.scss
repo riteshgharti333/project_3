@@ -220,11 +220,16 @@
   .contact2-section {
     margin: 80px 0px;
   }
-  .contact-map {
-    width: 100%;
+  .contact-maps{
+    display: flex;
+    gap: 30px;
 
-    @include lg {
-      margin-top: 40px;
+    @include md{
+      flex-direction: column;
+    }
+    .contact-map {
+      width: 100%;
     }
   }
+ 
 }

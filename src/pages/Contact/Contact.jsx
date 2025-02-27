@@ -7,12 +7,21 @@ import ContactSection from "../../components/ContactSection/ContactSection";
 
 import toast from "react-hot-toast";
 import { baseUrl } from "../../main";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedOption, setSelectedOption] = useState(""); // Empty means nothing is selected
   const [isValid, setIsValid] = useState(true); // Validation state
   const selectRef = useRef(null);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#map") {
+      document.getElementById("map")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -262,17 +271,33 @@ const Contact = () => {
         <ContactSection />
       </div>
 
-      <div className="contact-map">
+<div className="contact-maps" id="map">
+<div className="contact-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.951046296!2d76.76356261822156!3d28.644287349748506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1739350797861!5m2!1sen!2sin"
+         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2482.050124371573!2d-0.3746104233785356!3d51.53064047181858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDMxJzUwLjMiTiAwwrAyMicxOS4zIlc!5e0!3m2!1sen!2sin!4v1740658248032!5m2!1sen!2sin"
           width="100%"
-          height="600"
+          height="400"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+
+
+      <div className="contact-map">
+        <iframe
+       src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3731.805801551631!2d70.98298267524812!3d20.71810908085459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDQzJzA1LjIiTiA3MMKwNTknMDguMCJF!5e0!3m2!1sen!2sin!4v1740658269472!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+</div>
+     
     </div>
   );
 };
