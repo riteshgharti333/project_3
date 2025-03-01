@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 1400px;
     position: relative;
-    overflow: visible; 
+    overflow: visible;
 
     .photoAlbums-slider {
       position: relative;
@@ -59,11 +59,11 @@
           display: block;
           object-fit: cover;
 
-          @include md{
+          @include md {
             height: 300px;
           }
 
-          @include sm{
+          @include sm {
             height: 300px;
           }
         }
@@ -93,7 +93,7 @@
             margin-bottom: 5px;
             transition: all 0.3s ease-in-out;
 
-            @include sm{
+            @include sm {
               font-size: 22px;
             }
 
@@ -125,7 +125,7 @@
 
 .photoAlbums .swiper-slide-active {
   transform: scale(1);
-  z-index: 10; 
+  z-index: 10;
   position: relative;
 }
 
@@ -169,7 +169,7 @@
 .swiper-button-prev {
   left: 20%;
 
-  @include lg{
+  @include lg {
     left: 0;
   }
 }
@@ -177,23 +177,22 @@
 .swiper-button-next {
   right: 20%;
 
-  @include lg{
+  @include lg {
     right: 0;
   }
 }
 
-.album-swiper{
+.album-swiper {
   .swiper-wrapper {
-    padding-top: 50px; 
-    padding-bottom: 80px; 
+    // padding-top: 50px;
+    // padding-bottom: 80px;
 
-    @include sm{
+    @include sm {
       // padding-top: 20px;
       // padding-bottom: 20px;
     }
   }
 }
-
 
 /* Ensure proper scaling for swiper slides */
 .swiper-slide {

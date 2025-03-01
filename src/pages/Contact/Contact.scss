@@ -33,16 +33,21 @@
       .form-group {
         position: relative;
 
-        
-       .event-title{
-        font-size: 18px;
-        color: #585858;
+        .event-title {
+          font-size: 18px;
+          color: #585858;
 
-        .required {
-          font-size: 12px;
-          margin-left: 10px;
+          &.time {
+            font-size: 18px;
+            color: #999;
+            margin-left: 5px;
+          }
+
+          .required {
+            font-size: 12px;
+            margin-left: 10px;
+          }
         }
-       }
 
         label {
           color: #999;
@@ -191,7 +196,8 @@
       .form-group:nth-child(8),
       .form-group:nth-child(9),
       .form-group:nth-child(10),
-      .form-group:nth-child(11) {
+      .form-group:nth-child(11),
+      .form-group:nth-child(12) {
         grid-column: span 2;
       }
 
@@ -220,16 +226,15 @@
   .contact2-section {
     margin: 80px 0px;
   }
-  .contact-maps{
+  .contact-maps {
     display: flex;
     gap: 30px;
 
-    @include md{
+    @include md {
       flex-direction: column;
     }
     .contact-map {
       width: 100%;
     }
   }
- 
 }

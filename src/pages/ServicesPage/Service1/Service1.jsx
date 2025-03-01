@@ -2,15 +2,24 @@ import "./Service1.scss";
 
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
-import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import { service1Data, service1Steps } from "../../../assets/servicesData";
 
-import s1 from "../../../assets/images/serviceimgs/s1.jpeg"
+import s1 from "../../../assets/images/serviceimgs/s1.jpeg";
+import { useRef } from "react";
 
 const Service1 = () => {
+
+  const contentRef = useRef(null);
+
+  const scrollToContent = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="service1">
       <div className="service1-top-banner">
@@ -23,10 +32,10 @@ const Service1 = () => {
 
       <div className="service1-container">
         <div className="service1-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar  onSidebarClick={scrollToContent}/>
         </div>
 
-        <div className="service1-container-content">
+        <div className="service1-container-content" ref={contentRef}>
           <div className="service1-container-content-top">
             <img src={s1} alt="" />
             <h1>Wedding Photography by TK Production Film</h1>

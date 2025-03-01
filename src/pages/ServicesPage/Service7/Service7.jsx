@@ -7,8 +7,19 @@ import details from "../../../assets/images/details.jpg";
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import {  service7Data, service7Steps } from "../../../assets/servicesData";
+import { useRef } from "react";
 
 const Service7 = () => {
+
+    const contentRef = useRef(null);
+  
+    const scrollToContent = () => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  
+
   return (
     <div className="service7">
       <div className="service7-top-banner">
@@ -21,10 +32,10 @@ const Service7 = () => {
 
       <div className="service7-container">
         <div className="service7-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar  onSidebarClick={scrollToContent}/>
         </div>
 
-        <div className="service7-container-content">
+        <div className="service7-container-content" ref={contentRef}>
           <div className="service7-container-content-top">
             <img src={details} alt="" />
             <h1>Birthdat Photography by TK Production Film</h1>

@@ -7,15 +7,24 @@ import details from "../../../assets/images/details.jpg";
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import {
-  service1Data,
-  service1Steps,
   service2Data,
   service2Steps,
 } from "../../../assets/servicesData";
 
 import s3 from "../../../assets/images/serviceimgs/s3.jpeg";
+import { useRef } from "react";
 
 const Service3 = () => {
+
+  
+    const contentRef = useRef(null);
+  
+    const scrollToContent = () => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
     <div className="service3">
       <div className="service3-top-banner">
@@ -28,9 +37,9 @@ const Service3 = () => {
 
       <div className="service3-container">
         <div className="service3-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar  onSidebarClick={scrollToContent}/>
         </div>
-        <div className="service3-container-content">
+        <div className="service3-container-content" ref={contentRef}>
           <div className="service3-container-content-top">
             <img src={s3} alt="" />
             <h1>Pre Wedding Films by TK Production Film</h1>

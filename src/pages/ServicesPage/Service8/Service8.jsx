@@ -2,14 +2,22 @@ import "./Service8.scss";
 
 import ServicePageSidebar from "../ServicePageSidebar/ServicePageSidebar";
 
-
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
-import { service1Data, service1Steps, service4Data, service4Steps } from "../../../assets/servicesData";
+import { service4Data, service4Steps } from "../../../assets/servicesData";
 
-import s1 from "../../../assets/images/serviceimgs/s1.jpeg"
+import s1 from "../../../assets/images/serviceimgs/s1.jpeg";
+import { useRef } from "react";
 
 const Service8 = () => {
+  const contentRef = useRef(null);
+
+  const scrollToContent = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="service8">
       <div className="service8-top-banner">
@@ -22,15 +30,20 @@ const Service8 = () => {
 
       <div className="service8-container">
         <div className="service8-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar onSidebarClick={scrollToContent} />
         </div>
 
-        <div className="service8-container-content">
+        <div className="service8-container-content" ref={contentRef}>
           <div className="service8-container-content-top">
             <img src={s1} alt="" />
             <h1>Baby Shower Photography by TK Production Film</h1>
             <p>
-            A baby shower is a beautiful celebration of love, joy, and new beginnings. At TK Production Film, we specialize in capturing these heartfelt moments with elegance and creativity. Whether it’s an intimate gathering or a grand event, we ensure every special detail, emotion, and laughter is beautifully preserved through our expert photography and videography
+              A baby shower is a beautiful celebration of love, joy, and new
+              beginnings. At TK Production Film, we specialize in capturing
+              these heartfelt moments with elegance and creativity. Whether it’s
+              an intimate gathering or a grand event, we ensure every special
+              detail, emotion, and laughter is beautifully preserved through our
+              expert photography and videography
             </p>
           </div>
 

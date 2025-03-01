@@ -8,7 +8,6 @@ import { footerLinks, services } from "../../assets/data";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-
 import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {

@@ -7,13 +7,21 @@ import details from "../../../assets/images/details.jpg";
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import {
-  service1Data,
-  service1Steps,
   service4Data,
   service4Steps,
 } from "../../../assets/servicesData";
+import { useRef } from "react";
 
 const Service4 = () => {
+
+    const contentRef = useRef(null);
+  
+    const scrollToContent = () => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
     <div className="service4">
       <div className="service4-top-banner">
@@ -26,10 +34,10 @@ const Service4 = () => {
 
       <div className="service4-container">
         <div className="service4-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar onSidebarClick={scrollToContent} />
         </div>
 
-        <div className="service4-container-content">
+        <div className="service4-container-content" ref={contentRef}>
           <div className="service4-container-content-top">
             <img src={details} alt="" />
             <h1>Pre-Wedding Photography by TK Production Film</h1>

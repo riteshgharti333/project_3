@@ -5,12 +5,25 @@ import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
-import { service1Data, service1Steps, service2Data, service2Steps } from "../../../assets/servicesData";
+import {
+  service1Data,
+  service1Steps,
+  service2Data,
+  service2Steps,
+} from "../../../assets/servicesData";
 
-import s2 from "../../../assets/images/serviceimgs/s2.jpeg"
-
+import s2 from "../../../assets/images/serviceimgs/s2.jpeg";
+import { useRef } from "react";
 
 const Service2 = () => {
+  const contentRef = useRef(null);
+
+  const scrollToContent = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="service2">
       <div className="service2-top-banner">
@@ -23,15 +36,21 @@ const Service2 = () => {
 
       <div className="service2-container">
         <div className="service2-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar onSidebarClick={scrollToContent} />
         </div>
 
-        <div className="service2-container-content">
+        <div className="service2-container-content" ref={contentRef}>
           <div className="service2-container-content-top">
             <img src={s2} alt="" />
             <h1>Wedding Cinematography by TK Production Film</h1>
             <p>
-            A pre-wedding shoot is the perfect way to celebrate your love story before the big day. At TK Production Film, we specialize in capturing the chemistry, emotions, and unique connection between couples through breathtaking pre-wedding photography and films. Whether in iconic cityscapes, lush landscapes, or dreamy international locations like Lisbon, Portugal, our expert team ensures your love story is beautifully told.
+              A pre-wedding shoot is the perfect way to celebrate your love
+              story before the big day. At TK Production Film, we specialize in
+              capturing the chemistry, emotions, and unique connection between
+              couples through breathtaking pre-wedding photography and films.
+              Whether in iconic cityscapes, lush landscapes, or dreamy
+              international locations like Lisbon, Portugal, our expert team
+              ensures your love story is beautifully told.
             </p>
           </div>
 
@@ -66,7 +85,9 @@ const Service2 = () => {
             </ul>
 
             <p>
-            With creativity, passion, and technical expertise, TK Production Film makes your pre-wedding moments truly magical. Let us turn your love story into a cinematic masterpiece!
+              With creativity, passion, and technical expertise, TK Production
+              Film makes your pre-wedding moments truly magical. Let us turn
+              your love story into a cinematic masterpiece!
             </p>
           </div>
         </div>

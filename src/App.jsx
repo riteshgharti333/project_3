@@ -20,22 +20,31 @@ import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import Service8 from "./pages/ServicesPage/Service8/Service8.jsx";
 import Service9 from "./pages/ServicesPage/Service9/Service9.jsx";
+import { ScrollProvider, useScrollContext } from "./context/ScrollContext.jsx";
 
 function App() {
-  // const ScrollToTop = () => {
-  //   const { pathname } = useLocation();
-
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, [pathname]);
-
-  //   return null;
-  // };
+ 
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+    const { skipScroll, setSkipScroll } = useScrollContext();
+  
+    useEffect(() => {
+      if (!skipScroll) {
+        window.scrollTo(0, 0);
+      }
+      setSkipScroll(false); 
+    }, [pathname]);
+  
+    return null;
+  };
 
   return (
     <div className="app">
+
+      <ScrollProvider>
+
       <BrowserRouter>
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -75,6 +84,8 @@ function App() {
           }}
         />
       </BrowserRouter>
+      </ScrollProvider>
+
     </div>
   );
 }

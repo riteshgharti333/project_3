@@ -87,7 +87,7 @@
     img {
       object-fit: contain;
       position: absolute;
-      bottom: 0%;
+      bottom: 20%;
     }
   }
 
@@ -96,12 +96,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       margin-top: 30px;
-      padding-bottom: 80px;
       gap: 40px;
 
       @include xl {
         grid-template-columns: repeat(3, 1fr);
-        
       }
 
       @include lg {
@@ -167,6 +165,8 @@
           }
 
           img {
+            filter: invert(1);
+            transition: filter 0.3s ease-in-out;
             animation: bounce 0.8s ease-in-out;
           }
 

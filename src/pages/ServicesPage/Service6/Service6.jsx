@@ -6,9 +6,19 @@ import details from "../../../assets/images/details.jpg";
 
 import { FaCheck } from "react-icons/fa";
 import ServiceContact from "../../../components/ServiceContact/ServiceContact";
-import { service1Data, service1Steps, service6Data, service6Steps } from "../../../assets/servicesData";
+import { service6Data, service6Steps } from "../../../assets/servicesData";
+import { useRef } from "react";
 
 const Service6 = () => {
+
+  const contentRef = useRef(null);
+  
+    const scrollToContent = () => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
     <div className="service6">
       <div className="service6-top-banner">
@@ -21,10 +31,10 @@ const Service6 = () => {
 
       <div className="service6-container">
         <div className="service6-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar onSidebarClick={scrollToContent}/>
         </div>
 
-        <div className="service6-container-content">
+        <div className="service6-container-content" ref={contentRef}>
           <div className="service6-container-content-top">
             <img src={details} alt="" />
             <h1>

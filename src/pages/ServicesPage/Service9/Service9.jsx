@@ -7,8 +7,19 @@ import ServiceContact from "../../../components/ServiceContact/ServiceContact";
 import { service1Data, service7Data, service7Steps } from "../../../assets/servicesData";
 
 import s1 from "../../../assets/images/serviceimgs/s1.jpeg";
+import { useRef } from "react";
 
 const Service9 = () => {
+
+   const contentRef = useRef(null);
+  
+    const scrollToContent = () => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  
+
   return (
     <div className="service9">
       <div className="service9-top-banner">
@@ -21,10 +32,10 @@ const Service9 = () => {
 
       <div className="service9-container">
         <div className="service9-container-sidebar">
-          <ServicePageSidebar />
+          <ServicePageSidebar onSidebarClick={scrollToContent}/>
         </div>
 
-        <div className="service9-container-content">
+        <div className="service9-container-content" ref={contentRef}>
           <div className="service9-container-content-top">
             <img src={s1} alt="" />
             <h1>Graduation Photography by TK Production Film</h1>

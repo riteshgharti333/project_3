@@ -60,7 +60,6 @@ const OurPorfolio = () => {
           <div className="ourPorfolio-card" key={item.img}>
             <div className="ourPorfolio-card-inner">
               <img src={item.img} alt="California Fall Collection 2023" />
-             
             </div>
           </div>
         ))}
